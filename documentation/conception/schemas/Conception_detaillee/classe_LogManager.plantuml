@@ -1,0 +1,18 @@
+@startuml
+
+class LogManager {
+    + getFrames(frame : String) : void
+    + clearAll() : void
+    + save() : void
+    + getInstance(context: Context): LogManager
+    + getThesaurus(): Thesaurus
+    + dicoFrameSent(frame: Frame): void
+    + setLoggerviewModel(viewModel: LogManagerViewModel): void
+    + log(message: String): void
+    + getTime(): String
+    - setFrames(frame: Frame): String[]
+    - updateTable(): String
+    - StringTableToString(stringTable: String[]): String
+}
+
+@enduml

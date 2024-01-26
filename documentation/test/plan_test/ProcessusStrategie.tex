@@ -1,0 +1,126 @@
+% Auteurs : Camille Constant, Paul Trémoureux
+
+\section{Processus et Stratégie de test}
+\label{sec:process}
+
+\subsection{Objectifs (actions de test)}
+\label{sec:process:objectifs}
+
+\noindent Exigence : exigence concernée\\
+Risque : risque concerné (cf. section \ref{sec:peri:risques})\\
+Niveau : niveau de test (S : Système, I : Intégration, U : Unitaire)\\
+Technique : technique de test (AP : Analyse Partitionnelle ou Classes d'équivalence, AL : Analyse aux limites, CU : Cas d'Utilisation, PC : Protocole de Communication)\\
+
+\noindent\begin{longtable}[c]{|p{0.5cm}|p{2.8cm}|p{1.7cm}|p{1.2cm}|p{1.2cm}|p{1.8cm}|p{3.6cm}|}
+\hline
+\bf \centering N\textdegree & \bf Énoncé de l'objectif & \bf Exigence & \bf Risque & \bf Niveau & \bf Technique & \bf Conditions de mesure/niveau d'atteinte prévu.\\
+\hline
+\endhead
+\centering 1 & Tester la communication & Fonct. P0 & RPRD1 & I, S & AP, PC, CU & Fonctionnalités P0/100\% des fonctionnalités testées en utilisant les classes d'équivalence, le protocole de communication et les cas d'utilisation.\\
+\hline
+\centering 2 & Smoke test & Toutes & RPRJ1, RPRJ2, RPRJ4 & S & Test par expérience & Nombre d'anomalies bloquantes/pas d'anomalie bloquante.\\
+\hline
+\centering 3 & Tester 100\% des fonctionnalités P0 & Fonct. P0 & RPRJ3, RPRD1 & S & AP, CU & Fonctionnalités P0/100\% des fonctionnalités testées en utilisant les classes d'équivalence et les cas d'utilisation.\\
+\hline
+\centering 4 & Tester 100\% des fonctionnalités non P0 & Fonct. non P0 & RPRJ3, RPRD1 & S & AP, CU & Nombre de cas d'utilisation/tous les cas d'utilisation testés.\\
+\hline
+\centering 5 & Contrôle qualité des productions. & Toutes & RPRJ6 & U & Relecture, PAQL & Respect des règles du PAQL.\\
+\hline
+\end{longtable}
+
+\subsection{Organisation}
+\label{sec:process:orga}
+
+\subsubsection{Découpage en phase de tests/campagnes}
+\label{sec:process:orga:decoupage}
+
+Deux campagnes de tests système sont prévues dans le projet pour chaque lot/incrément :
+\begin{itemize}
+    \item Campagne de tests système comprenant les tests fonctionnels et non fonctionnels pour atteindre les différents objectifs de tests ci-dessus ;
+    \item Campagne de retest (vérification de la correction des anomalies détectées) et de régression.
+\end{itemize}
+
+\subsubsection{Gestion des rapports d'anomalie}
+\label{sec:process:orga:anomalies}
+
+Les anomalies sont gérées dans l'ENTP sous forme de tâche.
+Dès l'observation d'une défaillance dans le produit, un rapport d'anomalie est rédigé dans l'ENTP.
+
+\subsection{Critères d'acceptation des tests}
+\label{sec:process:accept}
+
+Pour le passage en test de validation système, la phase de smoke test ne doit pas détecter d'anomalie bloquante.\\
+Pour la mise en production, aucune anomalie bloquante ni majeure n'est acceptée.
+
+\noindent\begin{longtable}[c]{|p{.25\textwidth}|p{.75\textwidth}|}
+\hline
+{\bf Anomalie bloquante} & La fonctionnalité n'est pas utilisable.\\
+\hline
+{\bf Anomalie majeure} & La fonctionnalité ne répond pas à ses exigences mais une solution de contournement existe pour utiliser la fonctionnalité, ou la fonctionnalité est utilisable en l'état (par exemple, anomalie dans une règle de calcul).\\
+\hline
+{\bf Anomalie mineure} & La fonctionnalité est utilisable mais pas de façon optimale (par exemple, problème d'ergonomie ou de charte graphique).\\
+\hline
+\end{longtable}
+
+\subsection{Critères d'arrêt}
+\label{sec:process:arret}
+
+Les tests d'une fonctionnalité s'arrêteront si une anomalie bloquante est découverte ne permettant pas de poursuivre les tests de cette fonctionnalité.
+
+\subsection{Activités de test}
+\label{sec:process:activites}  
+  
+L'activité de test sera faite par {\equipe} tout au long du cycle de développement, via notamment :
+\begin{itemize}
+    \item Des tests de validation sur le comportement nominal et aux limites du système ;
+    \item Des tests d'intégration sur le comportement nominal du programme {\appliC} ;
+    %Ligne à ajouter au second incrément, ne pas oublier les modifications de ponctuation.
+    \item Des tests unitaires nominaux sur certaines classes de l'application {\appliA} et sur certains modules du programme {\appliC}.
+\end{itemize}
+
+\subsubsection{Planification}
+
+La planification des tests système est réalisée par {\equipe}.
+
+\subsubsection{Conception}
+
+La conception des tests système est réalisée par {\equipe}.
+La conception des jeux de données de test est réalisée par {\equipe}.
+
+\subsubsection{Exécution}
+
+L'exécution des tests système est réalisée par {\equipe}.
+L'exécution des tests d'acceptation est réalisée par {\client}.
+
+\subsubsection{Bilan}
+
+{\equipe} rédige un bilan de test en fin de campagne de test système.
+
+\subsection{Documents de test et livrables}
+\label{sec:process:livrables}
+
+\noindent\begin{longtable}[c]{|l|c|}
+\hline
+{\bf Documentation} & {\bf Livrable à transmettre} \\
+\hline
+Plan de test & X \\
+\hline
+Dossier de test & X \\
+\hline
+Rapport de test & X \\
+\hline
+Matrice de conformité exigences et tests & X \\
+\hline
+Rapport d’anomalies & X \\
+\hline
+{\bf Données} & \\
+\hline
+Documents d'analyses partitionnelles et aux limites & \\
+\hline
+Jeux de données de tests & X\\
+\hline
+{\bf Automatisation des tests} & \\
+\hline
+Code de test & \\
+\hline
+\end{longtable}

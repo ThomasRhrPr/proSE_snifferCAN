@@ -1,0 +1,29 @@
+\paragraph{La classe ProxyLogger}
+
+\begin{minipage}
+    {\linewidth}
+    \centering
+    \includegraphics[width=0.65\linewidth]{../schemas/Conception_detaillee/classe_ProxyLogger.pdf}
+    \captionof{figure}{Diagramme de classe de ProxyLogger}
+\end{minipage}
+
+\subparagraph{Philosophie de conception \newline} 
+
+\medspace
+
+La classe ProxyLogger qui est dans le programme {\nomLogiciel} a pour rôle de simuler le comportement de la classe Logger présente dans l'application {\nomApplication}.
+
+\subparagraph{Description structurelle \newline}
+
+\medspace
+
+\textbf{Attributs :}
+
+N.A.
+
+\textbf{Services offerts :}
+
+\begin{itemize}
+    \item \textbf{setFrame(frame : Frame) : ErrorState\_e} --- Opération qui permet de fournir les trames sniffées au Logger.
+    \item \textbf{encodeMessage(frame : Frame, message : String) : ErrorState\_e} --- Opération qui permet d'encoder une trame en une chaîne de caractères.
+\end{itemize}

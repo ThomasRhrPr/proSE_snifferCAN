@@ -1,0 +1,668 @@
+<head></head>
+<body></body>
+<script>
+	const model =
+		{
+			name: "Passerelle_CAN",
+			classes: String.raw`
+				class GUI <<active>>{
+					start_CANdroid()
+					- currentIdScreen : IdScreen
+					addObject()
+					select(id_element : IdElement)
+					unselect(id_element : IdElement)
+					openObjectMenu(id_element : IdElement)
+					writeFrame(frame : String)
+					writeObjectName(object : string)
+					saveFrame()
+					startSendFrame()
+					stopSendFrame()
+					cleanSniffer()
+					exportSniffer()
+					pauseSniffer()
+					resumeSniffer()
+					backToTopSniffer()
+					delete()
+					closeObjectMenu(id_element : IdElement)
+					startReconnection()
+					- displayScreen(idScreen : IdScreen)
+					acceptRequest(idScreen : IdScreen)
+					refuseRequest(idScreen : IdScreen)
+					setAvailabilityNetwork()
+					notifyNewFrame(number : int)
+					setSendingState()	
+					writeFrequency(frequency : int)
+					- saveNewFrame(id_element : IdElement) : String
+					stop_CANdroid()
+				}
+				class UI <<active>>{
+					start()
+					- signalState(state : State)
+					stop()
+				}
+				class Dealer <<entity>>{
+					
+					loadObject()
+					saveObject()
+					getListObject() : Id_object
+					getObject(id_element : IdElement) : object
+					getMaxIdObject() : integer
+					setFrameToSend()
+					deleteArticles()
+				}
+				class Logger <<entity>> {
+					
+					setFrame(frame : Frame)
+					getFrame() : Frame
+					clearAll()
+					save()
+				}
+				class Object {
+					- name : String
+					- id : int
+					- myFrames : Frame[*]
+					getFrame() : Frame
+					addFrame(frame : String)
+				}
+				class Frame {
+					- id : uint32_t
+					- size : uint8_t
+					- data : uint8_t[8]
+					- serverMode : ServerMode_e
+					setSenderMode(id_element : IdElement)
+				}
+				class Sniffer{
+					
+					startListenning()
+					- receiveFrame(frame : Frame)
+					stopListenning()
+				}
+				class Network {
+					
+					askAvailabilityNetwork()
+				}
+				class Basket {
+					
+					addElement(id_element : IdElement)
+					removeElement(id_element : IdElement)
+					getBasket() : IdElement[*]
+				}
+				class Sender <<active>> {
+					
+					-send()
+					askSendingState()
+				}
+				GUI  -->  Dealer
+				GUI  -->  Network
+				GUI  -->  Basket
+				GUI  <-->  Logger
+				GUI  <-->  Sender
+				GUI  <-->  Sniffer
+				Sniffer  -->  Logger
+				Dealer  -->  Object
+				Dealer  -->  Frame
+				Dealer --> Basket
+				Object  -->  Frame
+				UI  -->  Sniffer
+
+				enum IdScreen {
+					MAIN_SCREEN
+					ADD_OBJECT_SCREEN
+					STOP_SEND_SCREEN
+					ASK_RECONNECTION_SCREEN
+					FAIL_ADD_OBJECT_SCREEN
+					FAIL_WRITING_FRAME_SCREEN
+					FRAME_SENDING_MODE_SCREEN
+					DELETE_ELEMENT_SCREEN
+				}
+				enum State {
+					TODO
+				}
+			`,
+			objects: [
+				{	
+					name: "TableauDeBord",
+				},
+				{
+					name: "Utilisateur",
+					isActor: true,
+					features: String.raw`
+					`,
+				},
+				{
+					name: "gui",
+					class: "GUI",
+					isActor: false,
+					behavior: String.raw`
+						state "TODO" as TODO {
+						}
+						[*] -> TODO as "init2TODO_1" :    /
+					`,
+				},
+				{
+					name: "logger",
+					class: "Logger",
+					isActor: false,
+					stereotypes: [
+						"entity",
+					],
+				},
+				{
+					name: "dealer",
+					class: "Dealer",
+					stereotypes: [
+						"entity",
+					],
+				},
+				{
+					name: "object",
+					class: "Object",
+				},
+				{
+					name: "frame",
+					class: "Frame",
+				},
+				{
+					name: "network",
+					class: "Network",
+					isActor: false,
+				},
+				{
+					name: "basket",
+					class: "Basket",
+					isActor: false,
+				},
+				{
+					name: "sniffer",
+					class: "Sniffer",
+					isActor: false,
+				},
+				{
+					name: "sender",
+					class: "Sender",
+					isActor: false,
+					behavior: String.raw`
+						state "TODO" as TODO {
+						}
+						[*] -> TODO as "init2TODO_1" :    /
+					`,
+				},
+				{
+					name: "ui",
+					class: "UI",
+					isActor: false,
+				},
+			],
+			connectorByName: {
+				C1: {
+					ends: [
+						"gui",
+						"logger",
+					],
+					possibleMessages: {
+						forward: [
+							"getFrame()",
+							"clearAll()",
+							"save()",
+						],
+						reverse: [
+							"notifyNewFrame()",
+						],
+					},
+				},
+				C2: {
+					ends: [
+						"gui",
+						"dealer",
+					],
+					possibleMessages: {
+						forward: [
+							"setFrameToSend()",
+							"loadObject()",
+							"saveObject()",
+							"getListObject() : Id_object[*]",
+							"getObject(id_element : IdElement) : object",
+							"getMaxIdObject() : integer",
+							"saveNewFrame(id_element : IdElement) : String",
+							"setFrameToSend()",
+							"setSendingState()",
+							"deleteArticles()",
+						],
+					},
+				},
+				C3: {
+					ends: [
+						"gui",
+						"network",
+					],
+					possibleMessages: {
+						forward: [
+							"askAvailabilityNetwork()",
+						],
+						reverse: [
+							"setAvailabilityNetwork()",
+						],
+					},
+				},
+				C4: {
+					ends: [
+						"dealer",
+						"object",
+					],
+					possibleMessages: {
+						forward: [
+							"addFrame(frame : String)",
+							"getFrame()",
+						],
+					},
+				},
+				C5: {
+					ends: [
+						"gui",
+						"basket",
+					],
+					possibleMessages: {
+						forward: [
+							"addElement(id_element : IdElement)",
+							"removeElement(id_element : IdElement)",
+							"getBasket()"
+						],
+					},
+				},
+				C7: {
+					ends: [
+						"logger",
+						"sniffer",
+					],
+					possibleMessages: {
+						reverse: [
+							"setFrame(frame : Frame)",
+						],
+					},
+				},
+				C8: {
+					ends: [
+						"frame",
+						"object",
+					],
+					possibleMessages: {
+						reverse: [
+							"setSenderMode(id_element : IdElement)",
+						],
+					},
+				},
+				C9: {
+					ends: [
+						"gui",
+						"sender",
+					],
+					possibleMessages: {
+						forward: [
+							"askSendingState()",
+						],
+						reverse: [
+							"setSendingState()",
+						],
+					},
+				},
+				C10: {
+					ends: [
+						"Utilisateur",
+						"gui",
+					],
+					possibleMessages: {
+						forward: [
+							"start_CANdroid()",
+							"addObject()",
+							"select(id_element : IdElement)",
+							"unselect(id_element : IdElement)",
+							"openObjectMenu(id_element : IdElement)",
+							"writeFrame(frame : String)",
+							"saveFrame()",
+							"startSendFrame()",
+							"stopSendFrame()",
+							"cleanSniffer()",
+							"exportSniffer()",
+							"pauseSniffer()",
+							"resumeSniffer()",
+							"backToTopSniffer()",
+							"delete()",
+							"closeObjectMenu(id_element : IdElement)",
+							"startReconnection()",
+							"acceptRequest(idScreen : IdScreen)",
+							"refuseRequest(idScreen : IdScreen)",
+							"setSenderMode()",
+							"writeFrequency(frequency : int)",
+							"stop_CANdroid()",
+						],
+					},
+				},
+				C11: {
+					ends: [
+						"Utilisateur",
+						"ui",
+					],
+					possibleMessages: {
+						forward: [
+							"start()",
+							"stop()",
+						],
+					},
+				},
+				C12: {
+					ends: [
+						"ui",
+						"sniffer",
+					],
+					possibleMessages: {
+						forward: [
+							"startListenning()",
+							"stopListenning()"
+						],
+					},
+				},
+				C13: {
+					ends: [
+						"basket",
+						"dealer",
+					],
+					possibleMessages: {
+						reverse: [
+							"getBasket()",
+						],
+					},
+				},
+				C14: {
+					ends: [
+						"TableauDeBord",
+						"sniffer",
+					],
+					possibleMessages: {
+					},
+				},
+				C15: {
+					ends: [
+						"TableauDeBord",
+						"sender",
+					],
+					possibleMessages: {
+					},
+				},
+			},
+			interactions: {
+				AddObjects: String.raw`
+					actor Utilisateur
+					participant gui
+					participant logger
+					participant dealer
+					participant object
+					participant frame
+					participant network
+					participant basket
+					participant sniffer
+					participant sender
+					participant ui
+					e0 : Utilisateur -? gui : addObject()
+					accept e0
+					e2 : gui -? Utilisateur : displayScreen(id_element : IdElement)
+					accept e2
+					e4 : Utilisateur -? gui : acceptRequest(idScreen : IdScreen)
+					accept e4
+					e6 : gui -? dealer : saveObject()
+					accept e6
+					e8 : gui -? Utilisateur : displayScreen(id_element : IdElement)
+					accept e8
+				`,
+				DeleteElement: String.raw`
+					actor Utilisateur
+					participant gui
+					participant logger
+					participant dealer
+					participant object
+					participant frame
+					participant network
+					participant basket
+					participant sniffer
+					participant sender
+					participant ui
+					e0 : Utilisateur -? gui : select(id_element : IdElement)
+					accept e0
+					e2 : gui -? basket : addElement(id_element : IdElement)
+					accept e2
+					e4 : gui -? Utilisateur : displayScreen(idScreen : IdScreen)
+					accept e4
+					e6 : Utilisateur -? gui : delete()
+					accept e6
+					e8 : gui -? dealer : deleteArticles()
+					accept e8
+					e10 : gui -? Utilisateur : displayScreen(idScreen : IdScreen)
+					accept e10
+				`,
+				Demarrer: String.raw`
+					actor Utilisateur
+					participant gui
+					participant logger
+					participant dealer
+					participant object
+					participant frame
+					participant network
+					participant basket
+					participant sniffer
+					participant sender
+					participant ui
+					e0 : Utilisateur -? gui : start()
+					accept e0
+					e2 : gui -? dealer : loadObject()
+					accept e2
+					e4 : gui -? Utilisateur : displayScreen(id_element : IdElement)
+					accept e4
+					e6 : gui -? network : askAvailabilityNetwork()
+					accept e6
+					e8 : network -? gui : setAvailabilityNetwork()
+					accept e8
+					e10 : gui -? Utilisateur : displayScreen(id_element : IdElement)
+					accept e10
+				`,
+				InteractSniffer: String.raw`
+					actor Utilisateur
+					participant gui
+					participant logger
+					participant dealer
+					participant object
+					participant frame
+					participant network
+					participant basket
+					participant sniffer
+					participant sender
+					participant ui
+					e0 : Utilisateur -? gui : backToTopSniffer()
+					accept e0
+					e2 : gui -? Utilisateur : displayScreen(idScreen : IdScreen)
+					accept e2
+					e4 : Utilisateur -? gui : cleanSniffer()
+					accept e4
+				`,
+				ReceiveFrame: String.raw`
+					actor Utilisateur
+					participant gui
+					participant logger
+					participant dealer
+					participant object
+					participant frame
+					participant network
+					participant basket
+					participant sniffer
+					participant sender
+					participant ui
+					e0 : sniffer -? sniffer : receiveFrame(frame)
+					accept e0
+					e2 : sniffer -? logger : setFrame(frame : Frame)
+					accept e2
+					e4 : logger -? gui : notifyNewFrame()
+					accept e4
+					e6 : gui -? Utilisateur : displayScreen(idScreen : IdScreen)
+					accept e6
+				`,
+				Reconnection: String.raw`
+					actor Utilisateur
+					participant gui
+					participant logger
+					participant dealer
+					participant object
+					participant frame
+					participant network
+					participant basket
+					participant sniffer
+					participant sender
+					participant ui
+					e0 : Utilisateur -? gui : startReconnection()
+					accept e0
+					e2 : gui -? Utilisateur : displayScreen(idScreen : IdScreen)
+					accept e2
+					e4 : Utilisateur -? gui : acceptRequest(idScreen : IdScreen)
+					accept e4
+					e6 : gui -? network : askAvailabilityNetwork()
+					accept e6
+					e8 : gui -? Utilisateur : displayScreen(idScreen : IdScreen)
+					accept e8
+					e10 : network -? gui : setAvailabilityNetwork()
+					accept e10
+					e12 : gui -? Utilisateur : displayScreen(idScreen : IdScreen)
+					accept e12
+				`,
+				SaveFrame: String.raw`
+					actor Utilisateur
+					participant gui
+					participant logger
+					participant dealer
+					participant object
+					participant frame
+					participant network
+					participant basket
+					participant sniffer
+					participant sender
+					participant ui
+					e0 : Utilisateur -? gui : openObjectMenu(id_element : IdElement)
+					accept e0
+					e2 : gui -? gui : displayScreen(MAIN_SCREEN)
+					accept e2
+					e4 : Utilisateur -? gui : writeframe()
+					accept e4
+					e6 : Utilisateur -? gui : saveFrame()
+					accept e6
+					e8 : gui -? gui : displayScreen(FRAME_SENDING_MODE_SCREEN)
+					accept e8
+					e10 : Utilisateur -? gui : acceptRequest(idScreen : IdScreen)
+					accept e10
+					e12 : gui -? dealer : saveNewFrame(id_element : IdElement)
+					accept e12
+					e14 : dealer -? object : addFrame(frame : String)
+					accept e14
+					e16 : object -? frame : setSenderMode(id_element : IdElement)
+					accept e16
+					e18 : gui -? gui : displayScreen(MAIN_SCREEN)
+					accept e18
+				`,
+				SendFrame: String.raw`
+					actor Utilisateur
+					participant gui
+					participant logger
+					participant dealer
+					participant object
+					participant frame
+					participant network
+					participant basket
+					participant sniffer
+					participant sender
+					participant ui
+					e0 : Utilisateur -? gui : openObjectMenu(id_element : IdElement)
+					accept e0
+					e2 : gui -? gui : displayScreen(MAIN_SCREEN)
+					accept e2
+					e4 : Utilisateur -? gui : select(id_element : IdElement)
+					accept e4
+					e6 : gui -? basket : addElement(id_element : IdElement)
+					accept e6
+					e8 : gui -? gui : displayScreen(MAIN_SCREEN)
+					accept e8
+					e10 : Utilisateur -? gui : startSendFrame()
+					accept e10
+					e12 : gui -? sender : askSendingState()
+					accept e12
+					e14 : sender -? sender : send()
+					accept e14
+					e16 : sender -? gui : setSendingState()
+					accept e16
+					e18 : gui -? gui : displayScreen(MAIN_SCREEN)
+					accept e18
+				`,
+				StopSendFrame: String.raw`
+					actor Utilisateur
+					participant gui
+					participant logger
+					participant dealer
+					participant object
+					participant frame
+					participant network
+					participant basket
+					participant sniffer
+					participant sender
+					participant ui
+					e0 : Utilisateur -? gui : stopSendFrame()
+					accept e0
+					e2 : gui -? Utilisateur : displayScreen(idScreen : IdScreen)
+					accept e2
+					e4 : Utilisateur -? gui : acceptRequest(idScreen : IdScreen)
+					accept e4
+					e6 : gui -? sender : askSendingState()
+					accept e6
+					e8 : sender -? gui : setSendingState()
+					accept e8
+					e10 : gui -? Utilisateur : displayScreen(idScreen : IdScreen)
+					accept e10
+				`,
+			},
+			settings: {
+				display: {
+					hideLinks: false,
+					hideClasses: false,
+					hideOperations: false,
+					hideMethods: false,
+					showPorts: false,
+					showEndNames: false,
+					hideStateMachines: true,
+					hideOuterSMBoxes: true,
+					showExplicitSM: false,
+					hideStates: false,
+					showPseudostateInvariants: false,
+					hideSets: false,
+					showTransitions: false,
+				},
+				semantics: {
+					fireInitialTransitions: true,
+					autoFireAfterChoice: true,
+					autoReceiveDisabled: false,
+					considerGuardsTrue: true,
+					checkEvents: false,
+					keepOneMessagePerTrigger: true,
+					enableEventPools: true,
+					matchFirst: true,
+					symbolicValues: false,
+					reactiveSystem: false,
+				},
+				interface: {
+					disableModelSelection: false,
+					disableObjectSelection: false,
+					disableDoc: false,
+					disableSettings: false,
+					disableEdit: false,
+					hideStateMachines: true,
+					historyType: "sequence",
+				},
+			},
+		}
+	;
+	document.write(`
+		<iframe width="100%" height="100%" src='http://172.24.2.1/AnimUML.html#${encodeURIComponent(JSON.stringify(model)).replace(/'/g, '%27')}'></iframe>
+	`);
+</script>

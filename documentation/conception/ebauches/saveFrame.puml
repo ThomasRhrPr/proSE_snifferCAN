@@ -1,0 +1,35 @@
+
+@startuml
+actor Utilisateur
+participant gui
+participant logger
+participant dealer
+participant object
+participant frame
+participant network
+participant basket
+participant sniffer
+participant sender
+participant ui
+Utilisateur -> gui : openObjectMenu(id_element : IdElement)
+
+gui -> gui : displayScreen(PRINCIPAL_SCREEN)
+
+Utilisateur -> gui : writeframe ()
+
+Utilisateur -> gui : saveFrame()
+
+gui -> gui : displayScreen(FRAME_SENDING_MODE_SCREEN)
+
+Utilisateur -> gui : acceptRequest(idScreen : IdScreen)
+
+gui -> dealer : saveNewFrame(id_element : IdElement)
+
+dealer -> object : addFrame(frame : String)
+
+object -> frame : setSenderMode(id_element : IdElement)
+
+gui -> gui : displayScreen(PRINCIPAL_SCREEN)
+
+
+@enduml

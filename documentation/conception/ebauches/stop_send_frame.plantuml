@@ -1,0 +1,30 @@
+@startuml
+
+actor Utilisateur
+participant gui
+participant logger
+participant dealer
+participant object
+participant frame
+participant network
+participant basket
+participant sniffer
+participant sender
+participant ui
+
+Utilisateur -> gui : stopSendFrame()
+activate gui
+gui -> gui : displayScreen(STOP_SEND_SCREEN)
+gui --> Utilisateur
+deactivate gui
+Utilisateur -> gui : acceptRequest(STOP_SEND_SCREEN)
+activate gui
+gui -> sender : askSendingState()
+activate sender
+sender -> gui : setSendingState()
+deactivate sender
+gui -> gui : displayScreen(STOP_SEND_SCREEN)
+gui --> Utilisateur
+deactivate gui
+
+@enduml

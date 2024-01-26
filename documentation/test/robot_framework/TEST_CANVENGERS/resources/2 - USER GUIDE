@@ -1,0 +1,50 @@
+
+-------
+PyCharm
+-------
+
+1) Lancer PyCharm :
+
+# ./<path>/<to>/pycharm-community-2022.3.3/bin/pycharm.sh
+
+2) Ouvrir le projet exemple (Chat) :
+
+[] Open
+
+Open File or Project : (sélectionner) /<path>/<to>/TV_Chat.etu.0 
+[OK]
+
+3) Configurer le lancement des tests :
+
+(click droit) chat_test_CU-Sc.etu.0.robot > Run Robot Test Suite > New Configuration
+
+Python interpreter : Python 3.x
+Onglet [Output] : Output directory : report
+
+cliquer sur la disquette (en haut à gauche) : Save Configuration
+[OK]
+
+File > Settings... > Tools > Robot Runner Settings :
+chat_test_CU-Sc.etu.0 : cocher [x] Test Suite
+[OK]
+
+4) Configuration du lancement des tests :
+
+cf. resources/android/chat_test_CU-Sc.etu.0.resource
+cf. chat_test_CU-Sc.etu.0.robot
+
+
+X) Création d'un nouveau projet :
+
+[+] New Project
+
+Location : /home/<login>/<path>/<to>/<project_name>
+
+(x) Previous configured interpreter [...]
+	menu "System Interpreter" > Interpreter: /usr/bin/python3.<x> > [OK]
+
+(décocher) :
+[ ] Create a main.py welcom script 
+
+[Create]
+

@@ -1,0 +1,24 @@
+\paragraph{Côté CANdroid}
+
+\medspace
+
+\begin{minipage}
+    \textwidth
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Tâches & ConnectionCANdroid & ProtocolCANdroid & DispatcherCANdroid \\
+        \hline
+        GUI & & &\\
+        \hline
+        Interface DAO & & &\\
+        \hline
+        CommunicationCANdroid & X & X & X \\
+        \hline
+    \end{tabular}
+    \captionof{table}{Accès concurrents côté CANdroid}
+\end{minipage}
+
+\medspace
+
+\textbf{Analyse :} GUI est considéré ici en tant que package car il correspond à l'interface dans sa globalité. Il n'y a pas de potentiels accès concurrents car uniquement CommunicationCANdroid peut accéder aux opérations liées à la connexion. L'interface ne peut pas poser de potentiels accès concurrents car l'appel des opérations de l'interface se font via un ExecutorService, qui va s'assurer de ne pas bloquer le thread principal. De son coté, GUI va être utilisé par l'UI Thread et donc a son propre thread et ne peut pas poser de problèmes d'accès concurrents. 

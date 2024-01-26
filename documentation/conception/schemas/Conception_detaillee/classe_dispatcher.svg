@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="98px" preserveAspectRatio="none" style="width:417px;height:98px;" version="1.1" viewBox="0 0 417 98" width="417px" zoomAndPan="magnify"><defs><filter height="300%" id="f1fn6dqwlvlae9" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[0c7624888451d2039aaef18036130ed9]
+class Dispatcher--><rect fill="#FEFECE" filter="url(#f1fn6dqwlvlae9)" height="80.7109" id="Dispatcher" style="stroke: #A80036; stroke-width: 1.5;" width="399" x="7" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="51" x="181" y="23.1387">«active»</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="63" x="175" y="37.1074">«medium»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="68" x="172.5" y="51.0762">Dispatcher</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="8" x2="405" y1="58.9063" y2="58.9063"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="8" x2="405" y1="66.9063" y2="66.9063"/><rect fill="#F24D5C" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="74.9063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="373" x="27" y="81.1167">decodeMessage(message : String, frame : Frame) : ErrorState_e</text><!--MD5=[8f9b5b6e31979a966444949760722535]
+@startuml
+
+hide circle
+
+class Dispatcher <<active>> <<medium>> {
+            - decodeMessage(message : String, frame : Frame) : ErrorState_e
+}
+
+@enduml
+
+PlantUML version 1.2020.02(Sun Mar 01 11:22:07 CET 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.19+7-post-Ubuntu-0ubuntu122.04.1
+Operating System: Linux
+Default Encoding: UTF-8
+Language: fr
+Country: FR
+--></g></svg>

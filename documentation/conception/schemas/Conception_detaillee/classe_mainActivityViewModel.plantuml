@@ -1,0 +1,13 @@
+@startuml
+
+class MainActivityViewModel {
+    + getStateConnection(): MutableLiveData<Bool>
+    + getSendMode(): MutableLiveData<Bool>
+    + getPauseMode(): MutableLiveData<Bool>
+    + updateSendMode(): void
+    + updateStateConnection(): void
+    + updatePauseMode(): void
+
+}
+
+@enduml

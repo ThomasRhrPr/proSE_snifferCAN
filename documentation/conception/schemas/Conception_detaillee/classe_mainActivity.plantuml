@@ -1,0 +1,24 @@
+@startuml
+
+    class MainActivity extends AppCompatActivity  {
+        +setNetworkAvailability(networkState : NetworkState)
+        +setSendingState(sendingState : SendingState)
+        +onClickSetConnection(view View) : void
+        +onClickSend(view View) : void
+        +onClickStartReceive(view View) : void
+        +onDestroy() : void
+        +onClickSeeReceive(view View) : void
+        +onClickDisconnect(view View) : void
+        +onClickAddFrame(view View) : void
+        +onClickAddObject(view View) : void
+        +onClickDelete(view View) : void
+        +onClickPlayPause(view View) : void
+        +onClickBackToTop(view View) : void
+        +onCLickExportSniffer(view View) : void
+        +onClickCleanSniffer(view View) : void
+        -getFrame () : String
+        -setFrame (frame : String) : void
+
+
+    }
+@enduml

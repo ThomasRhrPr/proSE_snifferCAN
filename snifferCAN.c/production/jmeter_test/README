@@ -1,0 +1,5 @@
+To build the custom class needed for the test plan, simply type 'make' in your favorite terminal.
+Make sure to change the absolute jmeter path in the Makefile
+
+To launch jmeter with the custom class, simply type "./customLaunch.sh"
+Make sure to change the absolute jmeter path the the customLaunch.sh file

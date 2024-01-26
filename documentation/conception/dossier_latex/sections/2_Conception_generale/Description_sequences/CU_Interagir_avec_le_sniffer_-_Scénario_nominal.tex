@@ -1,0 +1,9 @@
+\\
+Utilisateur peut interagir avec le sniffer et réaliser plusieurs actions : 
+\begin{itemize}
+    \item Revenir en haut du sniffer pour voir apparaître les nouvelles trames. 
+    \item Nettoyer le sniffer c'est-à-dire supprimer toutes les trames présentes dans le sniffer. 
+    \item Lancer ou mettre en pause la réception des trames. 
+    \item Exporter les trames dans un fichier log en dehors de l'application {\nomApplication}. Cette action est uniquement possible si Utilisateur a mis en pause la réception des trames.
+\end{itemize}
+De plus, la \autoref{fig:inter-CU_Interagir_avec_le_sniffer_-_Scénario_nominal} indique un ordre spécifique pour les actions à effectuer, à savoir l'ordre du CU "Interagir avec le sniffer" du dossier de spécification [\hyperref[SPEC]{dossier\_de\_specification\_SPEC\_B1\_2024}]. Cependant, dans la version comprenant les variantes, il est indiqué que les actions peuvent être effectuées dans l'ordre souhaité, à l'exception de l'exportation des trames, qui doit être réalisée après la mise en pause du sniffer. En d'autres termes, Utilisateur a la liberté d'effectuer les actions dans l'ordre qui lui convient, excepté pour l'exportation des trames qui nécessite une mise en pause du sniffer au préalable.

@@ -1,0 +1,26 @@
+@startuml
+
+interface DAO
+{
++ addObject(object : Object) : void
++ addFrameOnly(frame : Frame) : void
++ deleteAllObjects() : void
++ deleteAllFrames() : void
++ deleteSpecificObject(name : String) : void
++ deleteSpecificObject(idFrame : String, size : int, data : String, periodicity : int, idObject : int) : void
++ deleteAllFramesInObject(idObject : int) : void
++ getAllObjects() : List<Object>
++ getObjectById(idObject : int) : Object
++ getObjectByName(name : String) : Object
++ getFramesByIdFrame(idFrame : String) : List<Frame>
++ getFramesBySize(size : int) : List<Frame>
++ getFramesByData(data : String) : List<Frame>
++ getFramesByPeriodicity(periodicity : String) : List<Frame>
++ getFramesByObjectId(int idObject) : List<Frame>
++ addFrame(frame : Frame, object : Object) : void
++ deleteAll() : void
++ removeFrame(frame : Object) : void
++ removeObject(object : Object) : void
+}
+
+@enduml

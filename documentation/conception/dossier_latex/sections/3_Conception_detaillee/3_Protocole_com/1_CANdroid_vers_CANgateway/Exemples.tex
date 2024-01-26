@@ -1,0 +1,70 @@
+\paragraph{Exemples}
+\label{sec:exemple-CANdroidToCANgateway}
+
+Pour rappel, nous appliquons un protocole textuel, les données envoyées sont sous la forme de chaîne de caractères.
+
+\subparagraph{Envoyer des trames \newline}
+
+\medspace
+
+Les échanges présentés dans le diagramme de la \autoref{fig:inter-CU_Envoyer_des_trames_-_Scénario_nominal} représente un envoi de donnée de l'application {\nomApplication} vers le programme {\nomLogiciel} via le protocole de communication décrit dans le \autoref{sec:formalisation-protocole-CANdroidToCANgateway}. Cette donnée correspond à une séquence de trame et peut être de la forme suivante :\\
+
+\begin{minipage}
+    \textwidth
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        nb=2\textbackslash n & \#19B\$6@00000E000000/1000\textbackslash n & \#19B\$6@000007000000/0\textbackslash n \\
+        \hline
+    \end{tabular}
+\end{minipage}
+
+\medspace
+
+La première trame est envoyée toutes les secondes, et permet d'ouvrir la portière de la porte avant-gauche sur le Simulateur ICSim. La seconde trame est envoyée une seule fois et permet d'ouvrir la portière arrière droite sur le Simulateur ICSim.
+
+Ensuite, une seconde donnée est envoyée, correspondant à une demande d'état du Mode Envoi. Elle est de la forme suivante :\\
+
+\begin{minipage}
+    \textwidth
+    \centering
+    \begin{tabular}{|c|}
+        \hline
+        ? \textbackslash n\\
+        \hline
+    \end{tabular}
+\end{minipage}
+
+\medspace
+
+\subparagraph{Arrêter d'envoyer des trames \newline}
+
+\medspace
+
+Les échanges présentés dans le diagramme de la \autoref{fig:inter-CU_Arrêter_envoi_des_trames_-_Scénario_nominal} représente un envoi de données de l'application {\nomApplication} vers le programme {\nomLogiciel} via le protocole de communication décrit dans le \autoref{sec:formalisation-protocole-CANdroidToCANgateway}. Ces données correspondent à une demande d'arrêt d'envoi de trames, puis une demande d'état du mode Envoi. Elles sont de la forme suivante  :\\
+
+\begin{minipage}
+    \textwidth
+    \centering
+    \begin{tabular}{|c|}
+        \hline
+        !\textbackslash n\\
+        \hline
+    \end{tabular}
+\end{minipage}
+
+\medspace
+
+Puis ce message :
+
+\medspace
+
+\begin{minipage}
+    \textwidth
+    \centering
+    \begin{tabular}{|c|}
+        \hline
+        ?\textbackslash n\\
+        \hline
+    \end{tabular}
+\end{minipage}

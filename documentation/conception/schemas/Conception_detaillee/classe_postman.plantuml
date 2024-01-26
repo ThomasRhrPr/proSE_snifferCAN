@@ -1,0 +1,9 @@
+@startuml
+
+hide circle
+
+class Postman <<active>> <<medium>> {
+    !includesub diag_classe_CANgateway.plantuml!Postman
+}
+
+@enduml

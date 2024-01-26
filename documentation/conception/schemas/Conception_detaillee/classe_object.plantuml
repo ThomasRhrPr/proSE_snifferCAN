@@ -1,0 +1,9 @@
+@startuml
+
+class Object {
+
+    + id : int
+    + name : String
+}
+
+@enduml

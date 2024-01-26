@@ -1,0 +1,100 @@
+% ----------------------------------------------
+% CU ENVOYER DES TRAMES
+% ----------------------------------------------
+\newpage
+\subsubsection{CU Envoyer des trames}
+\paragraph{Description graphique}
+Voir figure \ref{schema_cu_strat}.
+
+\paragraph{Description textuelle}
+\medskip
+
+\begin{longtable}[l]{|p{3cm}|p{11.7cm}|}
+    \hline
+    
+        Titre & Envoyer des trames.\\
+    \hline
+    
+        Résumé & Utilisateur utilise l'application {\nomApplication} afin d'envoyer une trame CAN au Tableau de Bord. \\
+    \hline
+    
+        Portée & SàE.\\
+    \hline
+    
+        Niveau & Utilisateur\\
+    \hline
+    
+        Acteurs directs & Utilisateur.\\
+    \hline 
+    
+        Acteurs indirects & N.A. \\
+    \hline
+    
+        Préconditions & 
+        \begin{itemize}
+            \item Le SàE est démarré.
+            \item Un ou plusieurs objets existent.
+            \item Une ou plusieurs trames existent.
+            \item L'application {\nomApplication} est connectée au programme \newline {\nomLogiciel}.
+            \item La Raspberry Pi est connectée au bus CAN.
+            \item Tableau de Bord est connecté au bus CAN.
+        \end{itemize}
+        \\
+    \hline
+    
+        Garanties \newline minimales & N.A. \\
+    \hline
+    
+        Garanties en cas de succès & 
+        \begin{itemize}
+            \item La trame CAN est envoyée à Tableau de Bord.
+        \end{itemize}
+         \\
+    \hline
+    
+        Scénario nominal & 
+        \begin{enumerate}
+            \item Utilisateur déroule le menu d'un objet.
+            \item L'application {\nomApplication} met à jour EcranPrincipal.
+            \item Utilisateur sélectionne une trame.
+            \item L'application {\nomApplication} met à jour EcranPrincipal.
+            \item Utilisateur demande à envoyer la trame.
+            \item Le SàE diffuse la trame sur le bus CAN.
+            \item L'application {\nomApplication} met à jour EcranPrincipal.
+        \end{enumerate}
+        \\
+    \hline
+        Variantes &     \newline
+        \textbf{1 [L'objet est déjà déplié]} \newline
+            1.a.1. Va en 3. \newline
+            \newline
+        \textbf{3 [Une trame est sélectionnée \& Utilisateur ne souhaite pas sélectionner de trames]} \newline
+            3.a.1. Va en 5. \newline
+            \newline
+        \textbf{3 [Aucune trame n'est sélectionnée \& Utilisateur ne souhaite pas sélectionner de trames]} \newline
+            3.b.1. Fin du CU. \newline
+            \newline
+        \textbf{5 [Utilisateur souhaite sélectionner plusieurs trames]} \newline
+            5.a.1. Va en 1. \newline
+            \newline
+        \textbf{5 [Utilisateur ne souhaite plus envoyer de trames]} \newline
+            5.b.1. Utilisateur désélectionne les trames grisées. \newline
+            5.b.2. L'application {\nomApplication} met à jour EcranPrincipal. \newline
+            5.b.3. Fin du CU. \newline
+            \newline
+        \textbf{5 [Utilisateur souhaite désélectionner une trame]}\newline
+            5.c.1. Utilisateur désélectionne une trame grisée. \newline
+            5.c.2. L'application {\nomApplication} met à jour EcranPrincipal. \newline
+            5.c.3. Va en 3. \newline
+            \newline
+        \textbf{6 [Une ou plusieurs trames sélectionnées sont paramétrées avec le Mode Envoi cyclique]} \newline
+            6.a.1. Le SàE commence l'envoi des trames sélectionnées sur le bus CAN. \newline
+            6.a.2. Va en 7. \newline
+        \\
+    \hline
+        Extensions &  N.A. \\
+     
+    \hline
+    Informations \newline complémentaires & N.A. \\
+    \hline
+\end{longtable}

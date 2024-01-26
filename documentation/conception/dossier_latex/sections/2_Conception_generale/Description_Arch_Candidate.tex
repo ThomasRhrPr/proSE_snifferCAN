@@ -1,0 +1,25 @@
+\\
+
+Il s'agit de la conception générale ; l'hypothèse d'un système matériel à ressources infinies est pour l'instant posée. 
+
+\begin{itemize}
+    \item Dans ce diagramme, on retrouve deux objets représentant des interfaces homme-machine : 
+    \begin{itemize}
+        \item \textit{ui}, permettant de démarrer ou arrêter le programme {\nomLogiciel} et d'informer Utilisateur du bon fonctionnement du programme 
+        \item \textit{gui}, permettant de démarrer et arrêter l'application {\nomApplication}. Il permet aussi à Utilisateur de réaliser divers actions et d'afficher les écrans (EcranPrincipal et Popup).
+    \end{itemize}
+
+    \item L'objet \textit{dealer} stocke et fournit à \textit{gui} les informations nécessaires à l'affichage des écrans. Il peut ajouter de nouveaux objets ou trames ou supprimer des éléments sélectionnés par Utilisateur et stockés dans \textit{basket}.
+
+    \item L'objet \textit{object} permet de stocker et récupérer les informations d'une instance d'un objet, tout comme l'objet \textit{frame} permettant de stocker et récupérer les informations d'une instance d'une trame.
+
+    \item L'objet \textit{basket} contient l'ensemble des objets et des trames sélectionnés par Utilisateur.
+
+    \item L'objet \textit{sender} permet d'envoyer les trames sélectionnées par Utilisateur et stockées dans \textit{basket}.
+
+    \item L'objet \textit{sniffer} permet de récupérer les trames reçues par le bus CAN et de les stocker dans l'objet \textit{logger}. 
+
+    \item L'objet \textit{logger} permet de stocker les trames reçues par le bus CAN et de notifier \textit{gui} qu'une nouvelle trame doit être affichée.
+
+    \item L'objet \textit{network} permet d'informer \textit{gui} de l'état de connexion entre l'application {\nomApplication} et le programme {\nomLogiciel}.
+\end{itemize}

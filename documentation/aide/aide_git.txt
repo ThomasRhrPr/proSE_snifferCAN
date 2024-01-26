@@ -1,0 +1,2 @@
+Liste des commandes GIT à utiliser pour le projet :
+

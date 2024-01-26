@@ -1,0 +1,79 @@
+\paragraph{Exemples}
+\label{sec:exemple-CANgatewayToCANdroid}
+
+Pour rappel, nous appliquons un protocole textuel, les données envoyées sont sous la forme de chaîne de caractères.
+
+
+\subparagraph{Recevoir des trames \newline}
+
+\medspace
+
+Les échanges présentés dans le diagramme de la \autoref{fig:inter-CU_Recevoir_des_trames_-_Scénario_nominal} représente un envoi de donnée du programme {\nomLogiciel} vers l'application {\nomApplication} via le protocole de communication décrit dans le \autoref{sec:formalisation-protocole-CANgatewayToCANdroid}. Cette donnée correspond à une trame et peut être de la forme suivante :\\
+
+\begin{minipage}
+    \textwidth
+    \centering
+    \begin{tabular}{|c|}
+        \hline
+        \textasciitilde{}frame\#19B\$6@00000E000000\textbackslash n\\
+        \hline
+    \end{tabular}
+\end{minipage}
+
+\medspace
+
+Cette trame permet d'ouvrir la porte avant-gauche de la portière sur le Simulateur ICSim.
+
+
+\subparagraph{Envoyer des trames \newline}
+
+\medspace
+
+Les échanges présentés dans le diagramme de la \autoref{fig:inter-CU_Envoyer_des_trames_-_Scénario_nominal} représente un envoi de donnée du programme {\nomLogiciel} vers l'application {\nomApplication} via le protocole de communication décrit dans le \autoref{sec:formalisation-protocole-CANgatewayToCANdroid}. Il y a deux données transmises lors d'un envoi de trames :
+\begin{itemize}
+    \item L'état du Mode Envoi ;
+    \item La trame envoyée.
+\end{itemize} 
+L'état du Mode Envoi est de la forme suivante :\\
+
+\begin{minipage}
+    \textwidth
+    \centering
+    \begin{tabular}{|c|}
+        \hline
+        \textasciitilde{}sendingState\#1\textbackslash n\\
+        \hline
+    \end{tabular}
+\end{minipage}
+
+\medspace
+
+La trame envoyée est de la forme suivante :\\
+
+\begin{minipage}
+    \textwidth
+    \centering
+    \begin{tabular}{|c|}
+        \hline
+        \textasciitilde{}frame\#19B\$6@00000E000000\textbackslash n\\
+        \hline
+    \end{tabular}
+\end{minipage}
+
+\medspace
+
+\subparagraph{Arrêter d'envoyer des trames \newline}
+
+\medspace
+
+Les échanges présentés dans le diagramme de la \autoref{fig:inter-CU_Arrêter_envoi_des_trames_-_Scénario_nominal} représente un envoi de donnée du programme {\nomLogiciel} vers l'application {\nomApplication} via le protole de communication décrit dans le \autoref{sec:formalisation-protocole-CANgatewayToCANdroid}. Cette donnée correspond à un état du Mode Envoi et est de la forme suivante :\\
+
+\begin{minipage}
+    \textwidth
+    \centering
+    \begin{tabular}{|c|}
+        \hline
+        \textasciitilde{}sendingState\#0\textbackslash n\\
+        \hline
+    \end{tabular}
+\end{minipage}

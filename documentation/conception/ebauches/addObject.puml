@@ -1,0 +1,46 @@
+@startuml addObject
+
+actor Utilisateur   as User   order 1
+participant gui     as GUI    order 2
+participant dealer  as Dealer order 3
+
+User   -> GUI       : addObject()
+activate GUI #FFBBBB
+GUI    -> Dealer    : getMaxIdObject()
+activate Dealer #FFBBBB
+Dealer --> GUI 
+deactivate Dealer
+GUI    -> GUI       : displayScreen(ADD_OBJECT_SCREEN)
+GUI    --> User 
+deactivate GUI
+
+User   -> GUI       : writeObjectName("Cligotant Droit")
+activate GUI #FFBBBB
+GUI    -> GUI       : displayScreen(ADD_OBJECT_SCREEN)
+GUI    --> User
+deactivate GUI
+
+
+User   -> GUI       : acceptRequest(ADD_OBJECT_SCREEN)
+activate GUI #FFBBBB
+GUI    -> Dealer    : saveObject()
+activate Dealer #FFBBBB
+Dealer -> Dealer       : getListObject()
+Dealer --> GUI
+deactivate Dealer
+
+alt accept new object
+GUI    -> GUI       : displayScreen(MAIN_SCREEN)
+
+else wrong name
+GUI    -> GUI       : displayScreen(FAIL_ADD_OBJECT_SCREEN)
+
+else cancel new object
+GUI    -> GUI       : displayScreen(MAIN_SCREEN)
+end
+
+GUI --> User
+deactivate GUI
+
+
+@enduml

@@ -1,0 +1,40 @@
+\section{Installation de Robot Framework}
+
+Afin d'exécuter des tests automatisés, nous vous proposons un tutoriel d'installation de PyCharm et Robot Framework.
+
+\subsection{Installation de PyCharm}
+
+Commencez par installer python, dans un terminal tapez : 
+\vspace{-1.8\baselineskip} 
+\begin{lstlisting}
+    sudo apt install python3
+    sudo apt install python3-pip
+\end{lstlisting}
+
+Téléchargez l'archive de PyCharm sur le site officiel : \href{https://www.jetbrains.com/fr-fr/pycharm/download/other.html}{Pycham}. Prenez la version 2022.3.3 (Community edition) pour votre OS. Désarchivez l'archive dans le dossier de votre choix.
+
+Téléchargez appium :
+\vspace{-1.8\baselineskip} 
+\begin{lstlisting}
+    sudo apt install npm
+    npm install appium
+\end{lstlisting}
+
+Téléchargez Robot Framework :
+\vspace{-1.8\baselineskip} 
+\begin{lstlisting}
+    pip install robotframework
+    pip install robotframework-appiumlibrar
+    pip install --force-reinstall -v "Appium-Python-Client==2.8.1"
+    pip install --force-reinstall -v "selenium==4.8.2"
+\end{lstlisting}
+
+\subsection{Configuration de PyCharm}
+
+Commencez par lancer PyCharm : 
+\vspace{-1.8\baselineskip} 
+\begin{lstlisting}
+    ./<path>/<to>/pycharm-community-2022.3.3/bin/pycharm.sh
+\end{lstlisting}
+
+Allez dans le menu File > Settings > Plugins, tapez "robot", installez "Robot Runner" et "IntelliBot \#patched". Redémarrez l'IDE.

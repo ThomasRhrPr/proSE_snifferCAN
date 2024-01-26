@@ -1,0 +1,9 @@
+@startuml
+
+hide circle
+
+class DriverCAN <<boundary>> {
+    !includesub diag_classe_CANgateway.plantuml!DriverCAN
+}
+
+@enduml

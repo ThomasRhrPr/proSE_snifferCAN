@@ -1,0 +1,35 @@
+@startuml reconnection
+
+actor Utilisateur   as User     order 1
+participant gui     as GUI      order 2
+participant network as Network  order 3 
+
+User    -> GUI      : startReconnection()
+activate GUI #FFBBBB
+GUI     -> GUI      : displayScreen(ASK_RECONNECTION_SCREEN)
+GUI     --> User
+deactivate GUI #FFBBBB
+
+alt accept reconnection
+User    -> GUI      : acceptRequest(ASK_RECONNECTION_SCREEN)
+activate GUI #FFBBBB
+GUI     -> GUI      : displayScreen(MAIN_SCREEN)
+' Modifier le logo de connexion sinon le Client ne peut pas savoir si la reconnexion a débuter.'
+GUI     -> Network  : askAvailibityNetwork()
+activate Network #FFBBBB
+Network -> GUI      : setAvailibityNetwork()
+deactivate Network #FFBBBB
+GUI     -> GUI      : displayScreen(MAIN_SCREEN)
+GUI     --> User
+deactivate GUI
+
+else cancel reconnection
+User    -> GUI      : refuseRequest(ASK_RECONNECTION_SCREEN)
+activate GUI #FFBBBB
+GUI     -> GUI      : displayScreen(MAIN_SCREEN)
+GUI     --> User
+deactivate GUI
+
+end 
+
+@enduml

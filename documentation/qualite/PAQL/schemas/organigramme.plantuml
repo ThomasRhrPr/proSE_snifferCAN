@@ -1,0 +1,21 @@
+@startwbs
+
+<style>
+node {
+HorizontalAlignment center
+}
+</style>
+
+*[#e24e31]:M. Théo BÉNARD
+Chef de projet (CdP);
+**[#bd7985]:M. Paul TRÉMOUREUX
+Responsable Qualité et Tests (RQT);
+**[#669ad3]:MME. Elisa DECLERCK
+Référente C;
+***[#669ad3]:M. Thomas ROCHER
+Développeur C;
+**[#94c147]:M.Gabriel MARQUETTE
+Référent Android;
+***[#94c147]:MME. Camille LENNE
+Développeuse Android;
+@endwbs

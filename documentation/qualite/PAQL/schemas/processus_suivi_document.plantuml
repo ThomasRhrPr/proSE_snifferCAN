@@ -1,0 +1,30 @@
+@startuml
+hide empty description
+
+state "En création" as creat
+creat : int X = 0;
+creat : int Y = 0;
+creat : int z = 0;
+state "En construction" as const
+state "Version finale\nEn attente de livraison" as attli
+state "Document livré au client" as final
+
+state const {
+state "En révision" as revis
+state "En attente de correction" as attco
+state "En attente de validation" as attva
+[*] --> revis : revision() \\ z+=1;
+revis --> revis : revision() \\ z+=1;
+revis --> attco : demandeRelecture();
+attco --> revis : relecture() \\ y+=1; z=0;
+attco --> attva: demandeValidation() \\ y+=1; z=0;
+attva --> revis : validation() \\ x+=1; y=0; z=0;
+attva --> revis : nonValidation();
+}
+
+[*] -> creat
+creat --> const
+const --> attli : x=2;
+attli --> final
+final -> [*]
+@enduml

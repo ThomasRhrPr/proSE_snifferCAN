@@ -1,0 +1,259 @@
+@startuml
+
+package CANdroid
+{
+    package GUI {
+
+        class MainActivityViewModel {
+            + getStateConnection(): MutableLiveData<Boolean>
+            + getSendMode(): MutableLiveData<Boolean>
+            + getPauseMode(): MutableLiveData<Boolean>
+            + updateSendMode(): void
+            + updateStateConnection(): void
+            + updatePauseMode(): void
+        }
+
+        class MainActivity
+        {
+            +onClickSetConnection(view View) : void
+            +onClickSend(view View) : void
+            +onClickStartReceive(view View) : void
+            +onDestroy() : void
+            +onClickSeeReceive(view View) : void
+            +onClickDisconnect(view View) : void
+            +onClickAddFrame(view View) : void
+            +onClickAddObject(view View) : void
+            +onClickDelete(view View) : void
+            +onClickPlayPause(view View) : void
+            +onClickBackToTop(view View) : void
+            +onCLickExportSniffer(view View) : void
+            +onClickCleanSniffer(view View) : void
+            -getFrame () : String
+            -setFrame (frame : String) : void
+        }
+
+        package Sniffer {
+            class Adapter extends RecyclerView.Adapter {
+                + onCreateViewHolder() : ViewHolder
+                + onBindViewHolder() : void
+                + setData(ArrayList<String> newData) : void
+                + getItemCount() : int
+            }
+
+                        
+            class RecyclerFragment extends Fragment {
+                + mettreAJourListe(ArrayList<String> nouvelleListe) : void
+            }
+        }
+
+
+    }
+
+    package Basket{
+        
+        class ObjectFragment extends Fragment{
+            - elements : IdElement[*]
+            +addElement (idElement : IdElement) : void
+            +removeElement(idElement : IdElement) : void
+            +clearAll() : void
+            +update () : void
+        }
+
+        class BasketAdapter extends Adapter{
+            +onBindViewHolder (ViewHolder holder, int position) : void
+            +getItemCount() : int
+            +bindRecyclerViewData(RecyclerView recyclerView, ArrayList<String> data) : void
+            +setData(ArrayList<String> newData) : void
+            +ViewHolder () : void
+        }
+    }
+
+    package Dealer{
+
+
+        package Datas { 
+
+            class Object {
+
+                + id : int
+                + name : String
+            }
+
+            class Frame
+            {
+                + id : int
+                + idFrame : String
+                + size : int
+                + data : String
+                + perioditicy : int
+                + idObject : int
+                + setIdObject(idObject : int) : void
+            }
+
+            interface DAO
+            {
+                + addObject(object : Object) : void
+                + addFrameOnly(frame : Frame) : void
+                + deleteAllObjects() : void
+                + deleteAllFrames() : void
+                + deleteSpecificObject(name : String) : void
+                + deleteSpecificFrame(idFrame : String, size : int, data : String, periodicity : int, idObject : int) : void
+                + deleteAllFramesInObject(idObject : int) : void
+                + getAllObjects() : List<Object>
+                + getObjectById(idObject : int) : Object
+                + getObjectByName(name : String) : Object
+                + getFramesByIdFrame(idFrame : String) : List<Frame>
+                + getFramesBySize(size : int) : List<Frame>
+                + getFramesByData(data : String) : List<Frame>
+                + getFramesByPeriodicity(periodicity : String) : List<Frame>
+                + getFramesByObjectId(int idObject) : List<Frame>
+                + addFrame(frame : Frame, object : Object) : void
+                + deleteAll() : void
+                + removeFrame(frame : Object) : void
+                + removeObject(object : Object) : void
+            }
+
+            abstract class BDD
+            {
+                {abstract} dao : DAO
+                + getInstance(context: Context): DataBase
+                - createDataBase(context: Context): DataBase
+            }
+
+        }
+    }
+
+    Frame -d-> Object
+    Object -d-> DAO
+    DAO -d-> BDD
+    BDD -d-> MainActivity
+
+
+    package Network {
+    package Observer {
+
+        Enum NetworkState
+        {
+            NETWORK_STATE_CONNECTED
+            NETWORK_STATE_NOT_CONNECTED
+        }
+
+        interface SocketListener
+        {
+            + onConnected() : void
+            + onNotConnected() : void
+            + getNetworkState() : NetworkState
+        }
+    }
+
+    package Client {
+
+        class ConnectionCANdroid 
+        {
+            + <<thread>> connect(ip : String, port : int) : void
+            + <<thread>> write(message : String) : void
+            + read() : String
+        }
+
+        class CommunicationCANdroid <<active>> extends Thread implements SocketListener
+        {
+            - receiveFrame() : void
+            + connectClient() : void
+            + disconnectClient() : void
+            + sendFrame(frame : String) : void
+        }
+
+
+        class ProtocolCANdroid {
+            {static} decodeMessage(message : String) : String
+        }
+
+        class DispatcherCANdroid {
+            + dispatch(frame : String ) : void
+        }
+
+    }
+
+    ProtocolCANdroid <-r- CommunicationCANdroid
+    ConnectionCANdroid <-u- CommunicationCANdroid
+    DispatcherCANdroid <-d- CommunicationCANdroid
+    NetworkState -d-> SocketListener
+    CommunicationCANdroid -[hidden]r-> SocketListener
+    }
+
+
+    package Logger {
+        class LogManager {
+            + getFrames(frame : String) : void
+            + clearAll() : void
+            + save() : void
+            + getInstance(context: Context): LogManager
+            + getThesaurus(): Thesaurus
+            + dicoFrameSent(frame: Frame): void
+            + setLoggerviewModel(viewModel: LogManagerViewModel): void
+            + log(message: String): void
+            - setFrames(frame: Frame): String[]
+            + getTime(): String
+            - updateTable(): String
+            - StringTableToString(stringTable: String[]): String
+        }
+
+        class FilesManager
+        {
+            + MAX_FRAMES: int
+            + createFiles(): void
+            + writeOnFiles(frame: String): void
+            + isMaxFramesReach(): bool
+            - getFileName(): String
+            - getLignes(file: File): int
+        }
+
+        class Thesaurus 
+        {
+            + addElements(frame: Frame): void
+            + removeElements(frame: Frame): void
+            + getObjectFromIdFrame(frame: Frame): Object
+            + getSize(): int
+            + searchFrame(idFrame: String, size: int, data: String): Frame
+        }
+
+        class LogManager 
+        {
+            + sortFrames(p_frame : String ): void
+            + createViewModel(): ViewModel
+        }
+
+        
+        class LogManagerViewModel 
+        {
+            + getLogData() : LiveData<String>
+            + setLogData(log : String) : void
+        }
+
+        FilesManager -> LogManager
+        LogManager -> LogManagerViewModel
+        Thesaurus -d-> LogManager
+        DispatcherCANdroid -u-> LogManager 
+        MainActivity --> DealerManager
+        DealerManager -u-> BDD
+
+
+        Adapter --> RecyclerFragment
+        RecyclerFragment --> MainActivity
+
+        BacktoTop --> MainActivity
+
+        MainActivity -u-> ObjectFragment
+
+    }
+
+MainActivity -u-> LogManagerViewModel
+MainActivityViewModel --> MainActivity
+BasketAdapter --> ObjectFragment
+
+
+
+}
+
+
+@enduml

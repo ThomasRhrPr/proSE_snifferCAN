@@ -1,0 +1,2342 @@
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.6.3)  13 JUN 2023 11:36
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**dossier_conception.tex
+(./dossier_conception.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count181
+\c@section=\count182
+\c@subsection=\count183
+\c@subsubsection=\count184
+\c@paragraph=\count185
+\c@subparagraph=\count186
+\c@figure=\count187
+\c@table=\count188
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2022/01/26 3.70 The Babel package
+\babel@savecnt=\count189
+\U@D=\dimen139
+\l@unhyphenated=\language5
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/xebabel.def
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def))
+\bbl@readstream=\read2
+\bbl@dirlevel=\count190
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-french/french.ldf
+Language: french 2021/07/20 v3.5m French support from the babel system
+Package babel Info: Hyphen rules for 'acadian' set to \l@french
+(babel)             (\language3). Reported on input line 91.
+Package babel Info: Hyphen rules for 'canadien' set to \l@french
+(babel)             (\language3). Reported on input line 92.
+\FB@nonchar=\count191
+Package french.ldf Info: No need for active punctuation characters
+(french.ldf)             with this version of XeTeX!
+(french.ldf)             reported on input line 332.
+\FB@punctthick=\XeTeXcharclass1
+\FB@punctthin=\XeTeXcharclass2
+\FB@punctnul=\XeTeXcharclass3
+\FB@guilo=\XeTeXcharclass4
+\FB@guilf=\XeTeXcharclass5
+\FB@guilnul=\XeTeXcharclass6
+\FBguill@level=\count192
+\FBold@everypar=\toks16
+\FB@Mht=\dimen140
+\mc@charclass=\count193
+\mc@charfam=\count194
+\mc@charslot=\count195
+\std@mcc=\count196
+\dec@mcc=\count197
+\listindentFB=\dimen141
+\descindentFB=\dimen142
+\labelindentFB=\dimen143
+\labelwidthFB=\dimen144
+\leftmarginFB=\dimen145
+\parindentFFN=\dimen146
+\FBfnindent=\dimen147
+))
+(/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+2.
+
+(/usr/share/texmf/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-01-21 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2022-01-12 L3 backend support: XeTeX
+
+(|extractbb --version)
+\c__kernel_sys_dvipdfmx_version_int=\count198
+\l__color_backend_stack_int=\count199
+\g__color_backend_stack_int=\count266
+\g__graphics_track_int=\count267
+\l__pdf_internal_box=\box50
+\g__pdf_backend_object_int=\count268
+\g__pdf_backend_annotation_int=\count269
+\g__pdf_backend_link_int=\count270
+))
+Package: xparse 2022-01-12 L3 Experimental document command parser
+)
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count271
+\l__fontspec_language_int=\count272
+\l__fontspec_strnum_int=\count273
+\l__fontspec_tmp_int=\count274
+\l__fontspec_tmpa_int=\count275
+\l__fontspec_tmpb_int=\count276
+\l__fontspec_tmpc_int=\count277
+\l__fontspec_em_int=\count278
+\l__fontspec_emdef_int=\count279
+\l__fontspec_strong_int=\count280
+\l__fontspec_strongdef_int=\count281
+\l__fontspec_tmpa_dim=\dimen148
+\l__fontspec_tmpb_dim=\dimen149
+\l__fontspec_tmpc_dim=\dimen150
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
+rs
+\f@nch@headwidth=\skip49
+\f@nch@O@elh=\skip50
+\f@nch@O@erh=\skip51
+\f@nch@O@olh=\skip52
+\f@nch@O@orh=\skip53
+\f@nch@O@elf=\skip54
+\f@nch@O@erf=\skip55
+\f@nch@O@olf=\skip56
+\f@nch@O@orf=\skip57
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2021/03/18 v5.0k Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip58
+\LTright=\skip59
+\LTpre=\skip60
+\LTpost=\skip61
+\LTchunksize=\count282
+\LTcapwidth=\dimen153
+\LT@head=\box51
+\LT@firsthead=\box52
+\LT@foot=\box53
+\LT@lastfoot=\box54
+\LT@gbox=\box55
+\LT@cols=\count283
+\LT@rows=\count284
+\c@LT@tables=\count285
+\c@LT@chunks=\count286
+\LT@p@ftn=\toks18
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 227.
+
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen154
+\ar@mcellbox=\box56
+\extrarowheight=\dimen155
+\NC@list=\toks19
+\extratabsurround=\skip62
+\backup@length=\skip63
+\ar@cellbox=\box57
+)
+\everycr=\toks20
+\minrowclearance=\skip64
+)
+\rownum=\count287
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen156
+\Hy@linkcounter=\count288
+\Hy@pagecounter=\count289
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
+nguages
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count290
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count291
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen157
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count292
+\Field@Width=\dimen158
+\Fld@charsize=\dimen159
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring OFF on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count293
+\c@Item=\count294
+\c@Hfootnote=\count295
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2021-06-07 v7.00m Hyperref driver for XeTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box58
+\c@Hy@AnnotLevel=\count296
+\HyField@AnnotCount=\count297
+\Fld@listcount=\count298
+\c@bookmark@seq@number=\count299
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip65
+)
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip66
+\enit@outerparindent=\dimen160
+\enit@toks=\toks21
+\enit@inbox=\box59
+\enit@count@id=\count300
+\enitdp@description=\count301
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks22
+\XKV@tempa@toks=\toks23
+)
+\XKV@depth=\count302
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box60
+)
+\tc@llx=\dimen161
+\tc@lly=\dimen162
+\tc@urx=\dimen163
+\tc@ury=\dimen164
+Package trimclip Info: Using driver 'tc-xetex.def'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-xetex.def
+File: tc-xetex.def 2019/01/04 v2.2 Clipping driver for xetex
+))
+\adjbox@Width=\dimen165
+\adjbox@Height=\dimen166
+\adjbox@Depth=\dimen167
+\adjbox@Totalheight=\dimen168
+\adjbox@pwidth=\dimen169
+\adjbox@pheight=\dimen170
+\adjbox@pdepth=\dimen171
+\adjbox@ptotalheight=\dimen172
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count303
+)
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box61
+\sift@deathcycles=\count304
+\@vwid@loff=\dimen173
+\@vwid@roff=\dimen174
+))
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count305
+\float@exts=\toks24
+\float@box=\box62
+\@float@everytoks=\toks25
+\@floatcapt=\box63
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen175
+\captionmargin@=\dimen176
+\captionwidth=\dimen177
+\caption@tempdima=\dimen178
+\caption@indent=\dimen179
+\caption@parindent=\dimen180
+\caption@hangindent=\dimen181
+Package caption Info: Standard document class detected.
+Package caption Info: french babel package is loaded.
+)
+\c@caption@flags=\count306
+\c@continuedfloat=\count307
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2021/09/03 v1.2n Refers to last page's name (HMM; JPG)
+)
+(./dossier_conception.aux
+
+LaTeX Warning: Label `LastPage' multiply defined.
+
+)
+\openout1 = `dossier_conception.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 101.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
+01.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+Package french.ldf Info: Setting StandardItemizeEnv=true for
+(french.ldf)             compatibility with enumitem package,
+(french.ldf)             reported on input line 101.
+Package french.ldf Info: Setting StandardEnumerateEnv=true for
+(french.ldf)             compatibility with enumitem package,
+(french.ldf)             reported on input line 101.
+LaTeX Info: Redefining \up on input line 101.
+
+Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 101.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 101.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 101.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 101.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 101.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 101.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 101.
+LaTeX Font Info:    Redeclaring math accent \check on input line 101.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 101.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 101.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 101.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 101.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 101.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 101.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 101.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 101.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 101.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 101.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 101.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 101.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 101.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 101.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 101.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 101.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 101.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 101.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 101.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 101.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 101.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 101.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 101.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 101.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 101.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 101.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 101.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 101.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 101.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 101.
+Package hyperref Info: Link coloring OFF on input line 101.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count308
+)
+LaTeX Info: Redefining \ref on input line 101.
+LaTeX Info: Redefining \pageref on input line 101.
+LaTeX Info: Redefining \nameref on input line 101.
+
+(./dossier_conception.out) (./dossier_conception.out)
+\@outlinefile=\write3
+\openout3 = `dossier_conception.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 101.
+\c@subsubparagraph=\count309
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 143.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 143.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 143.
+ (./avertissement.tex)
+(./tableau_version.tex
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [1
+
+]
+Overfull \hbox (1.39412pt too wide) in paragraph at lines 8--8
+[]|\T1/lmr/bx/n/10.95 Version| 
+ []
+
+
+Overfull \hbox (2.45708pt too wide) in paragraph at lines 12--12
+\T1/lmr/m/n/10.95 TRÉMOUREUX| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\T1/lmr/m/n/10.95 Réalisation de cer-tains dia-
+ []
+
+
+Underfull \hbox (badness 3919) in paragraph at lines 24--24
+[]|\T1/lmr/m/n/10.95 Rédaction des des-crip-tions des
+ []
+
+
+Overfull \hbox (2.45708pt too wide) in paragraph at lines 26--26
+\T1/lmr/m/n/10.95 TRÉMOUREUX| 
+ []
+
+
+Overfull \hbox (2.45708pt too wide) in paragraph at lines 32--32
+\T1/lmr/m/n/10.95 TRÉMOUREUX| 
+ []
+
+
+Overfull \hbox (2.45708pt too wide) in paragraph at lines 34--34
+\T1/lmr/m/n/10.95 TRÉMOUREUX| 
+ []
+
+
+Underfull \hbox (badness 1248) in paragraph at lines 42--42
+\T1/lmr/m/n/10.95 crip-tion des dia-grammes de sé-
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 46--46
+[]|\T1/lmr/m/n/10.95 Correction de la des-crip-tion de
+ []
+
+
+Underfull \hbox (badness 1430) in paragraph at lines 62--62
+[]|\T1/lmr/m/n/10.95 Correction de cer-taines des-crip-
+ []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 72--72
+[]|\T1/lmr/m/n/10.95 Ajout de l'ar-chi-tec-ture du pro-
+ []
+
+
+Underfull \hbox (badness 4556) in paragraph at lines 78--78
+\T1/lmr/m/n/10.95 classes proxy-GUI, proxy-Log-ger,
+ []
+
+
+Underfull \hbox (badness 1132) in paragraph at lines 78--78
+\T1/lmr/m/n/10.95 Dis-pat-cher et Post-man du pro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--80
+[]|\T1/lmr/m/n/10.95 Rédaction des dif-fé-rents dia-
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 84--84
+[]|\T1/lmr/m/n/10.95 Relecture de la concep-tion dé-
+ []
+
+
+Underfull \hbox (badness 6825) in paragraph at lines 88--88
+[]|\T1/lmr/m/n/10.95 Correction et re-lec-ture de la
+ []
+
+
+Overfull \hbox (2.20259pt too wide) in alignment at lines 6--95
+[] [] [] [] [] 
+ []
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[2]
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [3]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 97.
+See the caption package documentation for explanation.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[4]) (./dossier_conception.toc
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [5]
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [6]
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [7]
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [8]
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [9])
+\tf@toc=\write4
+\openout4 = `dossier_conception.toc'.
+
+
+(./sections/1_Introduction/Introduction.tex
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [10]
+(./sections/1_Introduction/1_Objet.tex) (./sections/1_Introduction/2_Portee.tex
+) (./sections/1_Introduction/3_Def_acr_abrv.tex
+Underfull \hbox (badness 1371) in paragraph at lines 21--22
+[]|\T1/lmr/m/n/10.95 Moyens per-met-tant aux uti-li-sa-teurs de l'ap-pli-ca-tio
+n
+ []
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[11]) (./sections/1_Introduction/4_References.tex
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+8.
+
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+(./sections/1_Introduction/5_Vue_ensemble.tex
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [12]
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [13]))
+(./sections/2_Conception_generale/2_Conception_generale.tex
+(../animUML/Passerelle_CAN-macros.tex)
+File: ../animUML/Passerelle_CAN-context.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-context.pdf>
+
+(./sections/2_Conception_generale/Description_Arch_Candidate.tex
+Underfull \hbox (badness 10000) in paragraph at lines 17--2
+
+ []
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[14])
+File: ../animUML/Passerelle_CAN-sequence-CU_Échanger_des_trames_CAN.pdf Graphic
+ file (type pdf)
+<use ../animUML/Passerelle_CAN-sequence-CU_Échanger_des_trames_CAN.pdf>
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [15]
+(./sections/2_Conception_generale/Description_sequences/CU_Échanger_des_trames_
+CAN.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 29--31
+
+ []
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[16]
+File: ../animUML/Passerelle_CAN-sequence-CU_Démarrer_le_SàE_-_Scénario_nominal.
+pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-sequence-CU_Démarrer_le_SàE_-_Scénario_nominal.p
+df>
+
+(./sections/2_Conception_generale/Description_sequences/CU_Démarrer_le_SàE_-_Sc
+énario_nominal.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 39--41
+
+ []
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[17]
+File: ../animUML/Passerelle_CAN-sequence-CU_Reconnecter_application_CANdroid_-_
+Scénario_nominal.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-sequence-CU_Reconnecter_application_CANdroid_-_S
+cénario_nominal.pdf>
+
+(./sections/2_Conception_generale/Description_sequences/CU_Reconnecter_applicat
+ion_CANdroid_-_Scénario_nominal.tex)
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [18]
+File: ../animUML/Passerelle_CAN-sequence-CU_Recevoir_des_trames_-_Scénario_nomi
+nal.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-sequence-CU_Recevoir_des_trames_-_Scénario_nomin
+al.pdf>
+
+(./sections/2_Conception_generale/Description_sequences/CU_Recevoir_des_trames_
+-_Scénario_nominal.tex
+Underfull \hbox (badness 10000) in paragraph at lines 59--4
+
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 5--61
+
+ []
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[19]
+File: ../animUML/Passerelle_CAN-sequence-CU_Interagir_avec_le_sniffer_-_Scénari
+o_nominal.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-sequence-CU_Interagir_avec_le_sniffer_-_Scénario
+_nominal.pdf>
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [20]
+(./sections/2_Conception_generale/Description_sequences/CU_Interagir_avec_le_sn
+iffer_-_Scénario_nominal.tex
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [21])
+Underfull \hbox (badness 3229) in paragraph at lines 9--71
+\T1/lmr/m/n/10.95 De plus, la []fi-gure 6[][] in-dique un ordre spé-ci-fique po
+ur les ac-tions à ef-fec-tuer, à
+ []
+
+
+Underfull \hbox (badness 4060) in paragraph at lines 9--71
+\T1/lmr/m/n/10.95 sa-voir l'ordre du CU "In-ter-agir avec le snif-fer" du dos-s
+ier de spé-ci-fi-ca-tion [[]dos-
+ []
+
+File: ../animUML/Passerelle_CAN-sequence-CU_Ajouter_un_objet_-_Scénario_nominal
+.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-sequence-CU_Ajouter_un_objet_-_Scénario_nominal.
+pdf>
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[22]
+(./sections/2_Conception_generale/Description_sequences/CU_Ajouter_un_objet_-_S
+cénario_nominal.tex)
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [23]
+File: ../animUML/Passerelle_CAN-sequence-CU_Ajouter_une_trame_-_Scénario_nomina
+l.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-sequence-CU_Ajouter_une_trame_-_Scénario_nominal
+.pdf>
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [24]
+(./sections/2_Conception_generale/Description_sequences/CU_Ajouter_une_trame_-_
+Scénario_nominal.tex
+Underfull \hbox (badness 10000) in paragraph at lines 89--3
+
+ []
+
+)
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [25]
+File: ../animUML/Passerelle_CAN-sequence-CU_Envoyer_des_trames_-_Scénario_nomin
+al.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-sequence-CU_Envoyer_des_trames_-_Scénario_nomina
+l.pdf>
+
+(./sections/2_Conception_generale/Description_sequences/CU_Envoyer_des_trames_-
+_Scénario_nominal.tex
+Underfull \hbox (badness 10000) in paragraph at lines 99--4
+
+ []
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[26])
+Underfull \hbox (badness 5741) in paragraph at lines 5--101
+\T1/lmr/m/n/10.95 Ces cas de fi-gure ne sont pas pré-sen-tés sur ce scé-na-rio,
+ mais sont ex-pli-ci-te-
+ []
+
+
+Underfull \hbox (badness 3746) in paragraph at lines 5--101
+\T1/lmr/m/n/10.95 ment dé-crits dans le CU "En-voyer des trames" du dos-sier de
+ spé-ci-fi-ca-tion [[]dos-
+ []
+
+File: ../animUML/Passerelle_CAN-sequence-CU_Arrêter_envoi_des_trames_-_Scénario
+_nominal.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-sequence-CU_Arrêter_envoi_des_trames_-_Scénario_
+nominal.pdf>
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[27]
+(./sections/2_Conception_generale/Description_sequences/CU_Arrêter_envoi_des_tr
+ames_-_Scénario_nominal.tex)
+File: ../animUML/Passerelle_CAN-sequence-CU_Supprimer_un_élément_-_Scénario_nom
+inal.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-sequence-CU_Supprimer_un_élément_-_Scénario_nomi
+nal.pdf>
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [28]
+(./sections/2_Conception_generale/Description_sequences/CU_Supprimer_un_élément
+_-_Scénario_nominal.tex
+Underfull \hbox (badness 10000) in paragraph at lines 119--3
+
+ []
+
+)
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [29]
+File: ../animUML/Passerelle_CAN-sequence-CU_Stopper_le_SàE_-_Scénario_nominal.p
+df Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-sequence-CU_Stopper_le_SàE_-_Scénario_nominal.pd
+f>
+
+(./sections/2_Conception_generale/Description_sequences/CU_Stopper_le_SàE_-_Scé
+nario_nominal.tex
+Underfull \hbox (badness 10000) in paragraph at lines 129--3
+
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 4--131
+
+ []
+
+File: ../animUML/Passerelle_CAN-datatypes.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-datatypes.pdf>
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[30] (./sections/2_Conception_generale/Description_enums/IdScreenPopUp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 141--1
+
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 3--144
+
+ []
+
+(./sections/2_Conception_generale/Description_enums/ProgramState.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 3--149
+
+ []
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[31] (./sections/2_Conception_generale/Description_enums/NetworkState.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 3--154
+
+ []
+
+(./sections/2_Conception_generale/Description_enums/SenderMode.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 3--159
+
+ []
+
+(./sections/2_Conception_generale/Description_enums/SendingState.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 3--164
+
+ []
+
+(./sections/2_Conception_generale/Description_types.tex
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [32])
+File: ../animUML/Passerelle_CAN-classes.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-classes.pdf>
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [33]
+File: ../animUML/Passerelle_CAN-class-Utilisateur.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-class-Utilisateur.pdf>
+
+(./sections/2_Conception_generale/Description_classes/Utilisateur.tex)
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [34]
+File: ../animUML/Passerelle_CAN-class-GUI.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-class-GUI.pdf>
+
+(./sections/2_Conception_generale/Description_classes/GUI.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 6--207
+
+ []
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[35]
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [36]
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [37]
+File: ../animUML/Passerelle_CAN-gui-SM.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-gui-SM.pdf>
+ (./sections/2_Conception_generale/Description_MAE/gui.tex
+Underfull \hbox (badness 10000) in paragraph at lines 219--3
+
+ []
+
+)
+File: ../animUML/Passerelle_CAN-class-UI.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-class-UI.pdf>
+ (./sections/2_Conception_generale/Description_classes/UI.tex
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [38])
+Underfull \hbox (badness 10000) in paragraph at lines 6--231
+
+ []
+
+File: ../animUML/Passerelle_CAN-class-Dealer.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-class-Dealer.pdf>
+(./sections/2_Conception_generale/Description_classes/Dealer.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 6--246
+
+ []
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[39]
+File: ../animUML/Passerelle_CAN-class-Logger.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-class-Logger.pdf>
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [40] (./sections/2_Conception_generale/Description_classes/Logger.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 6--261
+
+ []
+
+File: ../animUML/Passerelle_CAN-class-Object.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-class-Object.pdf>
+(./sections/2_Conception_generale/Description_classes/Object.tex
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [41])
+Underfull \hbox (badness 10000) in paragraph at lines 6--276
+
+ []
+
+File: ../animUML/Passerelle_CAN-class-Frame.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-class-Frame.pdf>
+(./sections/2_Conception_generale/Description_classes/Frame.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 6--291
+
+ []
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[42]
+File: ../animUML/Passerelle_CAN-class-Sniffer.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-class-Sniffer.pdf>
+ (./sections/2_Conception_generale/Description_classes/Sniffer.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 6--306
+
+ []
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[43]
+File: ../animUML/Passerelle_CAN-sniffer-SM.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-sniffer-SM.pdf>
+ (./sections/2_Conception_generale/Description_MAE/sniffer.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 318--320
+
+ []
+
+File: ../animUML/Passerelle_CAN-class-Network.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-class-Network.pdf>
+(./sections/2_Conception_generale/Description_classes/Network.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 6--330
+
+ []
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[44]
+File: ../animUML/Passerelle_CAN-class-Basket.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-class-Basket.pdf>
+ (./sections/2_Conception_generale/Description_classes/Basket.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 6--345
+
+ []
+
+File: ../animUML/Passerelle_CAN-class-Sender.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-class-Sender.pdf>
+(./sections/2_Conception_generale/Description_classes/Sender.tex
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [45])
+Underfull \hbox (badness 10000) in paragraph at lines 6--360
+
+ []
+
+File: ../animUML/Passerelle_CAN-sender-SM.pdf Graphic file (type pdf)
+<use ../animUML/Passerelle_CAN-sender-SM.pdf>
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[46] (./sections/2_Conception_generale/Description_MAE/sender.tex))
+Underfull \hbox (badness 10000) in paragraph at lines 372--189
+
+ []
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[47] (./sections/3_Conception_detaillee/Conception_detaillee.tex
+(./sections/3_Conception_detaillee/1_Architecture_physique.tex
+File: ../schemas/Conception_detaillee/architecture_CANgateway.pdf Graphic file 
+(type pdf)
+<use ../schemas/Conception_detaillee/architecture_CANgateway.pdf>
+File: ../schemas/Conception_detaillee/architecture_CANdroid.pdf Graphic file (t
+ype pdf)
+<use ../schemas/Conception_detaillee/architecture_CANdroid.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 12.
+See the caption package documentation for explanation.
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 8--15
+
+ []
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[48]
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [49]
+(./sections/3_Conception_detaillee/2_Description_classes/2_Description_classes.
+tex
+(./sections/3_Conception_detaillee/2_Description_classes/1_Description_classes_
+CANdroid/1_Description_classes_CANdroid.tex
+(./sections/3_Conception_detaillee/2_Description_classes/1_Description_classes_
+CANdroid/description_diagramme_classe.tex
+File: ../schemas/Conception_detaillee/diag_class_candroid.pdf Graphic file (typ
+e pdf)
+<use ../schemas/Conception_detaillee/diag_class_candroid.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
+
+ []
+
+
+(./sections/3_Conception_detaillee/2_Description_classes/1_Description_classes_
+CANdroid/description_classes_package_Logger/description_classe_thesaurus.tex
+File: ../schemas/Conception_detaillee/classe_thesaurus.pdf Graphic file (type p
+df)
+<use ../schemas/Conception_detaillee/classe_thesaurus.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[50]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+)
+(./sections/3_Conception_detaillee/2_Description_classes/1_Description_classes_
+CANdroid/description_classes_package_Logger/description_classe_filesManager.tex
+File: ../schemas/Conception_detaillee/classe_FilesManager.pdf Graphic file (typ
+e pdf)
+<use ../schemas/Conception_detaillee/classe_FilesManager.pdf>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[51]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+)
+(./sections/3_Conception_detaillee/2_Description_classes/1_Description_classes_
+CANdroid/description_classes_package_Logger/description_classe_LogManager.tex
+File: ../schemas/Conception_detaillee/classe_LogManager.pdf Graphic file (type 
+pdf)
+<use ../schemas/Conception_detaillee/classe_LogManager.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[52])
+(./sections/3_Conception_detaillee/2_Description_classes/1_Description_classes_
+CANdroid/description_classes_package_Logger/description_classe_logManagerViewMo
+del.tex
+File: ../schemas/Conception_detaillee/classe_logManagerViewModel.pdf Graphic fi
+le (type pdf)
+<use ../schemas/Conception_detaillee/classe_logManagerViewModel.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[53]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+)
+(./sections/3_Conception_detaillee/2_Description_classes/1_Description_classes_
+CANdroid/description_classes_package_Dealer/description_interface_dao.tex
+File: ../schemas/Conception_detaillee/interface_dao.pdf Graphic file (type pdf)
+
+<use ../schemas/Conception_detaillee/interface_dao.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[54]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[55])
+(./sections/3_Conception_detaillee/2_Description_classes/1_Description_classes_
+CANdroid/description_classes_package_Dealer/description_classe_bdd.tex
+File: ../schemas/Conception_detaillee/classe_bdd.pdf Graphic file (type pdf)
+<use ../schemas/Conception_detaillee/classe_bdd.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 8.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[56])
+(./sections/3_Conception_detaillee/2_Description_classes/1_Description_classes_
+CANdroid/description_classes_package_Dealer/description_classe_object.tex
+File: ../schemas/Conception_detaillee/classe_object.pdf Graphic file (type pdf)
+
+<use ../schemas/Conception_detaillee/classe_object.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[57])
+(./sections/3_Conception_detaillee/2_Description_classes/1_Description_classes_
+CANdroid/description_classes_package_Dealer/description_classe_frame.tex
+File: ../schemas/Conception_detaillee/classe_frame.pdf Graphic file (type pdf)
+<use ../schemas/Conception_detaillee/classe_frame.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[58])
+(./sections/3_Conception_detaillee/2_Description_classes/1_Description_classes_
+CANdroid/description_classes_package_Network/description_classes_protocolCANdro
+id.tex
+File: ../schemas/Conception_detaillee/classe_protocolCANdroid.pdf Graphic file 
+(type pdf)
+<use ../schemas/Conception_detaillee/classe_protocolCANdroid.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 8.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+)
+(./sections/3_Conception_detaillee/2_Description_classes/1_Description_classes_
+CANdroid/description_classes_package_Network/description_classe_communicationCA
+Ndroid.tex
+File: ../schemas/Conception_detaillee/classe_communicationCANdroid.pdf Graphic 
+file (type pdf)
+<use ../schemas/Conception_detaillee/classe_communicationCANdroid.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[59]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+)
+(./sections/3_Conception_detaillee/2_Description_classes/1_Description_classes_
+CANdroid/description_classes_package_Network/description_classe_connectionCANdr
+oid.tex
+File: ../schemas/Conception_detaillee/classe_connectionCANdroid.pdf Graphic fil
+e (type pdf)
+<use ../schemas/Conception_detaillee/classe_connectionCANdroid.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[60]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+)
+(./sections/3_Conception_detaillee/2_Description_classes/1_Description_classes_
+CANdroid/description_classes_package_Network/description_interface_SocketListen
+er.tex
+File: ../schemas/Conception_detaillee/interface_SocketListener.pdf Graphic file
+ (type pdf)
+<use ../schemas/Conception_detaillee/interface_SocketListener.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 8.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[61])
+(./sections/3_Conception_detaillee/2_Description_classes/1_Description_classes_
+CANdroid/description_classes_package_Network/description_enum_networkState.tex
+File: ../schemas/Conception_detaillee/enum_NetworkState.pdf Graphic file (type 
+pdf)
+<use ../schemas/Conception_detaillee/enum_NetworkState.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+)
+(./sections/3_Conception_detaillee/2_Description_classes/1_Description_classes_
+CANdroid/description_classes_package_Network/description_classe_dispatcher.tex
+File: ../schemas/Conception_detaillee/classe_dispatcher_candroid.pdf Graphic fi
+le (type pdf)
+<use ../schemas/Conception_detaillee/classe_dispatcher_candroid.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 8.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 20.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[62])
+(./sections/3_Conception_detaillee/2_Description_classes/1_Description_classes_
+CANdroid/description_classes_package_Sender/description_classe_sender_client.te
+x
+File: ../schemas/Conception_detaillee/diag_class_sender_client.pdf Graphic file
+ (type pdf)
+<use ../schemas/Conception_detaillee/diag_class_sender_client.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[63])
+(./sections/3_Conception_detaillee/2_Description_classes/1_Description_classes_
+CANdroid/description_classes_package_Basket/description_classe_basket.tex
+File: ../schemas/Conception_detaillee/classe_basket.pdf Graphic file (type pdf)
+
+<use ../schemas/Conception_detaillee/classe_basket.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[64]
+File: ../schemas/Conception_detaillee/classe_basketAdapter.pdf Graphic file (ty
+pe pdf)
+<use ../schemas/Conception_detaillee/classe_basketAdapter.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 44.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 49.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 55.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[65])
+(./sections/3_Conception_detaillee/2_Description_classes/1_Description_classes_
+CANdroid/description_classes_package_GUI/description_classe_mainActivity.tex
+File: ../schemas/Conception_detaillee/classe_mainActivity.pdf Graphic file (typ
+e pdf)
+<use ../schemas/Conception_detaillee/classe_mainActivity.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[66])
+(./sections/3_Conception_detaillee/2_Description_classes/1_Description_classes_
+CANdroid/description_classes_package_GUI/description_classe_objects.tex
+File: ../schemas/Conception_detaillee/classe_objects.pdf Graphic file (type pdf
+)
+<use ../schemas/Conception_detaillee/classe_objects.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 9.
+See the caption package documentation for explanation.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[67]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 14.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 21.
+
+File: ../schemas/Conception_detaillee/classe_objectFragment.pdf Graphic file (t
+ype pdf)
+<use ../schemas/Conception_detaillee/classe_objectFragment.pdf>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 43.
+See the caption package documentation for explanation.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[68]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 48.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 56.
+
+File: ../schemas/Conception_detaillee/classe_foldingStateObject.pdf Graphic fil
+e (type pdf)
+<use ../schemas/Conception_detaillee/classe_foldingStateObject.pdf>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 77.
+See the caption package documentation for explanation.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[69]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 82.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 88.
+
+)
+(./sections/3_Conception_detaillee/2_Description_classes/1_Description_classes_
+CANdroid/description_classes_package_GUI/description_classe_mainActivityViewMod
+el.tex
+File: ../schemas/Conception_detaillee/classe_mainActivityViewModel.pdf Graphic 
+file (type pdf)
+<use ../schemas/Conception_detaillee/classe_mainActivityViewModel.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[70]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+))
+(./sections/3_Conception_detaillee/2_Description_classes/2_Description_classes_
+CANgateway/2_Description_classes_CANgateway.tex
+(./sections/3_Conception_detaillee/2_Description_classes/2_Description_classes_
+CANgateway/description_diagramme_classe.tex
+File: ../schemas/Conception_detaillee/diag_classe_CANgateway.pdf Graphic file (
+type pdf)
+<use ../schemas/Conception_detaillee/diag_classe_CANgateway.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[71])
+(./sections/3_Conception_detaillee/2_Description_classes/2_Description_classes_
+CANgateway/description_classe_starter.tex
+File: ../schemas/Conception_detaillee/classe_starter.pdf Graphic file (type pdf
+)
+<use ../schemas/Conception_detaillee/classe_starter.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 28.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[72]
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [73]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 49.
+
+File: ../schemas/Conception_detaillee/diag_sequence_Starter.pdf Graphic file (t
+ype pdf)
+<use ../schemas/Conception_detaillee/diag_sequence_Starter.pdf>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 55.
+See the caption package documentation for explanation.
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 52--6
+
+ []
+
+
+(./sections/3_Conception_detaillee/2_Description_classes/2_Description_classes_
+CANgateway/description_classe_driverCAN.tex
+File: ../schemas/Conception_detaillee/classe_driverCAN.pdf Graphic file (type p
+df)
+<use ../schemas/Conception_detaillee/classe_driverCAN.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[74]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+)
+(./sections/3_Conception_detaillee/2_Description_classes/2_Description_classes_
+CANgateway/description_classe_dispatcher.tex
+File: ../schemas/Conception_detaillee/classe_dispatcher.pdf Graphic file (type 
+pdf)
+<use ../schemas/Conception_detaillee/classe_dispatcher.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[75])
+(./sections/3_Conception_detaillee/2_Description_classes/2_Description_classes_
+CANgateway/description_classe_postman.tex
+File: ../schemas/Conception_detaillee/classe_postman.pdf Graphic file (type pdf
+)
+<use ../schemas/Conception_detaillee/classe_postman.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+)
+(./sections/3_Conception_detaillee/2_Description_classes/2_Description_classes_
+CANgateway/description_classe_proxyGUI.tex
+File: ../schemas/Conception_detaillee/classe_proxyGUI.pdf Graphic file (type pd
+f)
+<use ../schemas/Conception_detaillee/classe_proxyGUI.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[76]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+)
+(./sections/3_Conception_detaillee/2_Description_classes/2_Description_classes_
+CANgateway/description_classe_proxyLogger.tex
+File: ../schemas/Conception_detaillee/classe_ProxyLogger.pdf Graphic file (type
+ pdf)
+<use ../schemas/Conception_detaillee/classe_ProxyLogger.pdf>
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 7.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 18.
+
+)))
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [77] (./sections/3_Conception_detaillee/3_Protocole_com/3_Protocole_com.tex
+(./sections/3_Conception_detaillee/3_Protocole_com/1_CANdroid_vers_CANgateway/1
+_CANdroid_vers_CANgateway.tex
+(./sections/3_Conception_detaillee/3_Protocole_com/1_CANdroid_vers_CANgateway/F
+ormalisation_protocole.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[78]
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+
+ []
+
+)
+(./sections/3_Conception_detaillee/3_Protocole_com/1_CANdroid_vers_CANgateway/E
+xemples.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 8.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[79]
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 42.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
+
+))
+Underfull \hbox (badness 10000) in paragraph at lines 63--6
+
+ []
+
+
+(./sections/3_Conception_detaillee/3_Protocole_com/2_CANgateway_vers_CANdroid/2
+_CANgateway_vers_CANdroid.tex
+(./sections/3_Conception_detaillee/3_Protocole_com/2_CANgateway_vers_CANdroid/F
+ormalisation_protocole.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[80]
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+
+ []
+
+)
+(./sections/3_Conception_detaillee/3_Protocole_com/2_CANgateway_vers_CANdroid/E
+xemples.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 9.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 30.
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[81]
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 67.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
+
+))
+Underfull \hbox (badness 10000) in paragraph at lines 72--8
+
+ []
+
+)
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [82]
+(./sections/3_Conception_detaillee/4_Gestion_multitâche/4_Gestion_multitache.te
+x
+(./sections/3_Conception_detaillee/4_Gestion_multitâche/1_Identification_acces_
+concurrents/1_CANdroid.tex
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 19.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (19.0777pt too wide) in paragraph at lines 8--19
+ [][] 
+ []
+
+)
+(./sections/3_Conception_detaillee/4_Gestion_multitâche/1_Identification_acces_
+concurrents/2_CANgateway.tex
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 23.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 32--8
+
+ []
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[83]) (./sections/3_Conception_detaillee/5_Gestion_de_la_persistance.tex))
+(./sections/4_Dictionnaire_domaine.tex
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+ [84]
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+[]\T1/lmr/bx/n/10.95 BackToTop \T1/lmr/m/n/10.95 : Cor-res-pond en an-glais à "
+La fin du fil" dans [][dos-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[85]
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+[]\T1/lmr/m/n/10.95 setPeriodicity(periodicity : int) : cor-res-pond à l'opé-ra
+-tion sai-sir-Pe-rio-di-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--34
+[]\T1/lmr/m/n/10.95 unselect(idElement : IdE-le-ment) : cor-res-pond à l'opé-ra
+-tion de-se-lec-tion-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--34
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
+[]\T1/lmr/bx/n/10.95 Écrans uti-li-sés \T1/lmr/m/n/10.95 : les écrans uti-li-sé
+s sont dé-crits dans [][dos-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
+
+ []
+
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[86]
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+[]\T1/lmr/bx/n/10.95 Raspberry PI \T1/lmr/m/n/10.95 : Cor-res-pond à E_Raspberr
+y dans [][dos-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
+[]\T1/lmr/bx/n/10.95 Smartphone \T1/lmr/m/n/10.95 : Cor-res-pond à E_Smartphone
+ dans [][dos-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+[]\T1/lmr/bx/n/10.95 Simulateur IC-Sim (cor-res-pond à E_ICSim dans [][dos-
+ []
+
+
+Underfull \hbox (badness 3039) in paragraph at lines 61--62
+\T1/lmr/bx/n/10.95 sier_de_specification_SPEC_B1_2024][]) \T1/lmr/m/n/10.95 : S
+i-mu-la-teur d'un ta-bleau de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+[]\T1/lmr/bx/n/10.95 Banc de test (cor-res-pond à E_Banc_De_Test dans [][dos-
+ []
+
+
+Underfull \hbox (badness 3260) in paragraph at lines 62--63
+\T1/lmr/bx/n/10.95 sier_de_specification_SPEC_B1_2024][]) \T1/lmr/m/n/10.95 : B
+anc de test d'un ta-bleau
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--66
+
+ []
+
+) 
+AED: lastpage setting LastPage
+File: ../figures/eseo.png Graphic file (type bmp)
+<../figures/eseo.png>
+File: ../figures/logo_kereval.png Graphic file (type bmp)
+<../figures/logo_kereval.png>
+[87] (./dossier_conception.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `dossier_conception.out' has not changed.
+(rerunfilecheck)             Checksum: EEDA058A55C5E18765B9C9D1D119A040;36511.
+ ) 
+Here is how much of TeX's memory you used:
+ 16953 strings out of 478163
+ 381278 string characters out of 5853707
+ 760529 words of memory out of 5000000
+ 37014 multiletter control sequences out of 15000+600000
+ 517210 words of font info for 58 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 73i,13n,117p,1118b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on dossier_conception.pdf (87 pages).

@@ -1,0 +1,17 @@
+@startuml
+    class BasketManager extends Fragment{
+        - elements : IdElement[*]
+        +onBindViewHolder (ViewHolder holder, int position) : void
+        +getItemCount() : int
+        +bindRecyclerViewData(RecyclerView recyclerView, ArrayList<String> data) : void
+        +setData(ArrayList<String> newData) : void
+        +ViewHolder () : void
+        +addElement (idElement : IdElement) : void
+        +removeElement(idElement : IdElement) : void
+        +getElement() : IdElement[*]
+        +clearAll() : void
+        +update () : void
+    }
+
+
+@enduml

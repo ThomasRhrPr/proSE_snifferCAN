@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="865px" preserveAspectRatio="none" style="width:1524px;height:865px;" version="1.1" viewBox="0 0 1524 865" width="1524px" zoomAndPan="magnify"><defs><filter height="300%" id="f18mesdyc1plxl" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[10f7bc656d1365f1b7e9983e51c4616d]
+cluster CANdroid--><polygon fill="#FFFFFF" filter="url(#f18mesdyc1plxl)" points="22,24,102,24,109,46.2969,1502,46.2969,1502,853,22,853,22,24" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="22" x2="109" y1="46.2969" y2="46.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="74" x="26" y="38.9951">CANdroid</text><!--MD5=[b27c5c9af3cea12247b1c4c8d3c78770]
+cluster GUI--><polygon fill="#FFFFFF" filter="url(#f18mesdyc1plxl)" points="1061,353,1094,353,1101,375.2969,1316,375.2969,1316,721,1061,721,1061,353" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="1061" x2="1101" y1="375.2969" y2="375.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="27" x="1065" y="367.9951">GUI</text><!--MD5=[7d5e5dbcd9dce300c48ce56a4efb5c19]
+cluster Sniffer--><polygon fill="#FFFFFF" filter="url(#f18mesdyc1plxl)" points="1085,396,1144,396,1151,418.2969,1292,418.2969,1292,637,1085,637,1085,396" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="1085" x2="1151" y1="418.2969" y2="418.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="53" x="1089" y="410.9951">Sniffer</text><!--MD5=[c742c62c3ff97a8b7fc57e99a640f73a]
+cluster Basket--><polygon fill="#FFFFFF" filter="url(#f18mesdyc1plxl)" points="1340,396,1399,396,1406,418.2969,1478,418.2969,1478,637,1340,637,1340,396" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="1340" x2="1406" y1="418.2969" y2="418.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="53" x="1344" y="410.9951">Basket</text><!--MD5=[e70e097114b6d9eed4366bd45b5874e8]
+cluster Dealer--><polygon fill="#FFFFFF" filter="url(#f18mesdyc1plxl)" points="909,67,966,67,973,89.2969,1035,89.2969,1035,495,909,495,909,67" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="909" x2="973" y1="89.2969" y2="89.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="51" x="913" y="81.9951">Dealer</text><!--MD5=[b9fd66fe618c249086ea58728915e599]
+cluster Datas--><polygon fill="#FFFFFF" filter="url(#f18mesdyc1plxl)" points="933,110,983,110,990,132.2969,1011,132.2969,1011,471,933,471,933,110" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="933" x2="990" y1="132.2969" y2="132.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="44" x="937" y="124.9951">Datas</text><!--MD5=[c16d822e175d79abcb56292e8c5a0d37]
+cluster Network--><polygon fill="#FFFFFF" filter="url(#f18mesdyc1plxl)" points="46,519,119,519,126,541.2969,591,541.2969,591,829,46,829,46,519" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="46" x2="126" y1="541.2969" y2="541.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="67" x="50" y="533.9951">Network</text><!--MD5=[f14666a6eb306e35ef084e5392334b0c]
+cluster Observer--><polygon fill="#FFFFFF" filter="url(#f18mesdyc1plxl)" points="435,562,515,562,522,584.2969,567,584.2969,567,721,435,721,435,562" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="435" x2="522" y1="584.2969" y2="584.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="74" x="439" y="576.9951">Observer</text><!--MD5=[406b65fecc21e832f7a9b6ebadc6dce1]
+cluster Client--><polygon fill="#FFFFFF" filter="url(#f18mesdyc1plxl)" points="70,562,121,562,128,584.2969,411,584.2969,411,805,70,805,70,562" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="70" x2="128" y1="584.2969" y2="584.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="45" x="74" y="576.9951">Client</text><!--MD5=[a7ae611b68ab8f382caa75f7acdd86d2]
+cluster Logger--><polygon fill="#FFFFFF" filter="url(#f18mesdyc1plxl)" points="615,562,677,562,684,584.2969,1037,584.2969,1037,721,615,721,615,562" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="615" x2="684" y1="584.2969" y2="584.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="56" x="619" y="576.9951">Logger</text><!--MD5=[5db00888549904919e3a09c35d77129e]
+class MainActivity--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="MainActivity" style="stroke: #A80036; stroke-width: 1.5;" width="78" x="1077" y="681"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="72" x="1080" y="697.1387">MainActivity</text><!--MD5=[f38a85e47f7d4f812523dd9b6d7d2c16]
+class Adapter--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="Adapter" style="stroke: #A80036; stroke-width: 1.5;" width="56" x="1101" y="431"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="50" x="1104" y="447.1387">Adapter</text><!--MD5=[95f7c7b8804a66b6e7920fea70ee5c32]
+class RecyclerFragment--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="RecyclerFragment" style="stroke: #A80036; stroke-width: 1.5;" width="118" x="1101" y="597"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="112" x="1104" y="613.1387">RecyclerFragment</text><!--MD5=[499a93d1a2128e7b640a788d1f7209bf]
+class Fragment--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="Fragment" style="stroke: #A80036; stroke-width: 1.5;" width="66" x="1210" y="431"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="60" x="1213" y="447.1387">Fragment</text><!--MD5=[41a5fbe8882835836874210d16e0e709]
+class ObjectFragment--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="ObjectFragment" style="stroke: #A80036; stroke-width: 1.5;" width="106" x="1356" y="597"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="100" x="1359" y="613.1387">ObjectFragment</text><!--MD5=[99679ccb8a39986f3eac1913fd232647]
+class BasketAdapter--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="BasketAdapter" style="stroke: #A80036; stroke-width: 1.5;" width="99" x="1357.5" y="431"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="93" x="1360.5" y="447.1387">BasketAdapter</text><!--MD5=[aa7f586532e18719e6cefa70fc650583]
+class Object--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="Object" style="stroke: #A80036; stroke-width: 1.5;" width="46" x="949" y="229"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="40" x="952" y="245.1387">Object</text><!--MD5=[678ba86161b65c93147b2a3a8cf02be2]
+class Frame--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="Frame" style="stroke: #A80036; stroke-width: 1.5;" width="45" x="949.5" y="145"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="39" x="952.5" y="161.1387">Frame</text><!--MD5=[384ca5efd7404dfd65476772df22927a]
+class DAO--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="DAO" style="stroke: #A80036; stroke-width: 1.5;" width="31" x="956.5" y="313"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="25" x="959.5" y="329.1387">DAO</text><!--MD5=[30c7fe53c12f397c5b91742883d410d5]
+class BDD--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="BDD" style="stroke: #A80036; stroke-width: 1.5;" width="32" x="956" y="431"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="26" x="959" y="447.1387">BDD</text><!--MD5=[e1170d1310756aebb62623713388dda7]
+class NetworkState--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="NetworkState" style="stroke: #A80036; stroke-width: 1.5;" width="91" x="455.5" y="597"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="85" x="458.5" y="613.1387">NetworkState</text><!--MD5=[3334dbde63ce3d00708e67c78dbfb583]
+class SocketListener--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="SocketListener" style="stroke: #A80036; stroke-width: 1.5;" width="99" x="451.5" y="681"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="93" x="454.5" y="697.1387">SocketListener</text><!--MD5=[cdc9858932958e0abfa4ba52c2ea5764]
+class ConnectionCANdroid--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="ConnectionCANdroid" style="stroke: #A80036; stroke-width: 1.5;" width="134" x="198" y="597"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="128" x="201" y="613.1387">ConnectionCANdroid</text><!--MD5=[529cab3b0c5a0c2d0a7e390be753685b]
+class CommunicationCANdroid--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="CommunicationCANdroid" style="stroke: #A80036; stroke-width: 1.5;" width="159" x="85.5" y="681"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="153" x="88.5" y="697.1387">CommunicationCANdroid</text><!--MD5=[948346f2dfe9866ea883595a582714fa]
+class Thread--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="Thread" style="stroke: #A80036; stroke-width: 1.5;" width="50" x="113" y="597"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="44" x="116" y="613.1387">Thread</text><!--MD5=[9cf1d0d1c467ab6241a70284e039f892]
+class ProtocolCANdroid--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="ProtocolCANdroid" style="stroke: #A80036; stroke-width: 1.5;" width="115" x="279.5" y="681"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="109" x="282.5" y="697.1387">ProtocolCANdroid</text><!--MD5=[8377efa590c81e76e542760390739437]
+class DispatcherCANdroid--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="DispatcherCANdroid" style="stroke: #A80036; stroke-width: 1.5;" width="131" x="181.5" y="765"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="125" x="184.5" y="781.1387">DispatcherCANdroid</text><!--MD5=[b3e73fb1cbb6904de4d99cbb878bea55]
+class LogManager--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="LogManager" style="stroke: #A80036; stroke-width: 1.5;" width="83" x="754.5" y="681"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="77" x="757.5" y="697.1387">LogManager</text><!--MD5=[aa79dc17db96389755dc992d78fcbbe0]
+class FilesManager--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="FilesManager" style="stroke: #A80036; stroke-width: 1.5;" width="89" x="630.5" y="681"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="83" x="633.5" y="697.1387">FilesManager</text><!--MD5=[e8a9813e106f9cf5632db8d301be7eea]
+class Thesaurus--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="Thesaurus" style="stroke: #A80036; stroke-width: 1.5;" width="72" x="705" y="597"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="66" x="708" y="613.1387">Thesaurus</text><!--MD5=[7025ae8a5438310909a8e1d5127f8227]
+class LogManagerViewModel--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="LogManagerViewModel" style="stroke: #A80036; stroke-width: 1.5;" width="148" x="873" y="681"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="142" x="876" y="697.1387">LogManagerViewModel</text><!--MD5=[edef492696cee41fed76c3d2c05c6bec]
+class DealerManager--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="DealerManager" style="stroke: #A80036; stroke-width: 1.5;" width="102" x="919" y="597"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="96" x="922" y="613.1387">DealerManager</text><!--MD5=[9772a394944f5c9d53fa70f72fea80d6]
+class BacktoTop--><rect fill="#FEFECE" filter="url(#f18mesdyc1plxl)" height="23.9688" id="BacktoTop" style="stroke: #A80036; stroke-width: 1.5;" width="72" x="812" y="597"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="66" x="815" y="613.1387">BacktoTop</text><!--MD5=[1c0a4a1f87061373766706685c3b5540]
+reverse link Adapter to Adapter--><path d="M1158.82,422.09 C1176,417.82 1192,424.79 1192,443 C1192,467.66 1162.65,471.71 1140.75,455.14 " fill="none" id="Adapter&lt;-Adapter" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="1161.8,428.42,1140.75,430.86,1155.69,415.83,1161.8,428.42" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[1a550079981e104afde836e30a9082c3]
+reverse link Fragment to RecyclerFragment--><path d="M1228.39,472.87 C1209.81,509.59 1178.6,571.26 1165.77,596.6 " fill="none" id="Fragment&lt;-RecyclerFragment" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="1222.15,469.7,1237.43,455.02,1234.64,476.02,1222.15,469.7" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[19ac53a7852773734c95538704924c13]
+reverse link Fragment to ObjectFragment--><path d="M1268.68,469.37 C1305.28,505.53 1370.97,570.43 1397.46,596.6 " fill="none" id="Fragment&lt;-ObjectFragment" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="1263.46,474.05,1254.15,455.02,1273.3,464.09,1263.46,474.05" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[2cc3e502c8d3edfdefa67431cf7544f2]
+reverse link Adapter to BasketAdapter--><path d="M1141.41,412.39 C1151.93,390.33 1169.12,361.64 1193,345 C1210.89,332.54 1249.53,338.18 1274.5,341 C1331.62,347.44 1379.64,404.94 1398.47,430.66 " fill="none" id="Adapter&lt;-BasketAdapter" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="1147.77,415.33,1133.38,430.89,1134.93,409.75,1147.77,415.33" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[654b4798cb65c587d01c7442a43d8af2]
+link Frame to Object--><path d="M972,169.06 C972,183.12 972,207.51 972,223.7 " fill="none" id="Frame-&gt;Object" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="972,228.85,976,219.85,972,223.85,968,219.85,972,228.85" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[7ab093a72a4f9f120720e3dbf520b618]
+link Object to DAO--><path d="M972,253.06 C972,267.12 972,291.51 972,307.7 " fill="none" id="Object-&gt;DAO" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="972,312.85,976,303.85,972,307.85,968,303.85,972,312.85" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[852f4da0b1516678d1fe9c606843f9ec]
+link DAO to BDD--><path d="M972,337.12 C972,357.68 972,401.72 972,425.67 " fill="none" id="DAO-&gt;BDD" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="972,430.74,976,421.74,972,425.74,968,421.74,972,430.74" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[de133869d5c1301ca99b209db1aa5376]
+link BDD to MainActivity--><path d="M985.97,455.22 C1000.5,467.55 1023.03,488.58 1037,511 C1070.45,564.7 1056.72,588.41 1085,645 C1090.56,656.12 1098.25,667.79 1104.57,676.72 " fill="none" id="BDD-&gt;MainActivity" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1107.56,680.87,1105.5581,671.2267,1104.643,676.8091,1099.0607,675.8939,1107.56,680.87" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[657e08da5fda12ae69568723c24366d2]
+reverse link Thread to CommunicationCANdroid--><path d="M147.94,640.2 C152.61,654.38 157.9,670.43 161.33,680.85 " fill="none" id="Thread&lt;-CommunicationCANdroid" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="141.25,642.24,141.64,621.06,154.55,637.87,141.25,642.24" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[0470239505dcc073b2a1d20eee8f67b3]
+reverse link SocketListener to CommunicationCANdroid--><path d="M447.82,675.08 C430.69,670.14 411.48,665.46 393.5,663 C343.3,656.13 329.75,656.53 279.5,663 C252.8,666.44 223.44,674.21 201.14,680.99 " fill="none" id="SocketListener&lt;-CommunicationCANdroid" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="450.05,668.44,467.13,680.99,445.95,681.82,450.05,668.44" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[53db97fae98b0e99cb0f281ab6cf1f22]
+link CommunicationCANdroid to SocketListener--><!--MD5=[f407630fbe7791d2061737b8059ce51d]
+link CommunicationCANdroid to ProtocolCANdroid--><path d="M244.62,693 C254.45,693 264.28,693 274.12,693 " fill="none" id="CommunicationCANdroid-&gt;ProtocolCANdroid" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="279.26,693,270.26,689,274.26,693,270.26,697,279.26,693" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[921957e72e16333cc6afb5758cb70c14]
+reverse link ConnectionCANdroid to CommunicationCANdroid--><path d="M247.27,624.54 C227.63,640.65 196.39,666.26 178.59,680.85 " fill="none" id="ConnectionCANdroid&lt;-CommunicationCANdroid" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="251.51,621.06,242.0177,623.6862,247.6479,624.2355,247.0986,629.8657,251.51,621.06" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[efc6666161025633cdc4a8dc358a9c4e]
+link CommunicationCANdroid to DispatcherCANdroid--><path d="M176.06,705.06 C190.49,719.49 215.79,744.79 231.95,760.95 " fill="none" id="CommunicationCANdroid-&gt;DispatcherCANdroid" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="235.85,764.85,232.3145,755.6576,232.3145,761.3145,226.6576,761.3145,235.85,764.85" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[615c3776c793dacba142ee19bc99da61]
+link NetworkState to SocketListener--><path d="M501,621.06 C501,635.12 501,659.51 501,675.7 " fill="none" id="NetworkState-&gt;SocketListener" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="501,680.85,505,671.85,501,675.85,497,671.85,501,680.85" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[ad98164320b2d85e0c7d9914591e4006]
+link FilesManager to LogManager--><path d="M719.9,693 C729.69,693 739.48,693 749.27,693 " fill="none" id="FilesManager-&gt;LogManager" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="754.38,693,745.38,689,749.38,693,745.38,697,754.38,693" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[b75ea01d48b49fa4be9005f9d51c9972]
+link LogManager to LogManagerViewModel--><path d="M837.58,693 C847.53,693 857.48,693 867.43,693 " fill="none" id="LogManager-&gt;LogManagerViewModel" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="872.63,693,863.63,689,867.63,693,863.63,697,872.63,693" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[6c2f573b41f473770614bef9c4a6bd33]
+link Thesaurus to LogManager--><path d="M748.42,621.06 C758.01,635.36 774.78,660.36 785.63,676.54 " fill="none" id="Thesaurus-&gt;LogManager" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="788.52,680.85,786.8174,671.1494,785.73,676.7008,780.1787,675.6134,788.52,680.85" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[b871ffe7372d38db0211ef9e1b9520e0]
+reverse link LogManager to DispatcherCANdroid--><path d="M777.14,708.11 C766.04,715.64 751.39,724.3 737,729 C659.82,754.19 427.29,767.88 312.52,773.26 " fill="none" id="LogManager&lt;-DispatcherCANdroid" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="781.36,705.18,771.6818,707.0054,777.2465,708.0223,776.2295,713.587,781.36,705.18" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[b8e5b322ce565834e1fae0adef51211e]
+link MainActivity to DealerManager--><path d="M1096.16,680.85 C1069.63,665.95 1022.64,639.57 994.11,623.54 " fill="none" id="MainActivity-&gt;DealerManager" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="989.69,621.06,995.5645,628.9651,994.0452,623.5161,999.4942,621.9967,989.69,621.06" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[f015011ed69aaeb411eee23753faae7d]
+reverse link BDD to DealerManager--><path d="M971.8,460.34 C971.4,493.53 970.49,568.07 970.14,596.6 " fill="none" id="BDD&lt;-DealerManager" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="971.87,455.02,967.7418,463.9619,971.7986,460.0195,975.741,464.0762,971.87,455.02" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[ee41f3cd9e2f745585317ca57cba373b]
+link Adapter to RecyclerFragment--><path d="M1131.08,455.02 C1136.42,483.24 1150.6,558.26 1156.9,591.62 " fill="none" id="Adapter-&gt;RecyclerFragment" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1157.84,596.6,1160.0994,587.0138,1156.9117,591.6869,1152.2385,588.4992,1157.84,596.6" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[31f6b44872d92e91bcdf905ee413f779]
+link RecyclerFragment to MainActivity--><path d="M1154.07,621.06 C1146.46,635.24 1133.21,659.94 1124.52,676.12 " fill="none" id="RecyclerFragment-&gt;MainActivity" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1121.98,680.85,1129.763,674.8146,1124.3462,676.4454,1122.7155,671.0286,1121.98,680.85" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[70aa99f2a8b205c4d2802f88f3e4500c]
+link BacktoTop to MainActivity--><path d="M861.59,621.02 C871.85,628.81 886.57,638.91 901,645 C931.26,657.77 1017.87,674.59 1071.48,684.26 " fill="none" id="BacktoTop-&gt;MainActivity" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1076.56,685.17,1068.4122,679.6371,1071.6393,684.2831,1066.9932,687.5102,1076.56,685.17" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[60b8b7d0fe9dfb58702520f3e29a9ed1]
+reverse link ObjectFragment to MainActivity--><path d="M1368,622.59 C1345.59,629.39 1317.32,637.83 1292,645 C1245.14,658.26 1190.97,672.58 1155.24,681.88 " fill="none" id="ObjectFragment&lt;-MainActivity" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1372.98,621.08,1363.2051,619.8749,1368.1968,622.5364,1365.5353,627.528,1372.98,621.08" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[c1807d2e8e23f93a350542d226c2450b]
+link BasketAdapter to ObjectFragment--><path d="M1407.13,455.02 C1407.48,483.12 1408.39,557.64 1408.8,591.2 " fill="none" id="BasketAdapter-&gt;ObjectFragment" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1408.86,596.6,1412.7569,587.5549,1408.8029,591.6003,1404.7574,587.6463,1408.86,596.6" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[dacf5783663d5f617527cd95e703f2af]
+reverse link LogManagerViewModel to MainActivity--><path d="M1026.47,693 C1043.24,693 1060.01,693 1076.77,693 " fill="none" id="LogManagerViewModel&lt;-MainActivity" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1021.27,693,1030.27,697,1026.27,693,1030.27,689,1021.27,693" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[713f0096094058ccdc5f22fc55ff3ac2]
+@startuml
+
+hide circle
+hide empty members
+
+package CANdroid
+{
+    package GUI {
+
+        class MainActivity
+
+        package Sniffer {
+            class Adapter extends Adapter                                     
+                        
+            class RecyclerFragment extends Fragment 
+
+        }
+
+
+
+    }
+
+    package Basket{
+        
+        class ObjectFragment extends Fragment
+
+        class BasketAdapter extends Adapter
+    }
+
+    package Dealer{
+
+        package Datas { 
+
+            class Object
+
+            class Frame
+
+            interface DAO
+
+            abstract class BDD
+
+        }
+    }
+
+    Frame -d-> Object
+    Object -d-> DAO
+    DAO -d-> BDD
+    BDD -d-> MainActivity
+
+
+    package Network {
+    package Observer {
+
+        Enum NetworkState
+
+        interface SocketListener
+    }
+
+    package Client {
+
+        class ConnectionCANdroid 
+
+        class CommunicationCANdroid extends Thread implements SocketListener
+    
+        class ProtocolCANdroid
+
+        class DispatcherCANdroid 
+
+    }
+
+    ProtocolCANdroid <-r- CommunicationCANdroid
+    ConnectionCANdroid <-u- CommunicationCANdroid
+    DispatcherCANdroid <-d- CommunicationCANdroid
+    NetworkState -d-> SocketListener
+    CommunicationCANdroid -[hidden]r-> SocketListener
+    }
+
+
+    package Logger {
+        class LogManager
+
+        class FilesManager
+
+        class Thesaurus
+
+        class LogManager 
+        
+        class LogManagerViewModel 
+
+        FilesManager -> LogManager
+        LogManager -> LogManagerViewModel
+        Thesaurus -d-> LogManager
+        DispatcherCANdroid -u-> LogManager 
+        MainActivity - -> DealerManager
+        DealerManager -u-> BDD
+
+
+
+        Adapter - -> RecyclerFragment
+        RecyclerFragment - -> MainActivity
+
+        BacktoTop - -> MainActivity
+
+        MainActivity -u-> ObjectFragment
+        BasketAdapter - -> ObjectFragment
+
+
+    }
+
+MainActivity -u-> LogManagerViewModel
+
+
+
+}
+
+
+@enduml
+
+PlantUML version 1.2020.02(Sun Mar 01 11:22:07 CET 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.19+7-post-Ubuntu-0ubuntu122.04.1
+Operating System: Linux
+Default Encoding: UTF-8
+Language: fr
+Country: FR
+--></g></svg>

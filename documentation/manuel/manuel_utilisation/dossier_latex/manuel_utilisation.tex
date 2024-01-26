@@ -1,0 +1,215 @@
+\documentclass[a4paper,11pt,titlepage,french]{article}
+% classe de document pour LaTeX qui définit les paramètres généraux du document : 
+    % a4paper : définit le format de papier sur lequel le document doit être imprimé (a4paper format standard)
+    % 11pt : définit la taille de police de base à 11 points
+    % titlepage : demande à LaTeX d'insérer une page de titre dans le document
+    % french : Cette option indique à LaTeX que le document est rédigé en français
+% TODO : \input{chemin vers le fichier de setup} 
+    % le fichier de setup devra contenir l'ensemble des usepackage suivants et les variables globales
+% ----------------
+% LIBRAIRIES LATEX
+% ----------------
+\usepackage[main=french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage{fancyhdr}
+\usepackage{xspace, graphicx}
+\usepackage{longtable}
+\usepackage[table]{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}	
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage{color}
+\usepackage{courier}
+
+% To use animUML example.tex file
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{float}
+
+\usepackage{caption}
+\usepackage{lastpage}
+
+% ------------------
+% VARIABLES GLOBALES
+% ------------------
+\newcommand{\version}{0.1}
+\newcommand{\revision}{0}
+\newcommand{\documentName}{Manuel d'utilisation}
+\newcommand{\documentNameAbrev}{INST}
+\newcommand{\prose}{ProSE}
+\newcommand{\creator}{Paul TREMOUREUX}
+\newcommand{\projectName}{Passerelle Android-CAN vers banc CAN réel ou simulé}
+\newcommand{\annee}{2024}
+\newcommand{\teamName}{CANvengers} 
+\newcommand{\teamNumber}{B1}
+\newcommand{\client}{KEREVAL}
+\newcommand{\nomLogiciel}{CANgateway} 
+\newcommand{\nomApplication}{CANdroid} 
+
+\setcounter{secnumdepth}{4} % Pour avoir une numérotation jusqu'au niveau 4
+\renewcommand{\theparagraph}{\thesubsubsection.\arabic{paragraph}} % Pour numéroter les paragraphes à partir du niveau 3
+\makeatletter % Redéfinit la commande \paragraph pour qu'elle utilise les paramètres de formatage de la commande \subsubsection.
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+    {-3.25ex \@plus -1ex \@minus -.2ex}%
+    {1.5ex \@plus .2ex}%
+    {\normalfont\normalsize\bfseries}}
+\makeatother
+\setlength{\parindent}{0pt} % Supprime l'indentation par défaut
+
+% -------------------------------------------------------
+% --------------------------
+% PARAMETRES HEADER / FOOTER 
+% --------------------------
+\pagestyle{fancy} % permet de personnaliser l'apparence de l'en-tête et du pied de page de chaque page du document
+\setlength{\hoffset}{-40pt} % définis la marge horizontale gauche
+\setlength{\topmargin}{-25pt} % définis la marge supérieure 
+\setlength{\headsep}{10pt} % définis l'espace vertical entre l'en-tête et le corps de texte 
+\renewcommand{\headheight}{60pt} % redéfinis la hauteur de l'en-tête
+\renewcommand{\headwidth}{450pt} %  redéfinis la largeur de l'en-tête
+\setlength{\textwidth}{450pt} % définis la largeur du corps de texte
+\setlength{\textheight}{604pt} %  définis la hauteur du corps de texte
+\renewcommand{\footrulewidth}{0.1mm} % redéfinis la largeur de la ligne de séparation de pied de page
+\fancyhf{} % vide les entêtes et pieds de page précédemment définis
+    % HEADER %
+    \fancyhead[LO]{\bf \includegraphics[width=80pt]{../figures/eseo.png}\\ % fancyhead - personnaliser l'en-tête avec 2 arguments : orientation "LO" pour "Left Odd" / contenu "\bf" pour texte en gras + "\includegraphics" inclure le logo de l'ESEO
+        \medskip % ajoute espace vertical moyen (≃ 6 points)
+        {\prose} équipe {\teamNumber} {\annee}} % texte en dessous de l'image de la partie gauche du pdf
+    \fancyhead[RO]{\bf \includegraphics[width=90pt]{../figures/logo_kereval.png}\\ % fancyhead - personnaliser l'en-tête avec 2 arguments : orientation "RO" pour "Right Odd" / contenu "\bf" pour texte en gras + "\includegraphics" inclure le logo de l'entreprise
+        {\small{Ref. {\documentNameAbrev}\_{\teamNumber}}}} % texte en dessous de l'image de la partie droite du pdf
+    % FOOTER %
+    \fancyfoot[LO]{\sl {\it Version {\version} - Révision {\revision}}} % fancyfoot - personnaliser le pied de page avec 2 arguments : position "LO" pour "Left Odd" / contenu "\sl" + "\it" pour texte en italique de la version et la révision
+    \cfoot{\copyright {\annee} Droits réservés {\teamName}} % insérer texte au centre du pied de page
+    \fancyfoot[RO]{\thepage/\pageref{LastPage}} % pied de page partie droite : numéro de page
+% ------------------------------
+% FIN PARAMETRES HEADER / FOOTER 
+% ------------------------------
+\definecolor{darkWhite}{rgb}{0.90,0.90,0.90}
+
+\lstset{
+    backgroundcolor=\color{darkWhite},
+    breakatwhitespace=false,
+    breaklines=true,
+    commentstyle=\color{red},
+    deletekeywords={...},
+    escapeinside={\%*}{*)},
+    keywordstyle=\color{blue},
+    language=bash,
+    stepnumber=0,
+    stringstyle=\color{orange},
+    tabsize=4,
+    columns=fullflexible, 
+    title=\lstname,
+}
+
+\lstdefinestyle{frameStyle}{
+    basicstyle=\footnotesize,
+    numbers=left,
+    numberstyle=\tiny\color{black}
+}
+ 
+\tcbuselibrary{listings,skins,breakable}
+ 
+\newtcblisting{customFrame}{
+    width=\textwidth,
+    listing only,
+    listing options={style=frameStyle}
+}
+
+% --------------
+% DEBUT DOCUMENT 
+% --------------
+\begin{document}
+\sloppy % relâche les règles de justification de texte pour éviter des espaces trop larges
+\renewcommand{\arraystretch}{1.3} % augmente la hauteur des lignes d'un tableau
+
+%-----------------------------------------------
+%   The titles of the parts
+%-----------------------------------------------
+\makeatletter
+% Adds a sub-subparagraph level
+\newcounter{subsubparagraph}[subparagraph]
+\renewcommand\thesubsubparagraph{%
+    \thesubparagraph.\@arabic\c@subsubparagraph}
+\newcommand\subsubparagraph{%
+    \@startsection{subsubparagraph}               % counter
+    {6}                                           % level
+    {0em}                                         % indentation
+    {1em}                                         % before the title
+    {1em}                                         % after the title
+    {\normalsize\hspace{6em}\color{colorTitle}} % style (overloaded by the title format)
+}
+\newcommand\l@subsubparagraph{\@dottedtocline{6}{13em}{6em}}
+\newcommand{\subsubparagraphmark}[1]{}
+\providecommand*{\toclevel@subsubparagraph}{6}
+
+\setcounter{tocdepth}{6}    % Allows the paragraph in the table of contents
+\setcounter{secnumdepth}{6} % Allows the numbering of the sub-paragraph
+
+\makeatother
+% -------------------
+% PAGE DE GARDE {p.1}
+% -------------------
+\begin{center} % centre le contenu de la commande
+    \vspace*{2cm} % ajout d'espace
+    \rule[0.5ex]{0.7\textwidth}{0.1mm}\\ % ajout ligne horizontale : décalage verticale "ex" / largeur de page "%" / épaisseur "mm"
+    \vspace*{2mm} % ajout d'espace
+        {\Huge {\textsc{\bf {\documentName}}}} % crée un titre : police en gras "\bf" / petites capitales "\textsc" / grande taille polile "\Huge" 
+    \vspace{0.4cm}\\ % ajout d'espace / "\\" : retour à la ligne 
+        {\large\bf {\prose} {\teamNumber} {\annee} - {\teamName}}\\ % crée un titre : police en gras "\bf" / taille de police relativement grande "\large"
+    \vspace*{1mm}
+        {\large\bf {\projectName}}\\ % crée un titre 
+    \rule[0.5ex]{0.75\textwidth}{0.1mm}\\ % ajout ligne horizontale
+    \vspace{2cm} 
+    \begin{tabular}{|c|c|} % crée un tableau avec 2 colonnes 
+        \hline % crée une ligne dans le tableau // & : séparateur colonne
+            Responsable du document & {\creator}                      \\
+            État du document        & En révision                     \\
+            Version                 & {\version}                      \\
+            Révision                & {\revision}                     \\
+        \hline
+    \end{tabular}
+\end{center}
+\vspace{3cm} 
+% -----------------------
+% FIN PAGE DE GARDE {p.1}
+% -----------------------
+ 
+% ---------------------
+% TABLEAU VERSION {p.2}
+% ---------------------
+% \noindent % Modifie l'espacement horizontal entre les colonnes
+\input{tableau_version.tex}
+% -------------------------
+% FIN TABLEAU VERSION {p.2}
+% -------------------------
+
+% --------------
+% SOMMAIRE {p.3}
+% --------------
+\tableofcontents % génére table des matières en fonction des commandes "\section{}"
+% ------------------
+% FIN SOMMAIRE {p.3}
+% ------------------
+
+% ---------------
+% BUT DU DOCUMENT
+% ---------------
+\input{sections/Introduction.tex}
+% -------------------------------
+% UTILISATION CANdroid/CANgateway
+% -------------------------------
+\input{sections/Utilisation_CANdroid_CANgateway.tex}
+% --------------------------------
+% AMÉLIORATION CANdroid/CANgateway
+% --------------------------------
+\input{sections/Amelioration_CANdroid_CANgateway.tex}
+
+
+\label{LastPage}
+\end{document}
+% ------------
+% FIN DOCUMENT 
+% ------------

@@ -1,0 +1,6 @@
+@startuml
+title Principaux concepts d'un cas d'utilisation\n
+Acteur -right- (Cas d'utilisation)
+(Cas d'utilisation) .-down-> (Sous cas d'utilisation) : <<include>>
+(Extension d'un cas d'utilisation) .-left-> (Cas d'utilisation) : <<extend>>
+@enduml

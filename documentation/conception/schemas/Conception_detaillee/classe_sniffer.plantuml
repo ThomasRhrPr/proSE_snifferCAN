@@ -1,0 +1,16 @@
+@startuml
+    namespace Sniffer {
+        class Adapter extends Adapter{
+            + onCreateViewHolder() : ViewHolder
+            + onBindViewHolder() : void
+            + setData(ArrayList<String> newData) : void
+            + getItemCount() : int
+        }
+
+                    
+        class RecyclerFragment extends Fragment {
+            + mettreAJourListe(ArrayList<String> nouvelleListe) : void
+
+        }
+    }
+@enduml

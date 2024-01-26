@@ -1,0 +1,64 @@
+@startgantt
+language fr
+printscale weekly
+scale 1200*400
+
+Project starts 2023-02-07
+
+--Réalisation--
+[Initialisation] starts 2023-02-07
+[Spécification Inc1] starts 2023-02-09
+[Conception Inc1] starts 2023-03-17
+[Code Inc1] starts 2023-04-14
+[Soutenance Inc1] starts 2023-05-16
+[Soutenance Inc1] displays on same row as [Initialisation]
+
+[Initialisation] ends 2023-03-10
+[Spécification Inc1] ends 2023-03-17
+[Conception Inc1] ends 2023-04-18
+[Code Inc1] ends 2023-05-10
+
+[Spécification Inc2] starts 2023-05-17
+[Spécification Inc2] displays on same row as [Spécification Inc1]
+[Conception Inc2] starts 2023-05-20
+[Conception Inc2] displays on same row as [Conception Inc1]
+[Code Inc2] starts 2023-05-23
+[Code Inc2] displays on same row as [Code Inc1]
+[Soutenance Inc2] starts 2023-06-14
+[Soutenance Inc2] displays on same row as [Soutenance Inc1]
+
+[Spécification Inc2] ends 2023-05-23
+[Conception Inc2] ends 2023-05-30
+[Code Inc2] ends 2023-06-07
+
+--Tests--
+[CdT Inc1] starts 2023-05-15
+[PdT Inc1] starts 2023-03-07
+[SV(R) Inc1] starts 2023-03-10
+[SV(E) Inc1] starts 2023-05-01
+[Intégrations(R+E) Inc1] starts 2023-03-20
+
+[PdT Inc1] ends 2023-03-17
+[SV(R) Inc1] ends 2023-03-17
+[SV(E) Inc1] ends 2023-05-14
+[Intégrations(R+E) Inc1] ends 2023-05-14
+
+[CdT Inc2] starts 2023-06-13
+[CdT Inc2] displays on same row as [CdT Inc1]
+[PdT Inc2] starts 2023-05-17
+[PdT Inc2] displays on same row as [PdT Inc1]
+[SV(R) Inc2] starts 2023-05-20
+[SV(R) Inc2] displays on same row as [SV(R) Inc1]
+[SV(E) Inc2] starts 2023-06-07
+[SV(E) Inc2] displays on same row as [SV(E) Inc1]
+[Intégrations(R+E) Inc2] starts 2023-05-28
+[Intégrations(R+E) Inc2] displays on same row as [Intégrations(R+E) Inc1]
+[Unitaires(R+E) Inc2] starts 2023-05-28
+
+[PdT Inc2] ends 2023-05-25
+[SV(R) Inc2] ends 2023-05-25
+[SV(E) Inc2] ends 2023-06-12
+[Intégrations(R+E) Inc2] ends 2023-06-12
+[Unitaires(R+E) Inc2] ends 2023-06-12
+
+@endgantt

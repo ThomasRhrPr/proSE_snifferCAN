@@ -1,0 +1,19 @@
+@startuml
+
+  node E_Smartphone 
+  node E_Raspberry
+  node E_PC
+  node E_Banc_De_Test
+
+  E_Smartphone -l- TCP_IP
+  TCP_IP -l- E_Raspberry 
+  E_Banc_De_Test - CAN
+  CAN -u- E_PC
+  CAN - E_Raspberry
+
+
+  [CANdroid] ..> E_Smartphone : <<deploy>>
+  [E_ICSim] ..> E_PC : <<deploy>>
+  [CANgateway] ..> E_Raspberry : <<deploy>>
+
+@enduml

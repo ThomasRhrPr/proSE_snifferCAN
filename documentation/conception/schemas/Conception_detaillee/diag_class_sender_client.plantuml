@@ -1,0 +1,12 @@
+@startuml
+
+class SendFrames
+{
+    + startSending(framesToSend : List<String> ) : void
+    + stopSending() : void
+    - askSendingSate() : String
+    - send() : void
+    - setNumberFramesToSend() : String
+}
+
+@enduml

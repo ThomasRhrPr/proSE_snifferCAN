@@ -1,0 +1,61 @@
+% ----------------------------------------------
+% CU SUPPRIMER UNE TRAME
+% ----------------------------------------------
+\subsubsection{CU Supprimer une trame}
+\paragraph{Description graphique}
+\medskip
+\paragraph{Description textuelle}
+\medskip
+
+
+\begin{longtable}[l]{|p{3cm}|p{11.7cm}|}
+    \hline
+    
+        Titre & Supprimer une trame.\\
+    \hline
+
+        Résumé & Permet de supprimer une trame créée \\
+    \hline
+
+        Portée & Application Android.\\
+    \hline
+
+        Niveau & Utilisateur.\\
+    \hline
+
+        Acteurs directs & Utilisateur.\\
+    \hline 
+
+        Acteurs indirects & \\
+    \hline
+
+        Préconditions & Le SàE est démarré. \newline
+        Un objet a été créé. \\
+    \hline
+
+        Garanties \newline minimales & \\
+    \hline
+
+        Garanties en cas de succès & 
+        La trame à été supprimée. \\
+    \hline
+
+        Scénario nominal &     \newline
+        1. L'utilisateur selectionne une trame. \newline
+        2. L'application Android grise la trame selectionnée.\newline
+        3. L'utilisateur appuie sur le bouton de suppression. \newline
+        4. L'application Android affiche Ecran\_Suppression. \newline
+        5. L'utilisateur valide. \newline
+        \\
+    \hline
+
+    Variantes & \newline
+        \textbf{1. [Plusieurs trames à selectionné]} \newline
+        1.a.1 L'utiliisateur selectionne plusieurs trames \newline
+        1.a.2 L'application Android grise les trames selectionné \newline
+        \\
+    \hline
+
+        Extensions & \\
+    \hline
+\end{longtable}

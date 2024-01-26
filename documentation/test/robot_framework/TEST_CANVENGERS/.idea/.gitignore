@@ -1,0 +1,12 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+report/*.html
+report/*.xml
+/misc.xml
+/modules.xml
+/inspectionProfiles/profiles_settings.xml
+/robot-runner-plugin__project_settings.xml
+/TEST_CANVENGERS.iml
+/vcs.xml
+SUT/CANdroid.apk

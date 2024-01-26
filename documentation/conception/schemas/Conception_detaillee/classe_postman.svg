@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="111px" preserveAspectRatio="none" style="width:336px;height:111px;" version="1.1" viewBox="0 0 336 111" width="336px" zoomAndPan="magnify"><defs><filter height="300%" id="f1k6kty5b9enuq" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[7452fdaa12554a166d21500bc352dcc0]
+class Postman--><rect fill="#FEFECE" filter="url(#f1k6kty5b9enuq)" height="93.5156" id="Postman" style="stroke: #A80036; stroke-width: 1.5;" width="318" x="7" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="51" x="140.5" y="23.1387">«active»</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="63" x="134.5" y="37.1074">«medium»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="55" x="138.5" y="51.0762">Postman</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="8" x2="324" y1="58.9063" y2="58.9063"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="8" x2="324" y1="66.9063" y2="66.9063"/><ellipse cx="18" cy="77.9063" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="292" x="27" y="81.1167">sendMessage(in - message : String) : ErrorState_e</text><ellipse cx="18" cy="90.7109" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="288" x="27" y="93.9214">receiveData(out - message : String) : ErrorState_e</text><!--MD5=[f545baa1582d244abc5db7235cd9fbf0]
+@startuml
+
+hide circle
+
+class Postman <<active>> <<medium>> {
+            + sendMessage(in - message : String) : ErrorState_e
+            + receiveData(out - message : String) : ErrorState_e
+}
+
+@enduml
+
+PlantUML version 1.2020.02(Sun Mar 01 11:22:07 CET 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.19+7-post-Ubuntu-0ubuntu122.04.1
+Operating System: Linux
+Default Encoding: UTF-8
+Language: fr
+Country: FR
+--></g></svg>

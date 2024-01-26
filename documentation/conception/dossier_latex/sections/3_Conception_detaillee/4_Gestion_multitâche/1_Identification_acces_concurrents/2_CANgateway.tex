@@ -1,0 +1,32 @@
+\paragraph{Côté CANgateway}
+
+\medspace
+
+\begin{minipage}
+    \textwidth
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Tâches & DriverCAN & ProxyLogger & ProxyGUI\\
+        \hline
+        UI &  &  &\\
+        \hline
+        Postman &  &  & \\
+        \hline
+        Dispatcher &  &  & \\
+        \hline
+        Sniffer & X & X &  \\
+        \hline
+        Sender & X & X & X \\
+        \hline
+    \end{tabular}
+    \captionof{table}{Accès concurrents côté CANgateway}
+\end{minipage}
+
+\medspace
+
+\textbf{Analyse générale :} Il y a de potentiels accès concurrents entre les tâches Sniffer et Sender. En effet, ces deux tâches utilisent la classe DriverCAN pour communiquer avec le bus CAN et la classe ProxyLogger pour informer l'application {\nomApplication} des trames envoyées et reçues sur le bus CAN. Il est donc nécessaire de protéger les accès concurrents à ces classes.\\
+
+\textbf{Problèmes avec la classe ProxyLogger :} En réalité, il n'y a pas de problèmes d'accès concurrents avec la classe ProxyLogger car elle utilise la classe Postman afin de transmettre les informations à fournir à Logger et que cette classe est déjà protégée contre les accès concurrents.\\
+
+\textbf{Problèmes avec la classe DriverCAN :} La classe DriverCAN utilise les socketCAN pour communiquer avec le bus CAN. Or les classes Sender et Sniffer utilisent deux sockets différentes. La classe Sender n'utilise sa socketCAN que pour écrire sur le bus. À l'inverse, la classe Sniffer n'utilise sa socketCAN que pour lire sur le bus. Il n'y a donc pas de réels problèmes d'accès concurrents.\\ 

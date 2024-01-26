@@ -1,0 +1,9 @@
+@startuml
+
+node Dispositif_matériel
+
+[Logiciel]
+
+Dispositif_matériel -l- Interface
+
+@enduml

@@ -1,0 +1,98 @@
+% ----------------------------------------------
+% CU Enregistrer des trames CAN
+% ----------------------------------------------
+\newpage
+\subsubsection{CU Ajouter une trame}
+\paragraph{Description graphique}
+Voir figure \ref{schema_cu_strat}.
+\paragraph{Description textuelle}
+\medskip
+
+\begin{longtable}[l]{|p{3cm}|p{11.7cm}|}
+    \hline
+    
+        Titre & Ajouter une trame.\\
+    \hline
+
+        Résumé & Utilisateur ajoute une trame CAN associée à un objet avec son Mode Envoi. \\
+    \hline
+
+        Portée & Application {\nomApplication}.\\
+    \hline
+
+        Niveau & Utilisateur.\\
+    \hline
+
+        Acteurs directs & Utilisateur.\\
+    \hline 
+
+        Acteurs indirects & N.A. \\
+    \hline
+
+        Préconditions & 
+        \begin{itemize}
+            \item Le SàE est démarré.
+            \item Un objet existe.
+        \end{itemize} \\
+    \hline
+
+        Garanties \newline minimales & N.A.\\
+    \hline
+
+        Garanties en cas de succès & 
+        \begin{itemize}
+            \item Une trame est créée dans le bon objet.
+        \end{itemize}
+         \\
+    \hline
+
+        Scénario nominal &
+        \begin{enumerate}
+            \item Utilisateur déroule le menu de l'objet.
+            \item L'application {\nomApplication} met à jour EcranPrincipal.
+            \item Utilisateur saisit la trame. 
+            \item Utilisateur valide la saisie de la trame.
+            \item L'application {\nomApplication} affiche PopupModeEnvoiTrame.
+            \item Utilisateur choisit le mode d'envoi ponctuel.
+            \item Utilisateur valide le mode d'envoi.
+            \item L'application {\nomApplication} affiche EcranPrincipal.
+        \end{enumerate} \\
+    \hline
+
+        Variantes & \newline
+        \textbf{1 [L’objet est déjà déplié]} \newline
+            1.a.1. Va en 3.\newline
+            \newline
+        \textbf{5 [Nombre maximal de trames atteint \& Utilisateur souhaite
+        ajouter une trame]} \newline
+            5.a.1. L’application {\nomApplication} aﬀiche PopupErreurNombreTrame.\newline
+            5.a.2. Utilisateur ferme PopupErreurNombreTrame. \newline
+            5.a.3. L’application {\nomApplication} aﬀiche EcranPrincipal. \newline
+            5.a.4. Fin du CU. \newline
+            \newline
+        \textbf{5 [Utilisateur souhaite ajouter une trame qui n'a pas le bon format]} \newline
+            5.b.1. L'application {\nomApplication} affiche PopupErreurSaisieTrame. \newline
+            5.b.2. Utilisateur ferme PopupErreurSaisieTrame. \newline
+            5.b.3. L’application {\nomApplication} aﬀiche EcranPrincipal. \newline
+            5.b.4. Va en 3. \newline 
+            \newline 
+        \textbf{6 [Utilisateur choisit le mode cyclique \& souhaite changer la périodicité]} \newline
+            6.a.1. Utilisateur choisit le mode d'envoi cyclique. \newline
+            6.a.2. Utilisateur saisit la périodicité. \newline
+            6.a.3. Va en 7. \newline
+            \newline
+        \textbf{6 [Utilisateur choisit le mode cyclique \& souhaite garder la périodicité par défaut]} \newline
+            6.b.1. Utilisateur choisit le mode d'envoi cyclique. \newline    
+            6.b.2. Va en 7. \newline
+            \\
+    \hline
+
+        Extensions & \newline
+        \textbf{6-7 [Utilisateur souhaite annuler]} \newline
+        6-7.a.1. Utilisateur ferme PopupModeEnvoiTrame. \newline
+        6-7.a.2. L'application {\nomApplication} affiche EcranPrincipal. \newline
+        \\
+    \hline
+    Informations \newline complémentaires & N.A. \\
+    \hline
+\end{longtable}

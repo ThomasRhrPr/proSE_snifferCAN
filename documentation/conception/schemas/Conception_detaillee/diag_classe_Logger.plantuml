@@ -1,0 +1,47 @@
+@startuml
+
+package Logger {
+class LogManager
+{
++ dicoFrameSent() : void
++ setFrame() : void
++ getFrames(p_frame : String ): void
++ clearAll() : void
++ save() : void
++createViewModel(): ViewModel
+}
+
+class FilesManager
+{
++ createFiles() : void
++ writeOnFiles() : void
++ saveFramesToFile() : void
++ isMaxFramesReach() : void
+}
+
+class Thesaurus
+{
++ getObjetFromIdFrame(idFrame : String) : Object
+}    
+
+
+
+}
+
+class LogManagerViewModel 
+{
+
+}
+
+class MainActivity 
+{
+    -viewModel: ViewModel
+}
+
+LogManager --> LogManagerViewModel
+MainActivity <-- LogManagerViewModel
+DispatcherCANdroid --> LogManager 
+FilesManager --> LogManager
+Thesaurus --> LogManager
+
+@enduml

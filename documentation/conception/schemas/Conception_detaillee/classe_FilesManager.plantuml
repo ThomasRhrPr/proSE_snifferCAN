@@ -1,0 +1,13 @@
+@startuml
+
+class FilesManager
+{
+    + MAX_FRAMES: int
+    + createFiles(): void
+    + writeOnFiles(frame: String): void
+    + isMaxFramesReach(): boolean
+    - getFileName(): String
+    - getLignes(file: File): int
+}
+
+@enduml

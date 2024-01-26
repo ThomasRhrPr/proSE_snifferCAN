@@ -1,0 +1,11 @@
+@startuml
+
+class CommunicationCANdroid extends Thread implements SocketListener
+{
+- receiveFrame() : void
++ connectClient() : void
++ disconnectClient() : void
++ sendFrame(frame : String) : void
+}
+
+@enduml

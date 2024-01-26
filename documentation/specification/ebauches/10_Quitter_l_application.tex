@@ -1,0 +1,66 @@
+% ----------------------------------------------
+% CU QUITTER L'APPLICATION
+% ----------------------------------------------
+\subsubsection{CU Quitter l'application}
+\paragraph{Description graphique}
+\medskip
+\paragraph{Description textuelle}
+\medskip
+
+
+\begin{longtable}[l]{|p{3cm}|p{11.7cm}|}
+    \hline
+    
+        Titre & Quitter l'application.\\
+    \hline
+
+        Résumé & Utilisateur quitte l'application, il ne peut plus utiliser les composants du SàE. \\
+    \hline
+
+        Portée & SàE.\\
+    \hline
+
+        Niveau & Utilisateur.\\
+    \hline
+
+        Acteurs directs & Utilisateur.\\
+    \hline 
+
+        Acteurs indirects & \\
+    \hline
+
+        Préconditions & \\
+    \hline
+
+        Garanties \newline minimales & \\
+    \hline
+
+        Garanties en cas de succès & 
+        L'utilisateur ne peut plus utiliser l'application. \\
+    \hline
+        Scénario nominal &
+        \begin{enumerate}
+            \item Utilisateur quitte de l'application {\nomApplication}.
+            \item {\nomApplication} se déconnecte du programme {\nomLogiciel}.
+            \item Utilisateur met hors tension la carte électronique.
+            \item Le programme {\nomLogiciel} s'arrête. 
+            \item Utilisateur éteint les Tableaux de bord.
+        \end{enumerate} \\
+    \hline
+
+    Variantes &     \newline
+        \textbf{3 [Ne rien faire]} \newline
+        3.a.1. Va en 5. \newline
+        \newline
+        \textbf{5 [Mise à l'arrêt du Simulateur ICSim uniquement]} \newline
+        5.a.1. Utilisateur éteint le Simulateur ICSim. \newline
+        \newline
+        \textebf{5 [Mise à l'arrêt du Banc de test uniquement]} \newline
+        5.b.1. Utilisateur éteint le Banc de test. \newline
+        \newline
+        \\
+    \hline
+
+        Extensions & \\
+    \hline
+\end{longtable}

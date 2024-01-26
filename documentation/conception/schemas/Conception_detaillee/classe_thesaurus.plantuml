@@ -1,0 +1,11 @@
+@startuml
+
+class Thesaurus {
+    + addElements(frame: Frame): void
+    + removeElements(frame: Frame): void
+    + getObjectFromIdFrame(frame: Frame): Object
+    + getSize(): int
+    + searchFrame(idFrame: String, size: int, data: String): Frame
+}
+
+@enduml

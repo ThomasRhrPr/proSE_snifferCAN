@@ -1,0 +1,61 @@
+% ----------------------------------------------
+% CU ENVOYER UNE TRAME
+% ----------------------------------------------
+\subsubsection{CU Envoyer une trame}
+\paragraph{Description graphique}
+\medskip
+\paragraph{Description textuelle}
+\medskip
+
+\begin{longtable}[l]{|p{3cm}|p{11.7cm}|}
+    \hline
+    
+        Titre & Envoyer une trame.\\
+    \hline
+
+        Résumé & Permet l'envoie d'une trame de l'application Android. \\
+    \hline
+
+        Portée & SàE.\\
+    \hline
+
+        Niveau & Utilisateur.\\
+    \hline
+
+        Acteurs directs & Utilisateur.\\
+    \hline 
+
+        Acteurs indirects & \\
+    \hline
+
+        Préconditions & Le SàE est démarré. \newline
+        Un objet a été créé. \newline
+        Une trame à été crée.  \\
+    \hline
+
+        Garanties \newline minimales & \\
+    \hline
+
+        Garanties en cas de succès & 
+        La trame à été envoyer au banc de test. \\
+    \hline
+
+        Scénario nominal &     \newline
+        1. L'utilisateur appui sur le bouton d'envoi de trames. \newline
+        2. L'application Android affiche Ecran\_Envoi\_Trames.\newline
+        3. L'utilisateur choisi le mode d'envoi. \newline
+        4. L'utilisateur valide son choix. \newline
+        5. L'application Android affiche Ecran\_Principal. \newline
+        \\
+    \hline
+
+    Variantes & \\
+    \hline
+
+        Extensions & \newline
+        \textbf{* [Annuler]} \newline
+        *.a.1 L'utilisateur ferme Ecran\_Envoi\_Trames \newline
+        *.a.2 Va en 5. \newline
+        \\
+    \hline
+\end{longtable}

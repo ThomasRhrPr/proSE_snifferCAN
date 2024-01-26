@@ -1,0 +1,35 @@
+@startuml
+actor Utilisateur
+participant gui
+participant logger
+participant dealer
+participant object
+participant frame
+participant network
+participant basket
+participant sniffer
+participant sender
+participant ui
+
+Utilisateur -> gui : openObjectMenu(id_element : IdElement)
+
+gui -> gui : displayScreen(MAIN_SCREEN)
+
+Utilisateur -> gui : select(id_element : IdElement)
+
+gui -> basket : addElement(id_element : IdElement)
+
+gui -> gui : displayScreen(MAIN_SCREEN)
+
+Utilisateur -> gui : startSendFrame()
+
+gui -> sender : askSendingState()
+
+sender -> sender : send()
+
+sender -> gui : setSendingState()
+
+gui -> gui : displayScreen(MAIN_SCREEN)
+
+
+@enduml

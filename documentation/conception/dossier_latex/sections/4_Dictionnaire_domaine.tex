@@ -1,0 +1,77 @@
+\newpage
+\section{Dictionnaire de domaine} \label{dictionnaire}
+
+\begin{itemize}  
+    \item \textbf{ASK\_DELAY} : Correspond à un délay de demande d'informations de 500 ms. \newline
+    \item \textbf{BackToTop} : Correspond en anglais à "La fin du fil" dans \hyperref[SPEC]{[dossier\_de\_specification\_SPEC\_B1\_2024]} dans le dictionnaire de domaine.\newline
+    \item \textbf{Boutons} : Pour rappel, les boutons et leur positionnement sont décrit dans \hyperref[SPEC]{[dossier\_de\_specification\_SPEC\_B1\_2024]} dans la section sur les IHM. \newline
+    \item \textbf{CAN} : Controller Area Network, il s'agit d'un protocole de communication série utilisé pour connecter par exemple des capteurs et des actionneurs.\newline
+    \item \textbf{Champs de textes} : Tout comme pour les boutons, les champs de textes et leur positionnement sont décrits dans \hyperref[SPEC]{[dossier\_de\_specification\_SPEC\_B1\_2024]} dans la section sur les IHM. \newline
+    \item \textbf{Correspondance des opérations de la classe GUI avec le contexte logique dans \hyperref[SPEC]{[dossier\_de\_specification\_SPEC\_B1\_2024]}} : 
+    \begin{itemize}
+        \item acceptRequest() : correspond à l'opération valider() du contexte logique.
+        \item addFrame() : correspond à l'opération ajouterTrame() du contexte logique.
+        \item addObject() : correspond à l'opération ajouterObjet() du contexte logique.
+        \item askReconnection() : correspond à l'opération reconnecter() du contexte logique.
+        \item backToTopSniffer() : correspond à l'opération revenirEnHaut() du contexte logique.
+        \item cleanSniffer() : correspond à l'opération supprimerTramesSniffer() du contexte logique.
+        \item closeObjectMenu(idElement : IdElement) : correspond à l'opération fermerMenuObjet(idElement : IdElement) du contexte logique.
+        \item delete() : correspond à l'opération supprimer() du contexte logique.
+        \item displayMainScreen() : correspond à l'opération afficherEcranPrincipal() du contexte logique.
+        \item displayPopup(idScreenPopup : IdScreenPopup) : correspond à l'opération afficherPopup(idScreenPopup : IdScreenPopup) du contexte logique.
+        \item exportSniffer() : correspond à l'opération exporterTramesSniffer() du contexte logique.
+        \item openObjectMenu(idElement : IdElement) : correspond à l'opération ouvrirMenuObjet(idElement : IdElement) du contexte logique.
+        \item pauseSniffer() : correspond à l'opération desactiverReceptionTrames() du contexte logique.
+        \item rejectRequest() : correspond à l'opération refuser() du contexte logique.
+        \item resumeSniffer() : correspond à l'opération activerReceptionTrames() du contexte logique.
+        \item select(idElement : IdElement) : correspond à l'opération selectionner(idElement : IdElement) du contexte logique.
+        \item setFrame(frame : string) : correspond à l'opération ecrireTrame(trame : string) du contexte logique.
+        \item setObject(object : string) : correspond à l'opération nommerObjet(nom : string) du contexte logique.
+        \item setSenderMode(senderMode : StructSenderMode) : correspond à l'opération definirModeEnvoiTrame(modeEnvoi : booléen) du contexte logique.
+        \item setPeriodicity(periodicity : int) : correspond à l'opération saisirPeriodicite(peridodicite : int) du contexte logique.
+        \item unselect(idElement : IdElement) : correspond à l'opération deselectionner(idElement : IdElement) du contexte logique.
+    \newline
+    \end{itemize} 
+    \item \textbf{\'Ecrans utilisés} : les écrans utilisés sont décrits dans \hyperref[SPEC]{[dossier\_de\_specification\_SPEC\_B1\_2024]} dans la section sur les IHM. Voici un rappel des traductions anglaises des noms des écrans utilisés dans le dossier : 
+        \begin{itemize}
+            \item \textbf{MainScreen}: Correspond à EcranPrincipal.
+            \item \textbf{PopupAddObject} : Correspond à PopupAjoutObjet.
+            \item \textbf{PopupAskReconnection} : Correspond à PopupDemandeReconnexion.
+            \item \textbf{PopupDeleteElement} : Correspond à PopupSuppressionElement. 
+            \item \textbf{PopupFailNumberObject} : Correspond à PopupErreurNombreObjet.
+            \item \textbf{PopupFailAddObject} : Correspond à PopupErreurAjoutObjet.
+            \item \textbf{PopupFailWritingFrame} : Correspond à PopupErreurSaisieTrame.
+            \item \textbf{PopupFailNumberFrame} : Correspond à PopupErreurNombreTrame.
+            \item \textbf{PopupFrameSendingMode} : Correspond à PopupModeEnvoiTrame.
+            \item \textbf{PopupStopSend} : Correspond à PopupArretEnvoi.\newline
+        \end{itemize}
+    \item \textbf{Format de la trame} : Afin d'éviter à Utilisateur de taper tous les zéros non significatifs lors de la saisie d'une trame, les trames doivent être saisies avec des séparateurs de la forme suivante : 
+    \begin{itemize}
+        \item \#id\$size\@@message \newline
+    \end{itemize}
+    \item \textbf{Git} : Correspond au dépôt utilisé par l'équipe CANvengers dans le cadre du projet Passerelle Android-CAN vers banc CAN réel ou simulé.\newline
+    \item \textbf{LED} : \textit{light-emitting diode}, Diode électroluminescente présente sur la Raspberry PI.\newline
+    \item \textbf{Mode Envoi} : ce mode définit si des trames sont en cours d'envoi ou non.\newline
+    \item \textbf{Nom d'objet par défaut} : Le nom par défaut est le nom donné lorsque Utilisateur ne spécifie pas de nom pour l'ajout d'un objet. Le nom par défaut sera "Objet\_" suivi de l'identifiant le plus grand déjà utilisé pour un objet, augmenté de 1. Par exemple, si les identifiants des derniers objets créés sont 10, 11 et 12, le prochain objet créé aura le nom par défaut "Objet\_13".\newline
+    \item \textbf{Raspberry PI} : Correspond à E\_Raspberry dans \hyperref[SPEC]{[dossier\_de\_specification\_SPEC\_B1\_2024]}, ordinateur monocarte créé par la Fondation Raspberry PI. \newline
+    \item \textbf{Smartphone} : Correspond à E\_Smartphone dans \hyperref[SPEC]{[dossier\_de\_specification\_SPEC\_B1\_2024]}, téléphone portable sous système Android. \newline
+    \item \textbf{Sniffer} : Un sniffer est un programme qui capture tous les paquets circulant dans le réseau. Dans notre cas, le terme sniffer est utilisé pour désigner le terminal d'affichage des trames du réseaux CAN de l'application {\nomApplication}. \newline
+    \item \textbf{Tableau de Bord}: Représente l'un des (ou les) deux systèmes ci-dessous :
+        \begin{itemize}
+            \item \textbf{Simulateur ICSim (correspond à E\_ICSim dans \hyperref[SPEC]{[dossier\_de\_specification\_SPEC\_B1\_2024]})} : Simulateur d'un tableau de bord de voiture. 
+            \item \textbf{Banc de test (correspond à E\_Banc\_De\_Test dans \hyperref[SPEC]{[dossier\_de\_specification\_SPEC\_B1\_2024]})} : Banc de test d'un tableau de bord de voiture
+        \end{itemize}
+        Il est connecté au SàE afin d'envoyer et recevoir des trames CAN. 
+        Dans tout le dossier, on emploie le terme Tableau de Bord (correspond à E\_TableauDeBord dans \hyperref[SPEC]{[dossier\_de\_specification\_SPEC\_B1\_2024]}) au singulier, car le scénario nominal du SàE n'utilise que le SimulateurICSim.\newline
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+

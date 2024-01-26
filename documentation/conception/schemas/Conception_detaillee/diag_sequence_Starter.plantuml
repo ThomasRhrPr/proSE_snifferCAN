@@ -1,0 +1,53 @@
+@startuml 
+
+skinparam LifelineStrategy solid
+
+actor Utilisateur
+
+Utilisateur -> Starter : main()
+Starter -> Starter : new()
+create Postman
+Starter -> Postman : new()
+create Dispatcher
+Starter -> Dispatcher : new()
+create DriverCAN
+Starter -> DriverCAN : new()
+create Sender
+Starter -> Sender : new()
+create Sniffer
+Starter -> Sniffer : new()
+
+Starter -> Starter : start()
+Starter -> Postman : start()
+Starter -> Dispatcher : start()
+Starter -> Sender : start()
+Starter -> Sniffer : start()
+
+Starter -> UI : startCANgateway()
+
+... Utilisateur souhaite arrêter le programme ...
+
+Utilisateur -> Starter : SIGINT
+
+Starter -> UI : stopCANgateway()
+
+Starter -> Starter : stop()
+Starter -> Sniffer : stop()
+Starter -> Sender : stop()
+Starter -> Postman : stop()
+Postman -> Dispatcher : stop()
+
+Starter -> Starter : free()
+Starter -> Sniffer : free()
+destroy Sniffer
+Starter -> Sender : free()
+destroy Sender
+Starter -> DriverCAN : free()
+destroy DriverCAN
+Starter -> Dispatcher : free()
+destroy Dispatcher
+Starter -> Postman : free()
+destroy Postman
+Starter --> Utilisateur 
+
+@enduml

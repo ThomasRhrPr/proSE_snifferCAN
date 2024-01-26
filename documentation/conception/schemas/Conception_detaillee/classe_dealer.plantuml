@@ -1,0 +1,17 @@
+@startuml
+
+class DealerManager {
+    + verifyObjectName(name: String, context: Context): bool
+    + verifyFrameName(frame: String): bool
+    + loadObjects() : IdElement[*]
+    + saveObject(object : String) : bool
+    + getListObject() : IdElement[*]
+    + getObject(idElement : IdElement) : Object
+    + getFrame(idElement : IdElement) : Frame
+    + saveNewFrame(idObject : IdObject, frame : String, mode : SenderMode, periodicity : int)
+    + getDefaultObjectName(context: Context): String
+    + deleteArticles(deleteObject: List<Object>, deleteFrame: List<Frame>, context: Context): void
+    - getMaxId(context: Context): int
+}
+
+@enduml

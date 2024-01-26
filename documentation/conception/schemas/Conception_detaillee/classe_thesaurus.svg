@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="130px" preserveAspectRatio="none" style="width:386px;height:130px;" version="1.1" viewBox="0 0 386 130" width="386px" zoomAndPan="magnify"><defs><filter height="300%" id="f150lctu5tza3y" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[e8a9813e106f9cf5632db8d301be7eea]
+class Thesaurus--><rect fill="#FEFECE" filter="url(#f150lctu5tza3y)" height="112.0234" id="Thesaurus" style="stroke: #A80036; stroke-width: 1.5;" width="368" x="7" y="7"/><ellipse cx="153.75" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M156.7188,28.6406 Q156.1406,28.9375 155.5,29.0781 Q154.8594,29.2344 154.1563,29.2344 Q151.6563,29.2344 150.3281,27.5938 Q149.0156,25.9375 149.0156,22.8125 Q149.0156,19.6875 150.3281,18.0313 Q151.6563,16.375 154.1563,16.375 Q154.8594,16.375 155.5,16.5313 Q156.1563,16.6875 156.7188,16.9844 L156.7188,19.7031 Q156.0938,19.125 155.5,18.8594 Q154.9063,18.5781 154.2813,18.5781 Q152.9375,18.5781 152.25,19.6563 Q151.5625,20.7188 151.5625,22.8125 Q151.5625,24.9063 152.25,25.9844 Q152.9375,27.0469 154.2813,27.0469 Q154.9063,27.0469 155.5,26.7813 Q156.0938,26.5 156.7188,25.9219 L156.7188,28.6406 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="66" x="174.25" y="27.1543">Thesaurus</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="8" x2="374" y1="39" y2="39"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="8" x2="374" y1="47" y2="47"/><ellipse cx="18" cy="58" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="191" x="27" y="61.2104">addElements(frame: Frame): void</text><ellipse cx="18" cy="70.8047" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="213" x="27" y="74.0151">removeElements(frame: Frame): void</text><ellipse cx="18" cy="83.6094" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="259" x="27" y="86.8198">getObjectFromIdFrame(frame: Frame): Object</text><ellipse cx="18" cy="96.4141" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="71" x="27" y="99.6245">getSize(): int</text><ellipse cx="18" cy="109.2188" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="342" x="27" y="112.4292">searchFrame(idFrame: String, size: int, data: String): Frame</text><!--MD5=[ae13c514871c02cca25ca50d9a346626]
+@startuml
+
+class Thesaurus {
+    + addElements(frame: Frame): void
+    + removeElements(frame: Frame): void
+    + getObjectFromIdFrame(frame: Frame): Object
+    + getSize(): int
+    + searchFrame(idFrame: String, size: int, data: String): Frame
+}
+
+@enduml
+
+PlantUML version 1.2020.02(Sun Mar 01 11:22:07 CET 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.19+7-post-Ubuntu-0ubuntu122.04.1
+Operating System: Linux
+Default Encoding: UTF-8
+Language: fr
+Country: FR
+--></g></svg>

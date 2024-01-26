@@ -1,0 +1,10 @@
+@startuml
+
+class ConnectionCANdroid 
+{
++ <<thread>> connect(ip : String, port : int) : void
++ <<thread>> write(message : String) : void
++ read() : String
+}
+
+@enduml

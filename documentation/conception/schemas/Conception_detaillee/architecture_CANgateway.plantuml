@@ -1,0 +1,45 @@
+@startuml 
+
+hide circle
+hide empty members
+
+package CANgateway {
+    package Communication {
+        class Postman <<active>> <<medium>> 
+        class Dispatcher <<active>> <<medium>> 
+        class ProxyGUI <<medium>> 
+        class ProxyLogger <<medium>> 
+    }
+
+    class Starter 
+
+    class Sniffer <<active>> 
+
+    class Sender <<active>> 
+
+    class DriverCAN <<boundary>>
+
+    class UI
+
+    Starter -d-> Sniffer
+    Starter -d-> Sender
+    Starter -d-> DriverCAN
+    Starter -l-> UI
+    Starter -l-> Dispatcher
+
+    ProxyGUI -u-> Postman
+    ProxyLogger -u-> Postman
+    ProxyGUI -[hidden]l-> ProxyLogger
+
+    Starter -l-> Postman
+    Dispatcher -l- Postman
+    Dispatcher -d-> Sender
+    Sender -d-> ProxyGUI
+    Sniffer -u-> ProxyLogger
+    UI -u-> Sniffer
+
+    Sniffer -d-> DriverCAN
+    Sender -l-> DriverCAN
+}
+
+@enduml

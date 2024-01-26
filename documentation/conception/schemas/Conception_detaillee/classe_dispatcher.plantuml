@@ -1,0 +1,9 @@
+@startuml
+
+hide circle
+
+class Dispatcher <<active>> <<medium>> {
+    !includesub diag_classe_CANgateway.plantuml!Dispatcher
+}
+
+@enduml

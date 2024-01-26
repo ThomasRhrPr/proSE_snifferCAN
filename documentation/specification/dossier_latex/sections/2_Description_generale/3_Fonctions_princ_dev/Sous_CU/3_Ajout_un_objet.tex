@@ -1,0 +1,84 @@
+% ----------------------------------------------
+% CU CREER UN NOUVEL OBJET
+% ----------------------------------------------
+\newpage
+\subsubsection{CU Ajouter un objet}
+\paragraph{Description graphique}
+Voir figure \ref{schema_cu_strat}.
+\paragraph{Description textuelle}
+\medskip
+
+\begin{longtable}[l]{|p{3cm}|p{11.7cm}|}
+    \hline
+    
+        Titre & Ajouter un objet.\\
+    \hline
+
+        Résumé & Utillisateur ajoute un objet sur l'application {\nomApplication}. \\
+    \hline
+
+        Portée & Application {\nomApplication}.\\
+    \hline
+
+        Niveau & Utilisateur. \\
+    \hline
+
+        Acteurs directs & Utilisateur.\\
+    \hline 
+
+        Acteurs indirects & N.A. \\
+    \hline
+
+        Préconditions & 
+        \begin{itemize}
+            \item L'application {\nomApplication} est démarrée.
+        \end{itemize} \\
+    \hline
+
+        Garanties \newline minimales & N.A. \\
+    \hline
+
+        Garanties en cas de succès & 
+        \begin{itemize}
+            \item Un objet est ajouté. 
+        \end{itemize}
+        \\
+    \hline
+
+    Scénario nominal &
+    \begin{enumerate} 
+        \item Utilisateur demande l'ajout d'un objet. 
+        \item Le SàE choisit un Nom d'objet par défaut.
+        \item L'application {\nomApplication} affiche PopupAjoutObjet.
+        \item Utilisateur saisit un nom d'objet.
+        \item Utilisateur valide l'ajout.
+        \item L'application {\nomApplication} met à jour EcranPrincipal.
+    \end{enumerate} \\
+    \hline
+
+        Variantes & \newline
+        \textbf{2 [Nombre maximal d'objets atteint \& Utilisateur souhaite ajouter un objet]} \newline
+        2.a.1. L’application {\nomApplication} aﬀiche PopupErreurNombreObjet. \newline 
+        2.a.2. Utilisateur ferme PopupErreurNombreObjet. \newline
+        2.a.3. L’application {\nomApplication} aﬀiche EcranPrincipal. \newline
+        2.a.4. Fin du CU. \newline
+        \newline
+        \textbf{4 [Utilisateur ne souhaite pas saisir de nom]} \newline
+        4.a.1. Va en 5. \newline
+        \newline
+        \textbf{6 [Utilisateur souhaite saisir un nom qui existe déjà]} \newline
+        6.a.1. L'application {\nomApplication} affiche PopupErreurAjoutObjet. \newline
+        6.a.2. Va en 4. \newline
+        \\
+    \hline
+
+        Extensions & \newline
+        \textbf{4-5 [Utilisateur souhaite annuler]} \newline
+        4-5.a.1. Utilisateur ferme PopupAjoutObjet. \newline
+        4-5.a.2. L’application {\nomApplication} aﬀiche EcranPrincipal. \newline
+        4-5.a.3. Fin du CU. \newline
+        \\
+    \hline
+    Informations \newline complémentaires & N.A. \\
+    \hline
+\end{longtable}

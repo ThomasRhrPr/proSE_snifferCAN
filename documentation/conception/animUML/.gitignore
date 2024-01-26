@@ -1,0 +1,13 @@
+/*.puml
+/*.svg
+/*.pdf
+/package-lock.json
+/node_modules/
+/example.tex
+/*-macros.tex
+/example.aux
+/example.fdb_latexmk
+/example.fls
+/example.log
+/example.out
+

@@ -1,0 +1,26 @@
+@startuml receiveFrame
+
+actor Utilisateur
+participant gui
+participant logger
+participant sniffer
+participant TableauDeBord
+
+Utilisateur -> TableauDeBord
+
+TableauDeBord -> sniffer : receiveCAN(data)
+
+sniffer -> sniffer : receiveFrame(frame)
+
+sniffer -> logger : setFrame(frame : Frame)
+
+logger -> gui : notifyNewFrame()
+
+gui -> logger : getFrame() 
+return 
+
+gui -> gui : displayScreen(MAIN_SCREEN)
+
+gui --> Utilisateur 
+
+@enduml

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="412px" preserveAspectRatio="none" style="width:483px;height:412px;" version="1.1" viewBox="0 0 483 412" width="483px" zoomAndPan="magnify"><defs><filter height="300%" id="fmlo4btn4fbi0" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[6abbbdc7e7f0583e295b1d636e135a3f]
+cluster CANgateway--><polygon fill="#FFFFFF" filter="url(#fmlo4btn4fbi0)" points="22,58,128,58,135,80.2969,461,80.2969,461,400,22,400,22,58" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="22" x2="135" y1="80.2969" y2="80.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="100" x="26" y="72.9951">CANgateway</text><!--MD5=[d43863dcb8b913b9217dc16715750e4b]
+cluster Communication--><polygon fill="#FFFFFF" filter="url(#fmlo4btn4fbi0)" points="222,101,349,101,356,123.2969,437,123.2969,437,302,222,302,222,101" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="222" x2="356" y1="123.2969" y2="123.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="121" x="226" y="115.9951">Communication</text><!--MD5=[1bca517e7fa79f6a2f9ac3600994dc72]
+class Starter--><rect fill="#FEFECE" filter="url(#fmlo4btn4fbi0)" height="23.9688" id="Starter" style="stroke: #A80036; stroke-width: 1.5;" width="50" x="132" y="150"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="44" x="135" y="166.1387">Starter</text><!--MD5=[a03b53cd9c8ec56b3a63c82c6f5a5c5b]
+class Sniffer--><rect fill="#FEFECE" filter="url(#fmlo4btn4fbi0)" height="37.9375" id="Sniffer" style="stroke: #A80036; stroke-width: 1.5;" width="53" x="38.5" y="248"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="51" x="39.5" y="264.1387">«active»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="40" x="45" y="278.1074">Sniffer</text><!--MD5=[7e0e21880190a3d3f8507b42d3153ce7]
+class Sender--><rect fill="#FEFECE" filter="url(#fmlo4btn4fbi0)" height="37.9375" id="Sender" style="stroke: #A80036; stroke-width: 1.5;" width="53" x="175.5" y="346"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="51" x="176.5" y="362.1387">«active»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="45" x="179.5" y="376.1074">Sender</text><!--MD5=[279723d577289112c24d08b81545c04e]
+class DriverCAN--><rect fill="#FEFECE" filter="url(#fmlo4btn4fbi0)" height="37.9375" id="DriverCAN" style="stroke: #A80036; stroke-width: 1.5;" width="76" x="64" y="346"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="74" x="65" y="362.1387">«boundary»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="61" x="71.5" y="376.1074">DriverCAN</text><!--MD5=[df76e760f2062188d44f98c21a88999b]
+class UI--><rect fill="#FEFECE" filter="url(#fmlo4btn4fbi0)" height="23.9688" id="UI" style="stroke: #A80036; stroke-width: 1.5;" width="18" x="64" y="150"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="12" x="67" y="166.1387">UI</text><!--MD5=[7452fdaa12554a166d21500bc352dcc0]
+class Postman--><rect fill="#FEFECE" filter="url(#fmlo4btn4fbi0)" height="51.9063" id="Postman" style="stroke: #A80036; stroke-width: 1.5;" width="65" x="347.5" y="136"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="51" x="354.5" y="152.1387">«active»</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="63" x="348.5" y="166.1074">«medium»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="55" x="352.5" y="180.0762">Postman</text><!--MD5=[0c7624888451d2039aaef18036130ed9]
+class Dispatcher--><rect fill="#FEFECE" filter="url(#fmlo4btn4fbi0)" height="51.9063" id="Dispatcher" style="stroke: #A80036; stroke-width: 1.5;" width="74" x="238" y="136"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="51" x="249.5" y="152.1387">«active»</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="63" x="243.5" y="166.1074">«medium»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="68" x="241" y="180.0762">Dispatcher</text><!--MD5=[e11b6edb78a0d2d4264bf8b2705b2d76]
+class ProxyGUI--><rect fill="#FEFECE" filter="url(#fmlo4btn4fbi0)" height="37.9375" id="ProxyGUI" style="stroke: #A80036; stroke-width: 1.5;" width="65" x="355.5" y="248"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="63" x="356.5" y="264.1387">«medium»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="54" x="361" y="278.1074">ProxyGUI</text><!--MD5=[391719b23560f9e5569a74f485482112]
+class ProxyLogger--><rect fill="#FEFECE" filter="url(#fmlo4btn4fbi0)" height="37.9375" id="ProxyLogger" style="stroke: #A80036; stroke-width: 1.5;" width="82" x="238" y="248"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="63" x="247.5" y="264.1387">«medium»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="76" x="241" y="278.1074">ProxyLogger</text><!--MD5=[01c1f09e956914cae7c0063972cd3f5f]
+link Starter to Sniffer--><path d="M147.15,174.02 C132.32,190.63 103.92,222.42 84.72,243.92 " fill="none" id="Starter-&gt;Sniffer" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="81.25,247.81,90.2199,243.7429,84.5727,244.0737,84.2419,238.4266,81.25,247.81" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[1f7f84b5cddd0dd95e954f40e11d89a9]
+link Starter to Sender--><path d="M159.48,174.09 C166.58,205.81 187.08,297.35 196.78,340.71 " fill="none" id="Starter-&gt;Sender" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="197.91,345.75,199.8355,336.0912,196.8118,340.8721,192.0309,337.8484,197.91,345.75" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[a932bb99e914ce25ade0c7259fe86558]
+link Starter to DriverCAN--><path d="M153.96,174.09 C145.29,205.81 120.24,297.35 108.37,340.71 " fill="none" id="Starter-&gt;DriverCAN" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="106.99,345.75,113.2401,338.1384,108.3201,340.9302,105.5283,336.0102,106.99,345.75" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[f68c5f2071c7ee1884633aada5fd7673]
+reverse link UI to Starter--><path d="M87.23,162 C102.11,162 116.99,162 131.87,162 " fill="none" id="UI&lt;-Starter" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="82.19,162,91.19,166,87.19,162,91.19,158,82.19,162" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[517a62c2b5e41bc8817b58b31b83e9ae]
+reverse link Dispatcher to Starter--><path d="M232.53,162 C215.81,162 199.08,162 182.35,162 " fill="none" id="Dispatcher&lt;-Starter" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="237.72,162,228.72,158,232.72,162,228.72,166,237.72,162" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[73c7055466bea8a02473f92e31e0a331]
+reverse link Postman to ProxyGUI--><path d="M382.37,193.54 C383.74,211.21 385.42,232.84 386.59,247.85 " fill="none" id="Postman&lt;-ProxyGUI" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="381.96,188.2,378.6661,197.4817,382.3457,193.1851,386.6423,196.8647,381.96,188.2" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[5f320addc0b24c249bfb7fa09b488902]
+reverse link Postman to ProxyLogger--><path d="M351.39,192.18 C333.83,210.08 311.9,232.45 296.8,247.85 " fill="none" id="Postman&lt;-ProxyLogger" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="355.29,188.2,346.1338,191.8282,351.7904,191.7711,351.8475,197.4276,355.29,188.2" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[b9a593da0f4dd382e4890bb176eddb84]
+reverse link ProxyLogger to ProxyGUI--><!--MD5=[7babba3979f44d9836acdb0145de8744]
+reverse link Postman to Starter--><path d="M375.56,130.85 C368.76,96.39 352.09,42.74 312.5,20 C284.37,3.84 267.63,3.84 239.5,20 C189.31,48.83 166.84,121.23 159.69,149.97 " fill="none" id="Postman&lt;-Starter" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="376.5,135.79,378.7594,126.2038,375.5717,130.8769,370.8985,127.6892,376.5,135.79" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[6dc538345e8960312bbcd92f9056de73]
+link Postman to Dispatcher--><path d="M347.48,162 C335.76,162 324.04,162 312.32,162 " fill="none" id="Postman-Dispatcher" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[ef90ff68a24d4025d9e2c41aafae262c]
+link Dispatcher to Sender--><path d="M255.05,188.33 C243.32,204.51 229.22,226.44 221,248 C209.31,278.67 204.81,316.59 203.08,340.54 " fill="none" id="Dispatcher-&gt;Sender" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="202.73,345.73,207.338,337.0256,203.073,340.7418,199.3569,336.4768,202.73,345.73" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[37100d655272d9e0239bce206355a617]
+link Sender to ProxyGUI--><path d="M228.73,356.2 C257.03,347.32 302.45,331.23 338,310 C347.54,304.31 357.1,296.82 365.26,289.75 " fill="none" id="Sender-&gt;ProxyGUI" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="369.16,286.32,359.7639,289.2717,365.4096,289.6267,365.0546,295.2724,369.16,286.32" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[49769b1c77b423974d0030eb117f6984]
+reverse link ProxyLogger to Sniffer--><path d="M232.54,267 C185.61,267 138.68,267 91.75,267 " fill="none" id="ProxyLogger&lt;-Sniffer" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="237.67,267,228.67,263,232.67,267,228.67,271,237.67,267" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[d48510abe80014175f9d5f224718b2bf]
+reverse link Sniffer to UI--><path d="M66.82,242.57 C68.49,221.11 70.88,190.29 72.14,174.02 " fill="none" id="Sniffer&lt;-UI" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="66.41,247.81,71.0942,239.1464,66.7968,242.825,63.1182,238.5276,66.41,247.81" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[d3372c3f3830385c89327a53f26fc82d]
+link Sniffer to DriverCAN--><path d="M71.96,286.06 C77.92,301.51 86.53,323.86 93.01,340.67 " fill="none" id="Sniffer-&gt;DriverCAN" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="94.95,345.7,95.4465,335.8637,93.1522,341.0344,87.9815,338.7401,94.95,345.7" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[f25d6b03c25e11e3d2fa7d3b73071075]
+reverse link DriverCAN to Sender--><path d="M145.51,365 C155.5,365 165.49,365 175.48,365 " fill="none" id="DriverCAN&lt;-Sender" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="140.28,365,149.28,369,145.28,365,149.28,361,140.28,365" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[b407676ca96c968e028c979ac1ffa369]
+@startuml 
+
+hide circle
+hide empty members
+
+package CANgateway {
+    package Communication {
+        class Postman <<active>> <<medium>> 
+        class Dispatcher <<active>> <<medium>> 
+        class ProxyGUI <<medium>> 
+        class ProxyLogger <<medium>> 
+    }
+
+    class Starter 
+
+    class Sniffer <<active>> 
+
+    class Sender <<active>> 
+
+    class DriverCAN <<boundary>>
+
+    class UI
+
+    Starter -d-> Sniffer
+    Starter -d-> Sender
+    Starter -d-> DriverCAN
+    Starter -l-> UI
+    Starter -l-> Dispatcher
+
+    ProxyGUI -u-> Postman
+    ProxyLogger -u-> Postman
+    ProxyGUI -[hidden]l-> ProxyLogger
+
+    Starter -l-> Postman
+    Dispatcher -l- Postman
+    Dispatcher -d-> Sender
+    Sender -d-> ProxyGUI
+    Sniffer -u-> ProxyLogger
+    UI -u-> Sniffer
+
+    Sniffer -d-> DriverCAN
+    Sender -l-> DriverCAN
+}
+
+@enduml
+
+PlantUML version 1.2020.02(Sun Mar 01 11:22:07 CET 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.19+7-post-Ubuntu-0ubuntu122.04.1
+Operating System: Linux
+Default Encoding: UTF-8
+Language: fr
+Country: FR
+--></g></svg>

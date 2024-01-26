@@ -1,0 +1,137 @@
+% Auteurs : Camille Constant, Paul Trémoureux
+
+\section{Introduction}
+\label{sec:intro}
+
+\subsection{Contexte}
+\label{sec:intro:contexte}
+
+\noindent\begin{tabularx}{\linewidth}{|p{3.5cm}|X|}
+\hline
+{\bf Produit à tester :} & {\projet} - version {\versionProjet}\\
+\hline
+{\bf Type de produit :} & {\produit}.\\
+\hline
+{\bf Commanditaire :} & {\client}\\
+\hline
+{\bf Développeur :} & {\equipe}\\
+\hline
+{\bf Testeur :} & {\equipe}\\
+\hline
+\end{tabularx}
+
+\subsection{Objet}
+\label{sec:intro:objet}
+
+Ce document décrit l'activité de test système qui sera menée par {\equipe} durant le projet {\projet} dans le but de valider le produit suivant : {\produit}. Il est rédigé sous la responsabilité du Responsable Qualité-Test (RQT), sous la direction du Chef de Projet (CdP), conformément au Plan d'Assurance Qualité Logicielle (PAQL) élaboré sous la responsabilité du RQT (cf. section~\ref{sec:eqTest}, Équipe de test).
+
+\subsection{Portée} 
+\label{sec:intro:portee}
+
+Sont concernés par ce document :
+\begin{itemize}
+    \item les testeurs : afin que ceux-ci connaissent le périmètre des tests (ce qu'ils vont tester), l'environnement de test (comment les tests seront mis en {\oe}uvre) et le processus de test (comment s'y prendre et rendre compte des résultats lors de l'exécution des tests) ;
+    \item les développeurs : à titre informatif, afin que ceux-ci sachent comment va être validée leur production ; à titre indicatif afin qu'ils sachent, par la description de la gestion des anomalies, comment ils s'interfaceront avec l'équipe de test ;
+    \item le client : ce plan de test fait l'objet d'une contractualisation avec le client pour déterminer le périmètre des tests menés pour valider le produit livré et les niveaux d'acceptation de cette validation ;
+    \item les auditeurs : ce plan de test, ainsi que son implication, feront l'objet d'audits par la société Formato.
+\end{itemize}
+
+\subsection{Copyright}
+\label{sec:intro:copyright}
+Cf. {\refPAQL} (section 1.3. Copyright).
+
+\subsection{Présentation du système} 
+\label{sec:intro:scope}
+
+Le système développé est un ensemble de 2 programmes : une application Android nommé {\appliA} déployé sur un smartphone Android et un programme C nommé {\appliC} déployé sur une Raspberry Pi.
+L'application {\appliA} sera relié au programme {\appliC} par un réseau TCP/IP. La Raspberry Pi sera connectée à un réseau CAN pour dialoguer avec Tableau de Bord (soit banc de test physique soit simulateur sur un PC).
+Ce projet permettra d'envoyer des trames depuis l'application {\appliA} vers Tableau de Bord afin de piloter ce dernier à distance.
+
+\subsection{Références}
+\label{sec:intro:ref}
+
+\subsubsection{Documents de référence internes}
+\noindent\begin{tabularx}{\linewidth}{|p{3cm}|X|p{1.4cm}|X|}
+\hline
+\textbf{Ref.} & \textbf{Nom et auteur} & \textbf{Version} & \textbf{Source}\\
+\hline
+{\refSpec} & Dossier de spécifications - \newline {\equipe} & 2.0.0 & se2024-b1.doc/specification/livrables\\
+\hline
+%Si client impliqué dans le PAQL
+{\refPAQL} & Plan d'Assurance Qualité Logiciel - {\rqt} & 1.0.0 & pdf sur le dépôt\\
+\hline
+\end{tabularx}
+
+\subsubsection{Documents de référence externes}
+\noindent\begin{tabularx}{\linewidth}{|p{2.8cm}|X|}
+\hline
+\textbf{Ref.} & \textbf{Nom} \\
+\hline
+[ISO-829-2008] & Documentation de test logiciel\\
+\hline
+[ISO/IEC/IEEE 29119-1:2022] & Ingénierie du logiciel et des systèmes - Essais du logiciel - Partie 1: Concepts généraux\\
+\hline
+\end{tabularx}
+
+\subsection{Glossaire et abréviations}
+\label{sec:intro:termes}
+
+Ce sont les termes et abréviations nécessaires à la compréhension de l'activité de test (les termes techniques propres au projet seront indiqués dans le dossier de spécification).
+
+\subsubsection{Abréviations}
+
+\noindent\begin{longtable}[c]{|p{.20\textwidth}|p{.80\textwidth}|}
+\hline
+CdP & Chef de Projet\\
+\hline
+IHM & Interface Homme-Machine\\
+\hline
+PAQL & Plan Assurance Qualité Logicielle\\
+\hline
+RQT & Responsable Qualité et Test\\
+\hline
+\end{longtable}
+
+\subsubsection{Glossaire}
+
+\noindent\begin{longtable}[c]{|p{.20\textwidth}|p{.80\textwidth}|}
+\hline
+{\bf Campagne de test} & Activité qui consiste à dérouler un ensemble de jeux de test. Un dossier de test est produit à l'issue d'une campagne.\\
+\hline
+{\bf Cas de test} & Déclinaison d'un test précisant les valeurs utilisées pour les variables du test ainsi que les résultats attendus.\\
+\hline
+{\bf Dossier de test} & Ensemble documentaire qui contient la description des scénarios et des cas de tests, ainsi que l'exécution des jeux de test. Le dossier de test est le reflet d'une campagne de test. \\
+\hline
+{\bf Jeux de test} & Ensemble des scénarios et cas de tests permettant de tester un produit logiciel. L'enchaînement des cas et scénarios de tests est relatif à une stratégie de test précisée dans le plan de test.\\
+\hline
+{\bf Plan de test} & Document décrivant le déroulement d'un jeu de test : stratégie de test, critères d'arrêt, planification.\\
+\hline
+{\bf Scénarios de test} & Ensemble de cas de tests cohérents permettant de traiter un objectif fonctionnel.\\
+\hline
+{\bf Test d'intégration} & Vérification effectuée pour montrer des défauts dans les interfaces et interactions de composants ou systèmes intégrés.\\
+\hline
+{\bf Test de non régression} & Vérification qu'une nouvelle version du produit fonctionne sans dégradation (technique, fonctionnelle, performance) par rapport à la version précédente.\\
+\hline
+{\bf Test de validation} & Vérification que le produit est cohérent et complet par rapport aux spécifications fonctionnelles.\\
+\hline
+{\bf Test fonctionnel} & Test (vu de l'utilisateur) du bon fonctionnement d'un produit logiciel, d'une fonctionnalité ou d'une fonction de base. Vérification par rapport aux spécifications.\\
+\hline
+{\bf Test système} & Vérification que le système dans son ensemble est cohérent et complet par rapport aux spécifications fonctionnelles et techniques.\\
+\hline
+{\bf Test unitaire} & Vérification que les composants logiciels individuels sont cohérents et complets par rapport aux spécifications.\\
+\hline
+\end{longtable}
+
+Voir également le \href{https://www.cftl.fr/wp-content/uploads/2018/10/Glossaire-des-tests-logiciels-v3_2F-ISTQB-CFTL-1.pdf}{[Glossaire CFTL/ISTQB des termes utilisés en tests de logiciels]}.\\
+
+\subsection{Conformité}
+\label{sec:intro:conf}
+
+Ce plan de test est conforme aux normes~:
+
+\begin{itemize}
+    \item IEEE Std. 1012-1986
+    \item ISO Std. 829-2008
+    \item IEEE Std. 1008-1987
+    \item ISO/IEC/IEEE 29119-1:2022
+\end{itemize}

@@ -1,0 +1,7 @@
+{
+	"type": "module",
+	"dependencies": {
+		"svgdom": "^0.1.10",
+		"svgdom-css": "^0.2.3"
+	}
+}

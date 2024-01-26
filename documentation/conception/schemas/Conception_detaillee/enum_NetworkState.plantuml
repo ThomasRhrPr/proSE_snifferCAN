@@ -1,0 +1,9 @@
+@startuml
+
+Enum NetworkState
+{
+NETWORK_STATE_CONNECTED
+NETWORK_STATE_NOT_CONNECTED
+}
+
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+
+hide circle
+
+class Starter {
+    !includesub diag_classe_CANgateway.plantuml!Starter
+}
+
+@enduml

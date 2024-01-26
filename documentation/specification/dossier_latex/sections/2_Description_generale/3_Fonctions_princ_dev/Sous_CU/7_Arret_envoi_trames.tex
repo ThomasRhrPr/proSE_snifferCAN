@@ -1,0 +1,77 @@
+% ----------------------------------------------
+% CU Arreter l'envoi des trames 
+% ----------------------------------------------
+\newpage
+\subsubsection{CU Arrêter l'envoi des trames}
+\paragraph{Description graphique}
+Voir figure \ref{schema_cu_strat}.
+
+\paragraph{Description textuelle}
+\medskip
+
+\begin{longtable}[l]{|p{3cm}|p{11.7cm}|}
+    \hline
+    
+        Titre & Arrêter l'envoi des trames.\\
+    \hline
+    
+        Résumé & Utilisateur utilise l'application {\nomApplication} afin d'arrêter l'envoi des trames à Tableau de Bord. \\
+    \hline
+    
+        Portée & SàE.\\
+    \hline
+    
+        Niveau & Utilisateur.\\
+    \hline
+    
+        Acteurs directs & Utilisateur.\\
+    \hline 
+    
+        Acteurs indirects & N.A. \\
+    \hline
+    
+        Préconditions & 
+        \begin{itemize}
+            \item Le SàE est démarré.
+            \item L'application {\nomApplication} est connectée au programme \newline {\nomLogiciel}.
+            \item La Raspberry Pi est connectée au bus CAN.
+            \item Tableau de Bord est connecté au bus CAN.
+            \item Un ou plusieurs objets existent.
+            \item Une ou plusieurs trames existent.
+            \item Une ou plusieurs trames sont en cours d'envoi.
+        \end{itemize}
+        \\
+    \hline
+    
+        Garanties \newline minimales & N.A. \\
+    \hline
+    
+        Garanties en cas de succès & 
+        \begin{itemize}
+            \item Plus aucune trame CAN n'est envoyée à Tableau de Bord.
+        \end{itemize}
+         \\
+    \hline
+    
+        Scénario nominal &
+        \begin{enumerate}
+            \item Utilisateur demande à stopper l'envoi des trames.
+            \item L'application {\nomApplication} affiche PopupArretEnvoi.
+            \item Utilisateur confirme l'arrêt de l'envoi des trames.
+            \item Le SàE arrête de diffuser les trames sur le bus CAN.
+            \item L'application {\nomApplication} affiche EcranPrincipal.
+        \end{enumerate}
+        \\
+    \hline
+        Variantes & \newline
+        \textbf{3 [Utilisateur ne souhaite plus arrêter l'envoi des trames]} \newline
+            3.a.1. Utilisateur ferme le pop-up. \newline
+            3.a.2. Va en 5. \newline
+        \\
+    \hline
+        Extensions &  N.A. \\
+     
+    \hline
+    Informations \newline complémentaires & N.A. \\
+    \hline
+\end{longtable}

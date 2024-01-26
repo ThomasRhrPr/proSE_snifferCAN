@@ -1,0 +1,186 @@
+\babel@toc {french}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{11}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Objet}{11}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Portée}{11}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Définitions, acronymes et abréviations}{11}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Références}{12}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Vue d'ensemble}{13}{subsection.1.5}%
+\contentsline {section}{\numberline {2}Conception générale}{14}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Architecture candidate}{14}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Diagrammes de séquence}{16}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}\emph {CU Échanger des trames CAN}}{16}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}\emph {CU Démarrer le SàE - Scénario nominal}}{17}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}\emph {CU Reconnecter application CANdroid - Scénario nominal}}{18}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}\emph {CU Recevoir des trames - Scénario nominal}}{19}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}\emph {CU Interagir avec le sniffer - Scénario nominal}}{21}{subsubsection.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.6}\emph {CU Ajouter un objet - Scénario nominal}}{23}{subsubsection.2.2.6}%
+\contentsline {subsubsection}{\numberline {2.2.7}\emph {CU Ajouter une trame - Scénario nominal}}{25}{subsubsection.2.2.7}%
+\contentsline {subsubsection}{\numberline {2.2.8}\emph {CU Envoyer des trames - Scénario nominal}}{26}{subsubsection.2.2.8}%
+\contentsline {subsubsection}{\numberline {2.2.9}\emph {CU Arrêter envoi des trames - Scénario nominal}}{28}{subsubsection.2.2.9}%
+\contentsline {subsubsection}{\numberline {2.2.10}\emph {CU Supprimer un élément - Scénario nominal}}{29}{subsubsection.2.2.10}%
+\contentsline {subsubsection}{\numberline {2.2.11}\emph {CU Stopper le SàE - Scénario nominal}}{30}{subsubsection.2.2.11}%
+\contentsline {subsection}{\numberline {2.3}Types de données}{31}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Description de l'énumération IdScreenPopUp}{31}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Description de l'énumération ProgramState}{32}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Description de l'énumération NetworkState}{32}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Description de l'énumération SenderMode}{32}{subsubsection.2.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.5}Description de l'énumération SendingState}{32}{subsubsection.2.3.5}%
+\contentsline {subsubsection}{\numberline {2.3.6}Descriptions des autres types de données}{33}{subsubsection.2.3.6}%
+\contentsline {subsection}{\numberline {2.4}Classes}{34}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Vue générale}{34}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}La classe Utilisateur}{34}{subsubsection.2.4.2}%
+\contentsline {paragraph}{\numberline {2.4.2.1}Attributs}{35}{paragraph.2.4.2.1}%
+\contentsline {paragraph}{\numberline {2.4.2.2}Services offerts}{35}{paragraph.2.4.2.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}La classe GUI}{35}{subsubsection.2.4.3}%
+\contentsline {paragraph}{\numberline {2.4.3.1}Philosophie de conception}{35}{paragraph.2.4.3.1}%
+\contentsline {paragraph}{\numberline {2.4.3.2}Attributs}{36}{paragraph.2.4.3.2}%
+\contentsline {paragraph}{\numberline {2.4.3.3}Services offerts}{36}{paragraph.2.4.3.3}%
+\contentsline {paragraph}{\numberline {2.4.3.4}Description comportementale}{38}{paragraph.2.4.3.4}%
+\contentsline {subsubsection}{\numberline {2.4.4}La classe UI}{38}{subsubsection.2.4.4}%
+\contentsline {paragraph}{\numberline {2.4.4.1}Philosophie de conception}{39}{paragraph.2.4.4.1}%
+\contentsline {paragraph}{\numberline {2.4.4.2}Attributs}{39}{paragraph.2.4.4.2}%
+\contentsline {paragraph}{\numberline {2.4.4.3}Services offerts}{39}{paragraph.2.4.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.5}La classe Dealer}{39}{subsubsection.2.4.5}%
+\contentsline {paragraph}{\numberline {2.4.5.1}Philosophie de conception}{40}{paragraph.2.4.5.1}%
+\contentsline {paragraph}{\numberline {2.4.5.2}Attributs}{40}{paragraph.2.4.5.2}%
+\contentsline {paragraph}{\numberline {2.4.5.3}Services offerts}{40}{paragraph.2.4.5.3}%
+\contentsline {subsubsection}{\numberline {2.4.6}La classe Logger}{41}{subsubsection.2.4.6}%
+\contentsline {paragraph}{\numberline {2.4.6.1}Philosophie de conception}{41}{paragraph.2.4.6.1}%
+\contentsline {paragraph}{\numberline {2.4.6.2}Attributs}{41}{paragraph.2.4.6.2}%
+\contentsline {paragraph}{\numberline {2.4.6.3}Services offerts}{41}{paragraph.2.4.6.3}%
+\contentsline {subsubsection}{\numberline {2.4.7}La classe Object}{41}{subsubsection.2.4.7}%
+\contentsline {paragraph}{\numberline {2.4.7.1}Philosophie de conception}{42}{paragraph.2.4.7.1}%
+\contentsline {paragraph}{\numberline {2.4.7.2}Attributs}{42}{paragraph.2.4.7.2}%
+\contentsline {paragraph}{\numberline {2.4.7.3}Services offerts}{42}{paragraph.2.4.7.3}%
+\contentsline {subsubsection}{\numberline {2.4.8}La classe Frame}{42}{subsubsection.2.4.8}%
+\contentsline {paragraph}{\numberline {2.4.8.1}Philosophie de conception}{43}{paragraph.2.4.8.1}%
+\contentsline {paragraph}{\numberline {2.4.8.2}Attributs}{43}{paragraph.2.4.8.2}%
+\contentsline {paragraph}{\numberline {2.4.8.3}Services offerts}{43}{paragraph.2.4.8.3}%
+\contentsline {subsubsection}{\numberline {2.4.9}La classe Sniffer}{43}{subsubsection.2.4.9}%
+\contentsline {paragraph}{\numberline {2.4.9.1}Philosophie de conception}{43}{paragraph.2.4.9.1}%
+\contentsline {paragraph}{\numberline {2.4.9.2}Attributs}{43}{paragraph.2.4.9.2}%
+\contentsline {paragraph}{\numberline {2.4.9.3}Services offerts}{44}{paragraph.2.4.9.3}%
+\contentsline {paragraph}{\numberline {2.4.9.4}Description comportementale}{44}{paragraph.2.4.9.4}%
+\contentsline {subsubsection}{\numberline {2.4.10}La classe Network}{44}{subsubsection.2.4.10}%
+\contentsline {paragraph}{\numberline {2.4.10.1}Philosophie de conception}{44}{paragraph.2.4.10.1}%
+\contentsline {paragraph}{\numberline {2.4.10.2}Attributs}{45}{paragraph.2.4.10.2}%
+\contentsline {paragraph}{\numberline {2.4.10.3}Services offerts}{45}{paragraph.2.4.10.3}%
+\contentsline {subsubsection}{\numberline {2.4.11}La classe Basket}{45}{subsubsection.2.4.11}%
+\contentsline {paragraph}{\numberline {2.4.11.1}Philosophie de conception}{45}{paragraph.2.4.11.1}%
+\contentsline {paragraph}{\numberline {2.4.11.2}Attributs}{45}{paragraph.2.4.11.2}%
+\contentsline {paragraph}{\numberline {2.4.11.3}Services offerts}{45}{paragraph.2.4.11.3}%
+\contentsline {subsubsection}{\numberline {2.4.12}La classe Sender}{46}{subsubsection.2.4.12}%
+\contentsline {paragraph}{\numberline {2.4.12.1}Philosophie de conception}{46}{paragraph.2.4.12.1}%
+\contentsline {paragraph}{\numberline {2.4.12.2}Attributs}{46}{paragraph.2.4.12.2}%
+\contentsline {paragraph}{\numberline {2.4.12.3}Services offerts}{46}{paragraph.2.4.12.3}%
+\contentsline {paragraph}{\numberline {2.4.12.4}Description comportementale}{47}{paragraph.2.4.12.4}%
+\contentsline {section}{\numberline {3}Conception détaillée}{48}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Architecture physique}{48}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Description des classes}{50}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Description des classes de CANdroid}{50}{subsubsection.3.2.1}%
+\contentsline {paragraph}{\numberline {3.2.1.1}Diagramme de classes de CANdroid}{50}{paragraph.3.2.1.1}%
+\contentsline {paragraph}{\numberline {3.2.1.2}La classe Thesaurus}{50}{paragraph.3.2.1.2}%
+\contentsline {subparagraph}{\numberline {3.2.1.2.1}Philosophie de conception \newline }{51}{subparagraph.3.2.1.2.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.2.2}Description structurelle \newline }{51}{subparagraph.3.2.1.2.2}%
+\contentsline {paragraph}{\numberline {3.2.1.3}La classe FilesManager}{51}{paragraph.3.2.1.3}%
+\contentsline {subparagraph}{\numberline {3.2.1.3.1}Philosophie de conception \newline }{52}{subparagraph.3.2.1.3.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.3.2}Description structurelle \newline }{52}{subparagraph.3.2.1.3.2}%
+\contentsline {paragraph}{\numberline {3.2.1.4}La classe LogManager}{52}{paragraph.3.2.1.4}%
+\contentsline {subparagraph}{\numberline {3.2.1.4.1}Philosophie de conception \newline }{52}{subparagraph.3.2.1.4.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.4.2}Description structurelle \newline }{53}{subparagraph.3.2.1.4.2}%
+\contentsline {paragraph}{\numberline {3.2.1.5}La classe LogManagerViewModel}{54}{paragraph.3.2.1.5}%
+\contentsline {subparagraph}{\numberline {3.2.1.5.1}Philosophie de conception \newline }{54}{subparagraph.3.2.1.5.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.5.2}Description structurelle \newline }{54}{subparagraph.3.2.1.5.2}%
+\contentsline {paragraph}{\numberline {3.2.1.6}L'interface DAO}{55}{paragraph.3.2.1.6}%
+\contentsline {subparagraph}{\numberline {3.2.1.6.1}Philosophie de conception \newline }{55}{subparagraph.3.2.1.6.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.6.2}Description structurelle \newline }{55}{subparagraph.3.2.1.6.2}%
+\contentsline {paragraph}{\numberline {3.2.1.7}La classe BDD}{56}{paragraph.3.2.1.7}%
+\contentsline {subparagraph}{\numberline {3.2.1.7.1}Philosophie de conception \newline }{56}{subparagraph.3.2.1.7.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.7.2}Description structurelle \newline }{57}{subparagraph.3.2.1.7.2}%
+\contentsline {paragraph}{\numberline {3.2.1.8}La classe Object}{57}{paragraph.3.2.1.8}%
+\contentsline {subparagraph}{\numberline {3.2.1.8.1}Philosophie de conception \newline }{57}{subparagraph.3.2.1.8.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.8.2}Description structurelle \newline }{57}{subparagraph.3.2.1.8.2}%
+\contentsline {paragraph}{\numberline {3.2.1.9}La classe Frame}{58}{paragraph.3.2.1.9}%
+\contentsline {subparagraph}{\numberline {3.2.1.9.1}Philosophie de conception \newline }{58}{subparagraph.3.2.1.9.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.9.2}Description structurelle \newline }{58}{subparagraph.3.2.1.9.2}%
+\contentsline {paragraph}{\numberline {3.2.1.10}La classe ProtocolCANdroid}{59}{paragraph.3.2.1.10}%
+\contentsline {subparagraph}{\numberline {3.2.1.10.1}Philosophie de conception \newline }{59}{subparagraph.3.2.1.10.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.10.2}Description structurelle \newline }{59}{subparagraph.3.2.1.10.2}%
+\contentsline {paragraph}{\numberline {3.2.1.11}La classe CommunicationCANdroid}{60}{paragraph.3.2.1.11}%
+\contentsline {subparagraph}{\numberline {3.2.1.11.1}Philosophie de conception \newline }{60}{subparagraph.3.2.1.11.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.11.2}Description structurelle \newline }{60}{subparagraph.3.2.1.11.2}%
+\contentsline {paragraph}{\numberline {3.2.1.12}La classe ConnectionCANdroid}{61}{paragraph.3.2.1.12}%
+\contentsline {subparagraph}{\numberline {3.2.1.12.1}Philosophie de conception \newline }{61}{subparagraph.3.2.1.12.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.12.2}Description structurelle \newline }{61}{subparagraph.3.2.1.12.2}%
+\contentsline {paragraph}{\numberline {3.2.1.13}L'interface SocketListener}{61}{paragraph.3.2.1.13}%
+\contentsline {subparagraph}{\numberline {3.2.1.13.1}Philosophie de conception \newline }{61}{subparagraph.3.2.1.13.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.13.2}Description structurelle \newline }{61}{subparagraph.3.2.1.13.2}%
+\contentsline {paragraph}{\numberline {3.2.1.14}L'énumération NetworkState}{62}{paragraph.3.2.1.14}%
+\contentsline {subparagraph}{\numberline {3.2.1.14.1}Philosophie de conception \newline }{62}{subparagraph.3.2.1.14.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.14.2}Description structurelle \newline }{62}{subparagraph.3.2.1.14.2}%
+\contentsline {paragraph}{\numberline {3.2.1.15}La classe Dispatcher}{62}{paragraph.3.2.1.15}%
+\contentsline {subparagraph}{\numberline {3.2.1.15.1}Philosophie de conception \newline }{62}{subparagraph.3.2.1.15.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.15.2}Description structurelle \newline }{63}{subparagraph.3.2.1.15.2}%
+\contentsline {paragraph}{\numberline {3.2.1.16}La classe SendFrames}{63}{paragraph.3.2.1.16}%
+\contentsline {subparagraph}{\numberline {3.2.1.16.1}Philosophie de conception \newline }{63}{subparagraph.3.2.1.16.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.16.2}Description structurelle \newline }{63}{subparagraph.3.2.1.16.2}%
+\contentsline {paragraph}{\numberline {3.2.1.17}La classe ObjectFragment}{64}{paragraph.3.2.1.17}%
+\contentsline {subparagraph}{\numberline {3.2.1.17.1}Philosophie de conception \newline }{64}{subparagraph.3.2.1.17.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.17.2}Description structurelle \newline }{64}{subparagraph.3.2.1.17.2}%
+\contentsline {paragraph}{\numberline {3.2.1.18}La classe BasketAdapter}{65}{paragraph.3.2.1.18}%
+\contentsline {subparagraph}{\numberline {3.2.1.18.1}Philosophie de conception \newline }{65}{subparagraph.3.2.1.18.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.18.2}Description structurelle \newline }{65}{subparagraph.3.2.1.18.2}%
+\contentsline {paragraph}{\numberline {3.2.1.19}La classe MainActivity}{66}{paragraph.3.2.1.19}%
+\contentsline {subparagraph}{\numberline {3.2.1.19.1}Philosophie de conception \newline }{66}{subparagraph.3.2.1.19.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.19.2}Description structurelle \newline }{66}{subparagraph.3.2.1.19.2}%
+\contentsline {paragraph}{\numberline {3.2.1.20}La classe ObjectAdapter}{67}{paragraph.3.2.1.20}%
+\contentsline {subparagraph}{\numberline {3.2.1.20.1}Philosophie de conception \newline }{68}{subparagraph.3.2.1.20.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.20.2}Description structurelle \newline }{68}{subparagraph.3.2.1.20.2}%
+\contentsline {paragraph}{\numberline {3.2.1.21}La classe ObjectFragment}{69}{paragraph.3.2.1.21}%
+\contentsline {subparagraph}{\numberline {3.2.1.21.1}Philosophie de conception \newline }{69}{subparagraph.3.2.1.21.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.21.2}Description structurelle \newline }{69}{subparagraph.3.2.1.21.2}%
+\contentsline {paragraph}{\numberline {3.2.1.22}L'énumération FoldingStateObject}{70}{paragraph.3.2.1.22}%
+\contentsline {subparagraph}{\numberline {3.2.1.22.1}Philosophie de conception \newline }{70}{subparagraph.3.2.1.22.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.22.2}Description structurelle \newline }{70}{subparagraph.3.2.1.22.2}%
+\contentsline {paragraph}{\numberline {3.2.1.23}La classe MainActivityViewModel}{70}{paragraph.3.2.1.23}%
+\contentsline {subparagraph}{\numberline {3.2.1.23.1}Philosophie de conception \newline }{71}{subparagraph.3.2.1.23.1}%
+\contentsline {subparagraph}{\numberline {3.2.1.23.2}Description structurelle \newline }{71}{subparagraph.3.2.1.23.2}%
+\contentsline {subsubsection}{\numberline {3.2.2}Description des classes de CANgateway}{71}{subsubsection.3.2.2}%
+\contentsline {paragraph}{\numberline {3.2.2.1}Diagramme de classes de CANgateway}{71}{paragraph.3.2.2.1}%
+\contentsline {paragraph}{\numberline {3.2.2.2}La classe Starter}{72}{paragraph.3.2.2.2}%
+\contentsline {subparagraph}{\numberline {3.2.2.2.1}Philosophie de conception \newline }{72}{subparagraph.3.2.2.2.1}%
+\contentsline {subparagraph}{\numberline {3.2.2.2.2}Description structurelle \newline }{72}{subparagraph.3.2.2.2.2}%
+\contentsline {subparagraph}{\numberline {3.2.2.2.3}Séquence de démarrage et arrêt de {CANgateway} \newline }{74}{subparagraph.3.2.2.2.3}%
+\contentsline {paragraph}{\numberline {3.2.2.3}La classe DriverCAN}{75}{paragraph.3.2.2.3}%
+\contentsline {subparagraph}{\numberline {3.2.2.3.1}Philosophie de conception \newline }{75}{subparagraph.3.2.2.3.1}%
+\contentsline {subparagraph}{\numberline {3.2.2.3.2}Description structurelle \newline }{75}{subparagraph.3.2.2.3.2}%
+\contentsline {paragraph}{\numberline {3.2.2.4}La classe Dispatcher}{75}{paragraph.3.2.2.4}%
+\contentsline {subparagraph}{\numberline {3.2.2.4.1}Philosophie de conception \newline }{75}{subparagraph.3.2.2.4.1}%
+\contentsline {subparagraph}{\numberline {3.2.2.4.2}Description structurelle \newline }{76}{subparagraph.3.2.2.4.2}%
+\contentsline {paragraph}{\numberline {3.2.2.5}La classe Postman}{76}{paragraph.3.2.2.5}%
+\contentsline {subparagraph}{\numberline {3.2.2.5.1}Philosophie de conception \newline }{76}{subparagraph.3.2.2.5.1}%
+\contentsline {subparagraph}{\numberline {3.2.2.5.2}Description structurelle \newline }{76}{subparagraph.3.2.2.5.2}%
+\contentsline {paragraph}{\numberline {3.2.2.6}La classe ProxyGUI}{76}{paragraph.3.2.2.6}%
+\contentsline {subparagraph}{\numberline {3.2.2.6.1}Philosophie de conception \newline }{77}{subparagraph.3.2.2.6.1}%
+\contentsline {subparagraph}{\numberline {3.2.2.6.2}Description structurelle \newline }{77}{subparagraph.3.2.2.6.2}%
+\contentsline {paragraph}{\numberline {3.2.2.7}La classe ProxyLogger}{77}{paragraph.3.2.2.7}%
+\contentsline {subparagraph}{\numberline {3.2.2.7.1}Philosophie de conception \newline }{77}{subparagraph.3.2.2.7.1}%
+\contentsline {subparagraph}{\numberline {3.2.2.7.2}Description structurelle \newline }{77}{subparagraph.3.2.2.7.2}%
+\contentsline {subsection}{\numberline {3.3}Protocole de communication}{78}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Protocole de communication de {CANdroid} vers {CANgateway}}{78}{subsubsection.3.3.1}%
+\contentsline {paragraph}{\numberline {3.3.1.1}Formalisation du protocole}{78}{paragraph.3.3.1.1}%
+\contentsline {paragraph}{\numberline {3.3.1.2}Exemples}{79}{paragraph.3.3.1.2}%
+\contentsline {subparagraph}{\numberline {3.3.1.2.1}Envoyer des trames \newline }{79}{subparagraph.3.3.1.2.1}%
+\contentsline {subparagraph}{\numberline {3.3.1.2.2}Arrêter d'envoyer des trames \newline }{80}{subparagraph.3.3.1.2.2}%
+\contentsline {subsubsection}{\numberline {3.3.2}Protocole de communication de {CANgateway} vers {CANdroid}}{80}{subsubsection.3.3.2}%
+\contentsline {paragraph}{\numberline {3.3.2.1}Formalisation du protocole}{80}{paragraph.3.3.2.1}%
+\contentsline {paragraph}{\numberline {3.3.2.2}Exemples}{81}{paragraph.3.3.2.2}%
+\contentsline {subparagraph}{\numberline {3.3.2.2.1}Recevoir des trames \newline }{81}{subparagraph.3.3.2.2.1}%
+\contentsline {subparagraph}{\numberline {3.3.2.2.2}Envoyer des trames \newline }{82}{subparagraph.3.3.2.2.2}%
+\contentsline {subparagraph}{\numberline {3.3.2.2.3}Arrêter d'envoyer des trames \newline }{82}{subparagraph.3.3.2.2.3}%
+\contentsline {subsection}{\numberline {3.4}Gestion du multitâche}{83}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Identification des accès concurrents}{83}{subsubsection.3.4.1}%
+\contentsline {paragraph}{\numberline {3.4.1.1}Côté CANdroid}{83}{paragraph.3.4.1.1}%
+\contentsline {paragraph}{\numberline {3.4.1.2}Côté CANgateway}{83}{paragraph.3.4.1.2}%
+\contentsline {subsection}{\numberline {3.5}Gestion de la persistance}{84}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Dictionnaire de domaine}{85}{section.4}%

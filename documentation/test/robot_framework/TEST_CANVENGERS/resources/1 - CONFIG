@@ -1,0 +1,49 @@
+
+-------
+PyCharm
+-------
+
+Lancer PyCharm :
+
+# ./<path>/<to>/pycharm-community-2022.3.3/bin/pycharm.sh
+
+menu [Plugins] (ou menu File > Settings... > Plugins) :
+	Type : robot
+	Robot Runner [Install]
+	IntelliBot #patched [Install]
+	[Restart IDE]
+	
+
+-----------------
+Création d'un AVD
+-----------------
+/!\ UNIQUEMENT pour ceux qui n'ont pas Android Studio /!\
+
+Configuration du PATH (dans .bashrc) :
+
+export PATH="~/Android/Sdk/platform-tools/":"~/Android/Sdk/emulator/":"~/Android/Sdk/cmdline-tools/tools/bin/":$PATH
+
+
+Création d'un AVD de Nexus One en API 23 :
+
+(Remarque : remplacer x86_64 par arm64-v8a pour une utilisation sur Mac M1 ou M2)
+
+# sdkmanager --sdk_root=$ANDROID_SDK --install "platforms;android-23"
+# sdkmanager --sdk_root=$ANDROID_SDK --install "system-images;android-23;default;x86_64"
+
+# avdmanager create avd -n "Nexus_One_API_23" -k "system-images;android-23;default;x86_64" -d "Nexus One"
+
+
+Commandes utiles pour la gestion des SDK Android et des AVDs :
+
+# sdkmanager --list
+# sdkmanager --list_installed
+
+# avdmanager list device
+# avdmanager list avd
+# avdmanager delete avd -n Nexus_One_API_23
+
+# emulator -list-avds
+# emulator -avd Nexus_One_API_23 -netdelay none -netspeed full
+
+	

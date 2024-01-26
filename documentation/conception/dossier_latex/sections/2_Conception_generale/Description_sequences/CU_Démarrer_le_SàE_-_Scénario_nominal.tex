@@ -1,0 +1,6 @@
+\\
+Pour rappel, en dehors de la portée du système, Utilisateur met en fonctionnement Tableau de Bord, connecte la Raspberry PI au bus CAN et met la Raspberry PI sous tension.\\
+Utilisateur doit ensuite démarrer manuellement le programme {\nomLogiciel} via une connexion SSH avec la Raspberry PI. Quand le programme {\nomLogiciel} est démarré, la LED de la Raspberry PI renvoie l'information à Utilisateur. Le programme {\nomLogiciel} commence alors à lire les trames du bus CAN.\\
+Ensuite, Utilisateur démarre l'application {\nomApplication} et EcranPrincipal s'affiche. L'application {\nomApplication} charge l'ensemble des éléments créés lors des précédentes utilisations et les affiche sur EcranPrincipal.\\
+Enfin, l'application {\nomApplication} se connecte au programme {\nomLogiciel} et EcranPrincipal se met à jour.\\
+Il est possible que la connexion entre l'application {\nomApplication} et le programme {\nomLogiciel} échoue. Dans ce cas, PopupReconnexion s'affiche et demande à Utilisateur s'il souhaite réessayer. Ce scénario n'est pas représenter sur la \autoref{fig:inter-CU_Démarrer_le_SàE_-_Scénario_nominal}.\\

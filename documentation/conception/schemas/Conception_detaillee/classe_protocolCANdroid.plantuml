@@ -1,0 +1,8 @@
+@startuml
+
+class ProtocolCANdroid {
+
+    {static} decodeMessage(message : String) : String
+}
+
+@enduml

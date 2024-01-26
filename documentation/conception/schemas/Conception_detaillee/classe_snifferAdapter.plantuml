@@ -1,0 +1,9 @@
+@startuml
+    class Adapter extends Adapter{
+        +onCreateViewHolder() : ViewHolder
+        +onBindViewHolder() : void
+        +getItemCount() : int
+    }
+
+
+@enduml

@@ -1,0 +1,54 @@
+% ----------------------------------------------
+% CU ECRIRE UNE TRAME
+% ----------------------------------------------
+\subsubsection{CU Ecrire une trame}
+\paragraph{Description graphique}
+\medskip
+\paragraph{Description textuelle}
+\medskip
+
+\begin{longtable}[l]{|p{3cm}|p{11.7cm}|}
+    \hline
+    
+        Titre & Ecrire une trame.\\
+    \hline
+
+        Résumé & Permet l'ajout d'une trame dans un objet. \\
+    \hline
+
+        Portée & Application Android.\\
+    \hline
+
+        Niveau & Utilisateur.\\
+    \hline
+
+        Acteurs directs & Utilisateur.\\
+    \hline 
+
+        Acteurs indirects & \\
+    \hline
+
+        Préconditions & Le SàE est démarré. \\
+    \hline
+
+        Garanties \newline minimales & \\
+    \hline
+
+        Garanties en cas de succès & 
+        Une trame à été crée. \\
+    \hline
+
+        Scénario nominal &     \newline
+        1. L'utilisateur appui sur le bouton de création de trame d'un objet. \newline
+        2. L'utilisateur saisie la trame.\newline
+        3. L'utilisateur valide la saisie de la trame. \newline
+        4. Le SàE ajout la nouvelle trame à la liste des trames de l'objet. \newline
+        \\
+    \hline
+
+    Variantes & \\
+    \hline
+
+        Extensions & \\
+    \hline
+\end{longtable}

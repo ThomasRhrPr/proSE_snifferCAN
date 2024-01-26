@@ -1,0 +1,46 @@
+@startuml
+skinparam defaultFontSize 15
+
+[*] -d-> EcranPrincipal
+EcranPrincipal -l-> [*] : quitter()
+
+state EcranPrincipal 
+
+state ajouterTrameChoice <<choice>>
+state ajouterObjetChoice <<choice>>
+
+state PopUp {
+    state PopupModeEnvoiTrame
+    state PopupAjoutObjet
+    state PopupArretEnvoi 
+    state PopupSuppressionElement 
+    state PopupDemandeReconnexion
+    state PopupErreurSaisieTrame
+    state PopupErreurNombreObjet
+    state PopupErreurNombreTrame
+    state PopupErreurAjoutObjet
+}
+
+PopUp --> EcranPrincipal : valider()
+PopUp --> EcranPrincipal : refuser()
+
+EcranPrincipal --> PopupDemandeReconnexion : reconnecter()
+EcranPrincipal --> PopupArretEnvoi : arreterEnvoi()
+EcranPrincipal --> PopupSuppressionElement : supprimer()
+
+
+EcranPrincipal --> ajouterTrameChoice : ajouterTrame()
+
+ajouterTrameChoice --> PopupErreurSaisieTrame : [SaisieTrameIncorrect]
+ajouterTrameChoice --> PopupModeEnvoiTrame : [else]
+ajouterTrameChoice --> PopupErreurNombreTrame : [MaxNombreTrame]
+
+
+EcranPrincipal --> ajouterObjetChoice : ajouterObjet()
+
+ajouterObjetChoice --> PopupAjoutObjet : [else]
+ajouterObjetChoice --> PopupErreurNombreObjet : [MaxNombreObjet]
+
+PopupAjoutObjet --> PopupErreurAjoutObjet : when [NomObjetDejaUtilise]
+
+@enduml

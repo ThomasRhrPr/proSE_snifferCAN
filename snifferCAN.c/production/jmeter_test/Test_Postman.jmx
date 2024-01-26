@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test_Postman" enabled="true">
+      <stringProp name="TestPlan.comments">Plan de test permettant de tester le serveur TCP/IP implémenté dans le Postman</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="Variables pré-définies" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Variables pré-définies" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="nb" elementType="Argument">
+            <stringProp name="Argument.name">nb</stringProp>
+            <stringProp name="Argument.value">nb=</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Nombre de trames de la séquence </stringProp>
+          </elementProp>
+          <elementProp name="open_avG" elementType="Argument">
+            <stringProp name="Argument.name">open_avG</stringProp>
+            <stringProp name="Argument.value">#19B$6@00000E000000/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">ouvrir portière avant gauche ICSim</stringProp>
+          </elementProp>
+          <elementProp name="open_arG" elementType="Argument">
+            <stringProp name="Argument.name">open_arG</stringProp>
+            <stringProp name="Argument.value">#19B$6@00000B000000/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">ouvrir portière arrière gauche ICSim</stringProp>
+          </elementProp>
+          <elementProp name="open_avD" elementType="Argument">
+            <stringProp name="Argument.name">open_avD</stringProp>
+            <stringProp name="Argument.value">#19B$6@00000D000000/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">ouvrir portière avant droite ICSim</stringProp>
+          </elementProp>
+          <elementProp name="open_arD" elementType="Argument">
+            <stringProp name="Argument.name">open_arD</stringProp>
+            <stringProp name="Argument.value">#19B$6@000007000000/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">ouvrir portière arrière droite ICSim</stringProp>
+          </elementProp>
+          <elementProp name="close_all" elementType="Argument">
+            <stringProp name="Argument.name">close_all</stringProp>
+            <stringProp name="Argument.value">#19B$6@00000F000000/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">fermer toutes les portières ICSim</stringProp>
+          </elementProp>
+          <elementProp name="askSendingState" elementType="Argument">
+            <stringProp name="Argument.name">askSendingState</stringProp>
+            <stringProp name="Argument.value">?</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">demande d&apos;état du Mode Envoi</stringProp>
+          </elementProp>
+          <elementProp name="stopSending" elementType="Argument">
+            <stringProp name="Argument.name">stopSending</stringProp>
+            <stringProp name="Argument.value">!</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">arrêter l&apos;envoi de trames</stringProp>
+          </elementProp>
+          <elementProp name="invalid" elementType="Argument">
+            <stringProp name="Argument.name">invalid</stringProp>
+            <stringProp name="Argument.value">#19B$600000E000000</stringProp>
+            <stringProp name="Argument.desc">trame avec un délimiteur manquant (&apos;@&apos;)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="TCPConfigGui" testclass="ConfigTestElement" testname="Paramètres TCP par défaut" enabled="true">
+        <stringProp name="TestPlan.comments">paramètre TCP permettant la connexion à la PI</stringProp>
+        <stringProp name="TCPSampler.server">10.3.141.1</stringProp>
+        <boolProp name="TCPSampler.reUseConnection">false</boolProp>
+        <stringProp name="TCPSampler.port">12345</stringProp>
+        <boolProp name="TCPSampler.nodelay">false</boolProp>
+        <stringProp name="TCPSampler.timeout">500</stringProp>
+        <stringProp name="TCPSampler.request"></stringProp>
+        <boolProp name="TCPSampler.closeConnection">false</boolProp>
+        <stringProp name="TCPSampler.classname">perso.TCPClientPostmanImpl</stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread group" enabled="true">
+        <stringProp name="TestPlan.comments">Group de thread</stringProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Contrôleur Boucle" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Arbre de résultat" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Choisir son scénario" enabled="true">
+          <stringProp name="TestPlan.comments">Contrôleur permettant la gestion et la maintenance des scénarios</stringProp>
+          <collectionProp name="ModuleController.node_path">
+            <stringProp name="764597751">Test Plan</stringProp>
+            <stringProp name="150728205">Test_Postman</stringProp>
+            <stringProp name="-1918616311">Thread group</stringProp>
+            <stringProp name="804804862">Scénario 1 : une trame</stringProp>
+          </collectionProp>
+        </ModuleController>
+        <hashTree/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Scénario 1 : une trame" enabled="true">
+          <stringProp name="TestPlan.comments">Envoi d&apos;une trame avec un mode d&apos;envoi ponctuel</stringProp>
+        </GenericController>
+        <hashTree>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Compteur de temps : 500ms" enabled="true">
+            <stringProp name="ConstantTimer.delay">500</stringProp>
+          </ConstantTimer>
+          <hashTree/>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="Nombre de trames de la séquence " enabled="true">
+            <stringProp name="TestPlan.comments">Nombre de trames de la séquence  (nb=...)</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">${nb}1
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree/>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="Trame avec mode d&apos;envoi ponctuel" enabled="true">
+            <stringProp name="TestPlan.comments">Trame envoyée en mode d&apos;envoi ponctuel (périodicité nulle) -&gt; ouvre portière avant gauche</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">${open_avG}/0
+?
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree/>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="askSendingState" enabled="true">
+            <stringProp name="TestPlan.comments">demande d&apos;état du Mode Envoi</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout">2000</stringProp>
+            <stringProp name="TCPSampler.request">${askSendingState}
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="sendingState" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="263701998">~sendingState#</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="stopSending" enabled="true">
+            <stringProp name="TestPlan.comments">arrêter d&apos;envoyer les trames (étape nécessaire même si périodicité nulle)</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout">200</stringProp>
+            <stringProp name="TCPSampler.request">${stopSending}
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">3000</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="askSendingState" enabled="true">
+            <stringProp name="TestPlan.comments">demande d&apos;état du Mode Envoi</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">${askSendingState}
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">true</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="sendingState" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="263701998">~sendingState#</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Scénario 2 : plusieurs trames" enabled="true">
+          <stringProp name="TestPlan.comments">Envoi de 2 séquences de plusieurs trames</stringProp>
+        </GenericController>
+        <hashTree>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Compteur de temps : 500ms" enabled="true">
+            <stringProp name="ConstantTimer.delay">500</stringProp>
+          </ConstantTimer>
+          <hashTree/>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="Nombre de trames de la séquence " enabled="true">
+            <stringProp name="TestPlan.comments">Nombre de trames de la séquence  (nb=...)</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">${nb}3
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree/>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="Trame avec mode d&apos;envoi cyclique" enabled="true">
+            <stringProp name="TestPlan.comments">Trame envoyée en mode d&apos;envoi ponctuel (périodicité = 100ms ) -&gt; ouvre portière avant gauche</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">${open_avG}/100
+?
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree/>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="Trame avec mode d&apos;envoi ponctuel" enabled="true">
+            <stringProp name="TestPlan.comments">Trame envoyée en mode d&apos;envoi ponctuel (périodicité nulle) -&gt; ouvre portière avant droite</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">${open_avD}/0
+?
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree/>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="Trame avec mode d&apos;envoi ponctuel" enabled="true">
+            <stringProp name="TestPlan.comments">Trame envoyée en mode d&apos;envoi ponctuel (périodicité nulle) -&gt; ouvre portière arrière gauche</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">${open_arG}/0
+?
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree/>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="askSendingState" enabled="true">
+            <stringProp name="TestPlan.comments">demande d&apos;état du Mode Envoi</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout">2000</stringProp>
+            <stringProp name="TCPSampler.request">${askSendingState}
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="sendingState" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="263701998">~sendingState#</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="stopSending" enabled="true">
+            <stringProp name="TestPlan.comments">arrêter d&apos;envoyer les trames</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">${stopSending}
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree/>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="askSendingState" enabled="true">
+            <stringProp name="TestPlan.comments">demande d&apos;état du Mode Envoi</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout">2000</stringProp>
+            <stringProp name="TCPSampler.request">${askSendingState}
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="sendingState" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="263701998">~sendingState#</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="Nombre de trames de la séquence " enabled="true">
+            <stringProp name="TestPlan.comments">Nombre de trames de la séquence  (nb=...)</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">${nb}2
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree/>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="Trame avec mode d&apos;envoi cyclique" enabled="true">
+            <stringProp name="TestPlan.comments">Trame envoyée en mode d&apos;envoi ponctuel (périodicité = 400ms ) -&gt; ouvre portière arrière gauche</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">${open_arG}/400
+?
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree/>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="Trame avec mode d&apos;envoi cyclique" enabled="true">
+            <stringProp name="TestPlan.comments">Trame envoyée en mode d&apos;envoi ponctuel (périodicité = 300ms ) -&gt; ouvre portière avant droite</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">${open_avD}/300
+?
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree/>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="askSendingState" enabled="true">
+            <stringProp name="TestPlan.comments">demande d&apos;état du Mode Envoi</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout">2000</stringProp>
+            <stringProp name="TCPSampler.request">${askSendingState}
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="sendingState" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="263701998">~sendingState#</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="stopSending" enabled="true">
+            <stringProp name="TestPlan.comments">arrêter d&apos;envoyer les trames</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">${stopSending}
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">true</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree/>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="askSendingState" enabled="true">
+            <stringProp name="TestPlan.comments">demande d&apos;état du Mode Envoi</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout">2000</stringProp>
+            <stringProp name="TCPSampler.request">${askSendingState}
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">true</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="sendingState" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="263701998">~sendingState#</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Scénario test : trame incorrect" enabled="true">
+          <stringProp name="TestPlan.comments">Tentative d&apos;envoi d&apos;une trame incorrect dans la séquence, elle ne s&apos;enverra pas</stringProp>
+        </GenericController>
+        <hashTree>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Compteur de temps : 500ms" enabled="true">
+            <stringProp name="ConstantTimer.delay">500</stringProp>
+          </ConstantTimer>
+          <hashTree/>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="Nombre de trames de la séquence " enabled="true">
+            <stringProp name="TestPlan.comments">Nombre de trames de la séquence  (nb=...)</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">${nb}2
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree/>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="Trame incorrect" enabled="true">
+            <stringProp name="TestPlan.comments">Trame incorrect car il lui manque le délimiteur &apos;@&apos;, la séquence ne sera pas envoyé avec cette trame</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">${invalid}/100
+?
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree/>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="Trame avec mode d&apos;envoi ponctuel" enabled="true">
+            <stringProp name="TestPlan.comments">Trame envoyée en mode d&apos;envoi ponctuel (périodicité nulle) -&gt; ouvre portière avant droite</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">${open_avD}/0
+?
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree/>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="Trame avec mode d&apos;envoi cyclique" enabled="true">
+            <stringProp name="TestPlan.comments">Trame envoyée en mode d&apos;envoi ponctuel (périodicité = 400ms ) -&gt; ouvre portière arrière gauche</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">${open_arG}/400
+?
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree/>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="askSendingState" enabled="true">
+            <stringProp name="TestPlan.comments">demande d&apos;état du Mode Envoi</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout">2000</stringProp>
+            <stringProp name="TCPSampler.request">${askSendingState}
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="sendingState" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="263701998">~sendingState#</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="stopSending" enabled="true">
+            <stringProp name="TestPlan.comments">arrêter d&apos;envoyer les trames</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">${stopSending}
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree/>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="askSendingState" enabled="true">
+            <stringProp name="TestPlan.comments">demande d&apos;état du Mode Envoi</stringProp>
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout">2000</stringProp>
+            <stringProp name="TCPSampler.request">${askSendingState}
+</stringProp>
+            <boolProp name="TCPSampler.closeConnection">true</boolProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="sendingState" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-2069703467">~sendingState</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Scénario : tester réponse du askSendingState" enabled="true">
+          <stringProp name="TestPlan.comments">Scénario permettant de voir le texte renvoyer par le serveur TCP. Ce script peut être ajouté dans tous les autres scénarios</stringProp>
+        </GenericController>
+        <hashTree>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Compteur de temps : 500ms" enabled="true">
+            <stringProp name="ConstantTimer.delay">500</stringProp>
+          </ConstantTimer>
+          <hashTree/>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="script askSendingState réponse" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">def client = new Socket(&quot;10.3.141.1&quot;, 12345);
+client.setSoTimeout(3000);
+client &lt;&lt; &quot;?\n&quot;;
+client.withStreams { input, output -&gt;
+	def reader = input.newReader()
+	def response = reader.readLine()
+	log.info(&apos;Response = &apos; + response)
+}
+client.close()</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="TestPlan.comments">script permettant d&apos;afficher la réponse du askSendingState</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

@@ -1,0 +1,107 @@
+///////////////Contexte logique//////////////////////
+
+@startuml
+
+title Contexte logique du SàE
+
+actor Utilisateur
+actor TableauDeBord
+rectangle "<u>SàE</u>" as S{
+}
+
+Utilisateur -right- S : connecterApplication() <&arrow-right> \n creerObjet() <&arrow-right> \n nommerObjet(id_objet) <&arrow-right> \n enregistrerObjet(id_objet) <&arrow-right> \n selectionnerObjet(id_Objet) <&arrow-right> \n supprimerObjet(id_objet) <&arrow-right> \n ouvrirMenuObjet(id_objet) <&arrow-right> \n creerTrame(id_objet) <&arrow-right> \n changerModeEnvoiTrame(id_trame) <&arrow-right> \n envoyerTrame() <&arrow-right> \n afficherTrame(id_trame) <&arrow-left> \n selectionnerTrame(id_trame) <&arrow-right> \n supprimerTrame(id_trame) <&arrow-right> \n activerReceptionTrame() <&arrow-right> \n desactiverReceptionTrame() <&arrow-right> \n enregistrerTrameEnvoi(id_trame) <&arrow-right> \n enregistrerTrameReception(id_trame) <&arrow-right> \n fermerMenuObjet(id_objet) <&arrow-right> \n afficherMsgErreur(id_erreur) <&arrow-left> \n deconnecterApplication() <&arrow-right> \n
+
+TableauDeBord -left- S : envoyerTrame(id_trame) <&arrow-right> \n recevoirTrame(id_trame) <&arrow-right> \n envoyerTrame(id_trame) <&arrow-left> \n recevoirTrame(id_trame) <&arrow-left> \n
+
+@enduml
+
+En provenance de Utilisateur vers le SàE :
+connecterApplication() : l'utilisateur se connecte à l'application.
+creerObjet() : l'utilisateur creer un nouvel objet.
+nommerObjet(id_objet) : l'utilisateur nomme l'objet créé.
+enregistrerObjet(id_objet) : l'utilisateur enregistre l'objet créé.
+selectionnerObjet(id_Objet) : l'utilisateur sélectionne un objet.
+supprimerObjet(id_objet) : l'utilisateur supprime un objet sélectionné de la liste d'objets enregistrée.
+ouvrirMenuObjet(id_objet) : l'utilisateur ouvre le menu d'un objet sélectionné.
+creerTrame(id_objet) : l'utilisateur ecrire une trame pour l'objet sélectionné. Cette trame correspond à une instruction qui pourra être envoyé à l'objet en question.
+changerModeEnvoiTrame(id_trame) : l'utilisateur choisi un mode d'envoi pour la trame ou les trames sélectionnées. Il peut choisir un mode d'envoie physique et un mode d'envoie logique.
+envoyerTrame(id_trame) : l'utilisateur envoie la trame ou les trames sélectionnées.
+selectionnerTrame(id_trame) : l'utilisateur selectionne une trame.
+supprimerTrame(id_trame) : l'utilisateur supprime une trame sélectionnée.
+activerReceptionTrame() : l'utilisateur active la réception de trame, le SàE va sniffer les trames en provenance du tableau de bord.
+desactiverReceptionTrame() : l'utilisateur désactive la réception de trame, le SàE ne va plus sniffer les trames en provenance du tableau de bord.
+enregistrerTrameEnvoi(id_trame) : l'utilisateur enregistre une trame créée par lui-même.
+enregistrerTrameReception(id_trame) : l'utilisateur enregistre une trame reçu par le SàE, en provenance du tableau de bord.
+fermerMenuObjet(id_objet) : l'utilisateur ferme le menu d'un objet sélectionné.
+deconnecterApplication() : l'utilisateur se déconnecte de l'application.
+
+En provenance du SàE vers Utilisateur :
+afficherTrame(id_trame) : le SàE affiche à l'utilisateur les trames en provenance du tableau de bord pour l'objet précedemment sélectionné, qui n'ont pas encore été affichées.
+afficherMsgErreur(id_erreur) : le SàE affiche un message d'erreur à l'utilisateur.
+
+En provenance de TableauDeBord vers le SàE : 
+envoyerTrame(id_trame) : le tableau de bord transmets des trames au SàE lorsque celui-ci est en fontionnement. 
+recevoirTrame(id_trame) : le tableau de bord reçoit les trames en provenance du SàE. (là j'ai mis un id car le SàE reçois aussi des trames en provenance de l'utilisateur.)
+
+En provenance de SàE vers TableauDeBord :
+envoyerTrame(id_trame) : le SàE transmets les trames en provenance de l'utilisateur au tableau de bord.
+recevoirTrame(id_trame) : le SàE reçoit les trames en provenance du TableauDeBord.
+
+///////////////Contexte physique//////////////////////
+
+@startuml
+
+title Contexte physique du SàE
+
+actor Utilisateur
+actor TableauDeBord
+
+rectangle "<u>SàE</u>" as S{
+}
+rectangle "<u>E_Telephone</u>" as T{
+}
+rectangle "<u>E_Raspberry</u>" as R{
+}
+
+Utilisateur -right- T : demanderEnvoi() <&arrow-right> \n demanderReception() <&arrow-right> \n
+
+S -left- T : afficherEcran() <&arrow-left> \n transmettreDemande(id_demande) <&arrow-right>
+
+R -left- S :transmettreDemande(id_demande) <&arrow-left> \n
+
+TableauDeBord -left- R : demanderEnvoi() <&arrow-left> \n demanderReception() <&arrow-left> \n
+
+@enduml
+
+En provenance de Utilisateur vers E_Telephone :
+demanderEnvoiTrame() : l'utilisateur envoie une demande d'envoi de trame
+demanderReceptionTrame() : l'utilisateur demande au
+
+En provenance du SàE vers E_Telephone :
+afficherEcran() : le SàE affiche l'interface graphique de l'application sur l'écran du téléphone.
+recupererInformationTactile() : le SàE récupère la réponse de la demande d'envoi et la réponse de la demande
+
+@startuml
+
+title Contexte physique du SàE
+
+actor Utilisateur
+actor TableauDeBord
+
+rectangle "<u>SàE</u>" as S{
+}
+rectangle "<u>E_Telephone</u>" as T{
+}
+rectangle "<u>E_Raspberry</u>" as R{
+}
+
+Utilisateur -right- T : appuyerBouton(id_bouton) <&arrow-right> \n remplirChampDeTexte(id_texte) <&arrow-right> \n
+
+S -left- T : afficherEcran() <&arrow-left> \n
+
+R -left- S
+
+TableauDeBord -left- R
+
+@enduml
+

@@ -1,0 +1,17 @@
+@startuml
+
+actor Utilisateur as u
+actor Utilisateur as uu
+
+rectangle "<u>SàE</u>" as S{
+}
+rectangle "<u>E_TableauDeBord</u>" as T{
+}
+
+u -u- S : ajouterObjet() <&arrow-top> \n nommerObjet(nom : string) <&arrow-top> \n <u>selectionner(id)</u> <&arrow-top> \n <u>deselectionner(id)</u> <&arrow-top> \n ouvrirMenuObjet(id_objet : Id_objet) <&arrow-top> \n ecrireTrame(trame : string) <&arrow-top> \n ajouterTrame() <&arrow-top> \n definirModeEnvoiTrame(mode_envoi : booléen) <&arrow-top> \n envoyerTrames() <&arrow-top> \n arreterEnvoiTrames() <&arrow-top> \n afficherTrames() <&arrow-bottom> \n afficherEcranPrincipal() <&arrow-bottom> \n supprimerTramesSniffer() <&arrow-top> \n exporterTramesSniffer() <&arrow-top> \n desactiverReceptionTrames() <&arrow-top> \n activerReceptionTrames() <&arrow-top> \n revenirEnHaut() <&arrow-top> \n supprimer() <&arrow-top> \n fermerMenuObjet(id_Objet : Id_objet) <&arrow-top> \n reconnecter() <&arrow-top> \n afficherPopUp(id_popup : Id_popup) <&arrow-bottom> \n valider() <&arrow-top> \n refuser() <&arrow-top> \n quitter() <&arrow-top> \n saisirPeriodicite(periodicite : int) <&arrow-top> \n demarrer_SSH() <&arrow-top> \n quitter_SSH() <&arrow-top> \n
+S -right- T : envoyerTrame(trame : Trame) <&arrow-right> \n recevoirTrame(trame : Trame)  <&arrow-left> \n
+T -d- uu : allumer() <&arrow-top> \n realiserAction(action) <&arrow-top> \n recupererInformation(Information) <&arrow-top> \n eteindre() <&arrow-top> \n
+
+@enduml
+
+

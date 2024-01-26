@@ -1,0 +1,63 @@
+@startuml
+package Network {
+package Obsersver {
+
+Enum NetworkState
+{
+NETWORK_STATE_CONNECTED
+NETWORK_STATE_NOT_CONNECTED
+}
+
+interface SocketListener
+{
+onConnected() : void
+onNotConnected() : void
+getNetworkState() : NetworkState
+}
+}
+
+package Client {
+
+class ConnectionCANdroid 
+{
+- a_socket : Socket
+- a_executorService : ExecutorService
+
++ <<thread>> connect(p_ip:String, p_port:Integer) : void
++ <<thread>> write(p_message:byte[]) : void
++ read() : byte[]
+}
+
+class CommunicationCANdroid extends Thread implements SocketListener
+{
+- a_connection
+- a_protocol
+
++ receiveFrame() : void
++ connectClient() : void
++ disconnectClient() : void
++ sendFrame(p_frame : String) : void
++ run() : void
+}
+
+class ProtocolCANdroid 
+{
+
++ encodeMessage(String p_message) : byte[]
++ decodeMessage(message:byte[]) : String
+}
+
+class DispatcherCANdroid
+{
++ dispatch(p_frame:String) : void
+}
+
+}
+ProtocolCANdroid <-- CommunicationCANdroid
+ConnectionCANdroid <-- CommunicationCANdroid
+DispatcherCANdroid <-- CommunicationCANdroid
+NetworkState --> SocketListener
+}
+
+
+@enduml

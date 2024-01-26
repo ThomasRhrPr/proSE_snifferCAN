@@ -1,0 +1,88 @@
+Titre : 
+	Envoyer et recevoir des trames CAN du banc de test et du simulateur
+	
+Résumé :
+    L'utilisateur utilise l'application CANdroid afin d'envoyer des trames CAN à ICSim et/ou au banc de test. 
+	L'utilisateur reçoit, sur l'application CANdroid, les trames CAN du banc de test et de ICSim.
+
+Acteurs directs : 
+	Utilisateur, Simulateur (ICSim), Banc de test
+
+Acteurs indirects : 
+
+Portée :
+	SàE
+
+Niveau : 
+	Stratégique
+	
+Préconditions : 
+	Le simulateur ne comporte pas de bugs. 
+    Le simulateur est lancé sur un PC. 
+    Le banc de test est alimenté et fonctionnel. 
+    CANdroid est téléchargée sur le smartphone.
+    Le smartphone et carte électronique sont fonctionels.
+	
+Garanties minimales : 
+	La connexion entre CANdroid et la carte électronique est établie
+	La connexion entre la carte électronique et le banc de test (physique et/ou logiciel) est établie 
+
+Garanties en cas de succès :
+	Échanges de trames CAN entre les simulateur, le banc de test et CANdroid.
+    L’utilisateur est capable d’observer les trames CAN reçues et d’en envoyer de nouvelles.
+    L'utilisateur est capable de créer et d'enregistrer des trames à envoyer. 
+
+Scénario nominal : 
+    1. L'utilisateur "démarre le SàE".
+    2. CANdroid affiche Ecran_Principal.
+    3. L'utilisateur "crée un nouvel objet".
+    4. CANdroid affiche l'objet.
+    5. L'utilisateur "écrit une trame".
+    6. CANdroid met à jour le menu de l'objet.
+    7. L'utilisateur "envoie une trame".
+    8. Le SàE "transmet la trame".
+    9. L'utilisateur stoppe le SàE. (= on ferme l'application/le téléphone s'éteint)
+
+Variantes : 
+    3.a [Pas d'objet à creer]
+     3.a.1. Va en 5.
+
+    3.b [Suppression d'un objet]
+     3.b.1. L'utilisateur "supprime un objet".
+    
+    5.a [Pas de trames à créer]
+     5.a.1. Va en 7.
+
+    5.b [Suppression d'une trame]
+     5.b.1. L'utilisation "supprime une trame".
+
+    7.a [Pas de trames à envoyer]
+     7.a.1. Va en 9.
+
+    9.a [Créer un nouvel objet]
+     9.a.1. Va en 3.
+
+    9.b [Créer une nouvelle trame]
+     9.b.1. Va en 5 
+
+Extensions : 
+
+    2-8. [Affichage de trame]
+     2-8.1 CANdroid affiche les trames reçues
+
+    3.* [Quitter]
+     3.*.1. L'utilisateur quitte l'application
+
+	 
+Sous-CU : 
+    - Démarrer le SàE (brancher la carte électronique pour que le programme démarre, initialisation du banc etc et démarrage de l'application)
+    - Creer un objet
+    - Ecrire une nouvelle trame (selection d'objet + ecriture de la trame) + Enregistrer la trame
+    - Envoyer une trame (selectionner une ou plusieurs trames à envoyer et les envoie)
+    - Transmet la trame
+
+    - Supprimer un objet
+    - Supprimer une trame
+
+Questions : 
+- Les taches de fond doivent-elles apparaitre dans les CUs ?

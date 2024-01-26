@@ -1,0 +1,81 @@
+% ----------------------------------------------
+% CU Recevoir des trames
+% ----------------------------------------------
+\newpage
+\subsubsection{CU Recevoir des trames}
+\paragraph{Description graphique}
+Voir figure \ref{schema_cu_strat}.
+\medskip
+\paragraph{Description textuelle}
+\medskip
+
+\begin{longtable}[l]{|p{3cm}|p{11.7cm}|}
+    \hline
+    
+        Titre & Recevoir des trames.\\
+    \hline
+
+        Résumé & L'application {\nomApplication} reçoit et affiche les trames du réseau CAN. \\
+    \hline
+
+        Portée & Application {\nomApplication}.\\
+    \hline
+
+        Niveau & Utilisateur.\\
+    \hline
+
+        Acteurs directs & Utilisateur.\\
+    \hline 
+
+        Acteurs indirects & N.A. \\
+    \hline
+
+        Préconditions & 
+            \begin{itemize}
+                \item Le SàE est démarré. 
+                \item L'application {\nomApplication} est connectée au programme \newline {\nomLogiciel}.
+                \item La Raspberry Pi est connectée au bus CAN.
+                \item Tableau de Bord est connecté au bus CAN.
+            \end{itemize}\\
+    \hline
+
+        Garanties \newline minimales & N.A. \\
+    \hline
+
+        Garanties en cas de succès & 
+        \begin{itemize}
+            \item Les trames sont affichées sur le sniffer de l'application \newline {\nomApplication}.
+        \end{itemize}
+        \\
+    \hline
+
+        Scénario nominal &
+        \begin{enumerate}
+            \item Utilisateur commande un actionneur sur Tableau de Bord.
+            \item Le SàE récupère les trames du réseau CAN.
+            \item L'application {\nomApplication} met à jour EcranPrincipal.
+            \item Utilisateur demande à \underline{interagir avec le sniffer}.
+        \end{enumerate} \\
+    \hline
+
+        Variantes & \newline
+            \textbf{1-2 [La connexion échoue \& Utilisateur ne souhaite pas se reconnecter]} \newline
+            1-2.a.1. Va en 3. \newline
+            \newline
+            \textbf{1-2 [La connexion échoue \& Utilisateur souhaite se reconnecter]} \newline
+            1-2.b.1. Utilisateur demande à \underline{reconnecter l'application {\nomApplication}} au programme {\nomLogiciel}. \newline
+            1-2.b.2. Va en 1. \newline
+            \newline
+            \textbf{4 [Utilisateur souhaite commander un autre actionneur]}\newline
+            4.a.1. Va en 1. \newline
+            \\
+    \hline
+
+        Extensions & \newline
+        \textbf{2-3 [Utilisateur a demandé l'arrêt de la réception de trames]}
+        2-3.a.1. Fin du CU. \newline
+        \\
+    \hline
+    Informations \newline complémentaires & N.A. \\
+    \hline
+\end{longtable}

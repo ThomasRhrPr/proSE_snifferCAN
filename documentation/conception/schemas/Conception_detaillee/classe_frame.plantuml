@@ -1,0 +1,14 @@
+@startuml
+
+class Frame
+{
+    + id : int
+    + idFrame : String
+    + size : int
+    + data : String
+    + perioditicy : int
+    + idObject : int
+    + setIdObject(idObject : int) : void
+}
+
+@enduml

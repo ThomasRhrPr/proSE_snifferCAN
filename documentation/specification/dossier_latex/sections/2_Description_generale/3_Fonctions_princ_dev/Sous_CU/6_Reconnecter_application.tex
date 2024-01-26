@@ -1,0 +1,79 @@
+% ----------------------------------------------
+% CU DEMARRER LE SAE
+% ----------------------------------------------
+\newpage
+\subsubsection{CU Reconnecter l'application {\nomApplication}}
+\paragraph{Description graphique}
+\medskip
+Voir figure \ref{schema_cu_strat}.
+\paragraph{Description textuelle}
+\medskip
+
+\begin{longtable}[l]{|p{3cm}|p{11.7cm}|}
+    \hline
+    
+        Titre & Reconnecter l'application {\nomApplication}.\\
+    \hline
+
+        Résumé & Utilisateur peut reconnecter l'application {\nomApplication} au programme {\nomLogiciel}. \\
+    \hline
+
+        Portée & Application {\nomApplication}.\\
+    \hline
+
+        Niveau & Utilisateur.\\
+    \hline
+
+        Acteurs directs & Utilisateur.\\
+    \hline 
+
+        Acteurs indirects & N.A. \\
+    \hline
+
+        Préconditions & 
+        \begin{itemize}
+            \item L'application {\nomApplication} est déconnectée du programme \newline {\nomLogiciel}. 
+        \end{itemize}
+        \\
+    \hline
+
+        Garanties \newline minimales & N.A. \\
+    \hline
+
+        Garanties en cas de succès & 
+        \begin{itemize}
+            \item L'application {\nomApplication} est de nouveau connectée au programme {\nomLogiciel}.
+            \item Utilisateur peut utiliser l’application {\nomApplication} librement.
+        \end{itemize}
+         \\
+    \hline
+        Scénario nominal &
+        \begin{enumerate}
+            \item Utilisateur demande la reconnexion de l'application \newline{\nomApplication} au programme {\nomLogiciel}. 
+            \item L'application {\nomApplication} affiche PopupDemandeReconnexion.
+            \item Utilisateur valide la reconnexion.
+            \item L'application {\nomApplication} affiche EcranPrincipal.
+            \item L'application {\nomApplication} se reconnecte au programme \newline {\nomLogiciel}.
+            \item L'application {\nomApplication} met à jour EcranPrincipal.
+        \end{enumerate} \\
+    \hline
+
+    Variantes &     \newline
+        \textbf{3 [Utilisateur souhaite abandonner la reconnexion]} \newline
+        3.a.1. Utilisateur annule la reconnexion. \newline
+        3.a.2. L'application {\nomApplication} affiche EcranPrincipal. \newline
+        3.a.3. Fin du CU.\newline
+        \newline
+        \textbf{5 [La connexion échoue \& Utilisateur ne souhaite pas se reconnecter]} \newline
+        5.a.1. Fin du CU. \newline
+        \newline
+        \textbf{5 [La connexion échoue \& Utilisateur souhaite se reconnecter]} \newline
+        5.b.1. Va en 1. \newline
+        \\
+    \hline
+
+        Extensions & N.A. \\
+    \hline
+    Informations \newline complémentaires & N.A. \\
+    \hline
+\end{longtable}

@@ -1,0 +1,15 @@
+@startuml
+    package Objects {
+        class ObjectsAdapter extends Adapter{
+            +onCreateViewHolder() : ViewHolder
+            +onBindViewHolder() : void
+            +getItemCount() : int
+        }
+                    
+        class ObjectsFragment extends Fragment {
+            + name : String
+            + frame : String[]
+            + foldingStateObject : FoldingStateObject
+        }
+    }	
+@enduml

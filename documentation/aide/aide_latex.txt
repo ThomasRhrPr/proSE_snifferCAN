@@ -1,0 +1,68 @@
+- faire une section : \section{nom de section}
+- faire une sous-section : \subsection{nom de la sous-section}
+- faire une n-sous-section : \n*subsection{nom}
+- faire un paragraphe : \paragraph{nom}
+
+- Ecrire un mot en gras : \textbf{mot}
+- Ecrire un mot en italique : \textit{mot}
+- Faire un retour à la ligne : \newligne à la fin de la ligne
+
+- Commenter le code : % ...
+
+- Créer une liste : 
+	\begin{itemize} 
+		\item <ce qu'on veux>
+		- pour donner un titre à la liste : \caption{titre}
+	\end{itemize}
+
+- Créer un boite de texte de code : 
+	\begin{code} 
+		- pour avoir la coloration syntaxique du code : 
+			\begin{minted}{langage} 
+				... 
+			\end{minted}
+		- pour inserer du code existant dans un autre fichier : 
+			\inputminted{langage}{path du fichier à partir de celui-ci}
+		- pour donner un titre à la boite : \caption{titre}
+	\end{code}
+
+- Créer un figure :
+	\begin{figure}[H]
+		- pour centrer l'image : \centering
+		\includegraphics[largeur]{nom du diagramme}
+	\end{figure}
+
+- Créer un tableau :
+	\begin{tabular}{l|l} ou \begin{xltabular}{l|l}
+		ici, le tableau aura 2 colonnes avec le texte aligné à gauche
+		On peut aussi ajouter des colonne, les centrer avec c, ou les aligner à droite avec r
+		Plus de possibilités spécifiques sont également disponible (cf the Internet)
+		- Pour écrire sur une ligne : \hline <contenu première colonne> & <contenu deuxième colonne> ...
+		- Pour préciser la fin de la ligne de tête : \endfirsthead
+		- Pour changer les caractéristiques de toutes les colonnes : \multicolumn{nombre de colonne}{...}
+		- Créer une ligne de texte avant la coupure du tableau sur une autre page : {message}\tabularnewline
+	\end{tabular}
+
+- Créer un lien sur un mot : \href{<lien>}{mot}
+
+- On peut créer une bibliographie et cité des documents grâce à des clées : \autocite{key}
+- On peut également citer le document : \cite{key}
+- Citer : \enquote{message}
+
+
+- Donner un label à un titre : \section{titre} \label{label}
+- Utilisiser le numero de section d'un titre : \ref{label}
+- Utiliser le numero de page d'un titre : \pageref{label}
+
+
+A FAIRE POUR CHAQUE COMMIT :
+
+git pull
+
+git add "fichier modifier" / git add .
+
+git pull -> message de sortie : "already up to date"
+
+git commit -m "[#numero tache] [type] message du commit"
+
+git push 

@@ -1,0 +1,15 @@
+\subsubsection{Descriptions des autres types de données}
+
+Voici une liste des autres types de données utilisés dans le dossier ainsi que leur description :
+\begin{itemize}
+    \item \textbf{bool} : booléen, peut prendre la valeur true ou false.
+    \item \textbf{CANFrame} : structure de données représentant un trame CAN. Elle contient les champs suivants :
+    \begin{itemize}
+        \item \textbf{id} : identifiant de la trame. C'est un entier non signé de 32 bits.
+        \item \textbf{size} : taille de la trame. C'est un entier non signé de 8 bits.
+        \item \textbf{data} : tableau de 8 octets non signés contenant les données de la trame.
+    \end{itemize}
+    \item \textbf{IdElement} : identifiant des objets et des trames. C'est un entier non signé de 16 bits. L'ID d'un objet est de la forme XX000 où XX représente l'ID de l'objet. L'ID d'une trame est de la forme XXYYY où XX représente l'ID de l'objet et YYY représente l'ID de la trame. Par exemple, si l'objet "Clignotant droit" a pour ID 06000, alors la première trame associée à cet objet aura pour ID 06001.
+    \item \textbf{String} : chaîne de caractères.
+    \item \textbf{StructSenderMode} : structure de données contenant le Mode Envoi (enumération SenderMode) et la périodicité si le Mode Envoi est cyclique.
+\end{itemize}

@@ -1,0 +1,10 @@
+@startuml
+
+interface SocketListener
+{
+onConnected() : void
+onNotConnected() : void
+getNetworkState() : NetworkState
+}
+
+@enduml

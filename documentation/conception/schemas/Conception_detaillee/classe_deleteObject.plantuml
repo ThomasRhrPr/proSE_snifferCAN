@@ -1,0 +1,7 @@
+@startuml
+
+class DeleteObject extends Fragment {
+    -deleteObject (String object) : void
+}
+
+@enduml

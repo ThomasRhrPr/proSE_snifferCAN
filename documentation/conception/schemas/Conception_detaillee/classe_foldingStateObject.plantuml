@@ -1,0 +1,6 @@
+@startuml
+        Enum FoldingStateObject {
+            UNFOLDING_STATE
+            FOLDING_STATE
+        }
+@enduml

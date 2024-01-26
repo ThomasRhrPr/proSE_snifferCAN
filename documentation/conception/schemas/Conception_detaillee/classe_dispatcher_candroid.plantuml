@@ -1,0 +1,7 @@
+@startuml
+
+class DispatcherCANdroid {
+    + dispatch(frame : String ) : void
+}
+
+@enduml

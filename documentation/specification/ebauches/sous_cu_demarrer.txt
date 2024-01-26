@@ -1,0 +1,45 @@
+Titre : 
+	Démarrer le SàE
+	
+Résumé :
+    L'utilisateur démarre le SàE
+
+Acteurs directs : 
+	Utilisateur, Simulateur (ICSim), Banc de test
+
+Acteurs indirects : 
+
+Portée :
+	SàE
+
+Niveau : 
+	Utilisateur
+	
+Préconditions : 
+	Le smartphone est alimenté
+	
+Garanties minimales : 
+	Le SàE démarre
+
+Garanties en cas de succès :
+	Le SàE est en état de fonctionner 
+
+Scénario nominal : 
+    1. L'utilisateur alimente la carte électronique
+    2. CANnect se lance
+    3. L'utilisateur démarre CANdroid
+    4. CANdroid se lance
+    5. CANdroid se connecte à CANnect
+    6. CANdroid affiche Ecran_Principal connecté à CANnect
+
+Variantes : 
+    6. [Connexion impossible]
+     6.1. CANdroid affiche Ecran_Principal non connecté à CANnect
+
+Extensions : 
+
+    1.* [L'utilisateur ne branche pas la carte électronique]
+     1.*.1. Va en 3
+
+Questions : 
+- l'étape 6 est déjà écrite dans le CU stratégique, faut-il la retirer du CU stratégique ?

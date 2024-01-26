@@ -1,0 +1,43 @@
+\babel@toc {french}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{5}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Objectif du document}{5}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Portée}{5}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Copyright}{5}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Références}{5}{subsection.1.4}%
+\contentsline {section}{\numberline {2}Utilisation de {CANdroid}/{CANgateway}}{7}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Matériel nécessaire}{7}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Logiciels nécessaires}{7}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Préparation}{7}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Application {CANdroid} seule}{7}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Utilisation de la Raspberry Pi}{7}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Utilisation du Simulateur ICSim}{8}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Utilisation du Banc de Test}{8}{subsubsection.2.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.5}Utilisation du Simulateur ICSim et du Banc de Test}{8}{subsubsection.2.3.5}%
+\contentsline {subsubsection}{\numberline {2.3.6}Tests}{9}{subsubsection.2.3.6}%
+\contentsline {subsection}{\numberline {2.4}Branchement}{9}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Simulateur ICSim}{9}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Banc de Test}{10}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}Banc de Test et Simulateur ICSim}{10}{subsubsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.5}Démarrage}{10}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Banc de Test}{10}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}Simulateur ICSim}{11}{subsubsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.3}Programme {CANgateway}}{13}{subsubsection.2.5.3}%
+\contentsline {subsubsection}{\numberline {2.5.4}Application {CANdroid}}{13}{subsubsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.6}Manipulation}{13}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}Application {CANdroid}}{14}{subsubsection.2.6.1}%
+\contentsline {paragraph}{\numberline {2.6.1.1}Partie interaction avec le simulateur}{14}{paragraph.2.6.1.1}%
+\contentsline {paragraph}{\numberline {2.6.1.2}Partie basse de l'écran}{14}{paragraph.2.6.1.2}%
+\contentsline {subsubsection}{\numberline {2.6.2}Programme {CANgateway}}{14}{subsubsection.2.6.2}%
+\contentsline {subsubsection}{\numberline {2.6.3}Simulateur ICSim}{15}{subsubsection.2.6.3}%
+\contentsline {subsubsection}{\numberline {2.6.4}Programme {CANgateway}}{15}{subsubsection.2.6.4}%
+\contentsline {subsubsection}{\numberline {2.6.5}Simulateur ICSim}{15}{subsubsection.2.6.5}%
+\contentsline {subsubsection}{\numberline {2.6.6}Banc de Test}{15}{subsubsection.2.6.6}%
+\contentsline {subsection}{\numberline {2.7}Tests}{15}{subsection.2.7}%
+\contentsline {subsubsection}{\numberline {2.7.1}JMeter}{15}{subsubsection.2.7.1}%
+\contentsline {subsubsection}{\numberline {2.7.2}Robot Framework}{16}{subsubsection.2.7.2}%
+\contentsline {subsubsection}{\numberline {2.7.3}Tests unitaires CMocka}{16}{subsubsection.2.7.3}%
+\contentsline {section}{\numberline {3}Amélioration de {CANdroid}/{CANgateway}}{17}{section.3}%
+\contentsline {subsection}{\numberline {3.1}État du projet}{17}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Améliorations}{17}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Spécifications}{17}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Création de scénarios}{17}{subsubsection.3.2.2}%

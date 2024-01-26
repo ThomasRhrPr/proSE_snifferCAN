@@ -1,0 +1,41 @@
+\section{Installation de l'application CANdoid}
+
+CANdroid est lancé depuis Android Studio. Pour cela, nous vous proposons un tutoriel d'installation.
+
+\subsection{Installation de Android Studio}
+
+Rendez-vous sur le site officiel : \href{https://developer.android.com/studio}{Android Studio}  et téléchargez le fichier .zip. Placez le dans le dossier pertinent pour vos applications (par exemple dans /usr/local/). 
+Dans un terminal, rendez-vous dans le répertoire android-studio/bin/. Ensuite, exécutez studio.sh.
+
+Choisissez, si vous le souhaitez, d'importer les paramètres anciens de Android Studio. Cliquez sur OK pour valider.
+Poursuivez l'installation avec l'assistant de configuration d'Android Studio. Cela implique le téléchargement des composants SDK Android nécessaires au dévéloppement. 
+
+Si vous possédez une version 64 bits d'Ubuntu, il est nécessaire d'installer des bibliothèques 32 bits avec la commande suivante : 
+\vspace{-1.8\baselineskip} 
+\begin{lstlisting}
+    sudo apt install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
+\end{lstlisting}
+
+Si vous exécutez Fedora 64 bits, tapez : 
+\vspace{-1.8\baselineskip} 
+\begin{lstlisting}
+    sudo yum install zlib.i686 ncurses-libs.i686 bzip2-libs.i686
+\end{lstlisting}
+
+\subsection{Configurer l'appareil}
+
+Sur votre Smartphone, dans les paramètres, activez les option pour les développeurs. 
+Appuyez sept fois sur l'option Build Number (Numéro de version) de manière à ce que le message "You are now a developer!" s'affiche. Cela permet d'activer les options pour les développeurs sur votre appareil. 
+
+Vous devez ensuite activer le débogage USB de manière à ce que les outils SDK reconnaissent l'appareil s'il est connecté via USB. 
+Activez le débogage USB dans les paramètres système de l'appareil dans Developer options (Options pour les développeurs). Le chemin d'accès dépend de la version Android : 
+
+\begin{itemize}
+    \item Android 9 (niveau d'API 28) ou version ultérieure : Settings > System > Advanced > Developer Options > USB debugging (Paramètres > Système > Avancé > Options pour les développeurs > Débogage USB) 
+    \item Android 8.0.0 (niveau d'API 26) et Android 8.1.0 (niveau d'API 27) : Settings > System > Developer Options > USB debugging (Paramètres > Système > Options pour les développeurs > Débogage USB) 
+    \item Android 7.1 (niveau d'API 25) ou version antérieure : Settings > Developer Options > USB debugging (Paramètres > Options pour les développeurs > Débogage USB)
+\end{itemize}
+
+
+
+Lorsque Android Studio est fonctionnel, branchez votre appareil. Dans Open'Edit Run/Debug configurations' Dialog > Edit Configuration... > CANdroid > Apply > OK. Puis cliquez sur Run 'CANdroid'. 

@@ -1,0 +1,38 @@
+@startuml
+
+node (Échanger des trames CAN) as (Main)
+
+node (Démarrer le SàE) as (Demarrer)
+node (Recevoir des trames) as (Recevoir)
+node (Ajouter un objet) as (CreerObjet)
+node (Interagir avec le sniffer) as (InteragirSniffer)
+node (Ajouter une trame) as (EnregistrerTrames)
+node (Envoyer des trames) as (Envoyertrames)
+node (Reconnecter l'application CANdroid) as (RecoAppli)
+node (Arrêter l'envoi des trames) as (Arretenvoyertrames)
+node (Supprimer un élément) as (Supprimer)
+node (Stopper le SàE) as (Quit)
+
+(Main) .u..> (Demarrer) : <<include>>
+(Main) .l.> (Recevoir) : <<include>>
+(Main) .d..> (CreerObjet) : <<include>>
+(Main) .l..> (EnregistrerTrames) : <<include>>
+(Main) ..> (Envoyertrames) : <<include>>
+(Main) ..> (Arretenvoyertrames) : <<include>>
+(Main) .r..> (Supprimer) : <<include>>
+
+(Main) ...> (Quit) : <<include>>
+
+(Demarrer) .l.> (RecoAppli) : <<include>>
+(Recevoir) .d.> (InteragirSniffer) : <<include>>
+(Main) ..> (RecoAppli) : <<include>>
+(Recevoir) ..> (RecoAppli) : <<include>>
+
+(Quit) .[Hidden].> (Arretenvoyertrames)
+(Quit) .[Hidden].> (Envoyertrames)
+(EnregistrerTrames) .[Hidden].> (Recevoir)
+(CreerObjet) .[Hidden].> (Recevoir)
+
+:Utilisateur: -d- (Main)
+
+@enduml

@@ -1,0 +1,117 @@
+@startuml
+
+hide circle
+hide empty members
+
+package CANdroid
+{
+    package GUI {
+
+        class MainActivity
+
+        package Sniffer {
+            class Adapter extends Adapter                                     
+                        
+            class RecyclerFragment extends Fragment 
+
+        }
+
+
+
+    }
+
+    package Basket{
+        
+        class ObjectFragment extends Fragment
+
+        class BasketAdapter extends Adapter
+    }
+
+    package Dealer{
+
+        package Datas { 
+
+            class Object
+
+            class Frame
+
+            interface DAO
+
+            abstract class BDD
+
+        }
+    }
+
+    Frame -d-> Object
+    Object -d-> DAO
+    DAO -d-> BDD
+    BDD -d-> MainActivity
+
+
+    package Network {
+    package Observer {
+
+        Enum NetworkState
+
+        interface SocketListener
+    }
+
+    package Client {
+
+        class ConnectionCANdroid 
+
+        class CommunicationCANdroid extends Thread implements SocketListener
+    
+        class ProtocolCANdroid
+
+        class DispatcherCANdroid 
+
+    }
+
+    ProtocolCANdroid <-r- CommunicationCANdroid
+    ConnectionCANdroid <-u- CommunicationCANdroid
+    DispatcherCANdroid <-d- CommunicationCANdroid
+    NetworkState -d-> SocketListener
+    CommunicationCANdroid -[hidden]r-> SocketListener
+    }
+
+
+    package Logger {
+        class LogManager
+
+        class FilesManager
+
+        class Thesaurus
+
+        class LogManager 
+        
+        class LogManagerViewModel 
+
+        FilesManager -> LogManager
+        LogManager -> LogManagerViewModel
+        Thesaurus -d-> LogManager
+        DispatcherCANdroid -u-> LogManager 
+        MainActivity --> DealerManager
+        DealerManager -u-> BDD
+
+
+
+        Adapter --> RecyclerFragment
+        RecyclerFragment --> MainActivity
+
+        BacktoTop --> MainActivity
+
+        MainActivity -u-> ObjectFragment
+        BasketAdapter --> ObjectFragment
+
+
+    }
+
+MainActivity -u-> LogManagerViewModel
+
+
+
+}
+
+
+@enduml

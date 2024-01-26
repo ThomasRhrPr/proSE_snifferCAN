@@ -1,0 +1,60 @@
+% ----------------------------------------------
+% CU SUPPRIMER UN OBJET
+% ----------------------------------------------
+\subsubsection{CU Supprimer un objet}
+\paragraph{Description graphique}
+\medskip
+\paragraph{Description textuelle}
+\medskip
+
+\begin{longtable}[l]{|p{3cm}|p{11.7cm}|}
+    \hline
+    
+        Titre & Supprimer un objet. \\
+    \hline
+
+        Résumé & Permet de supprimer un objet créé. \\
+    \hline
+
+        Portée & Application Android.\\
+    \hline
+
+        Niveau & Utilisateur.\\
+    \hline
+
+        Acteurs directs & Utilisateur.\\
+    \hline 
+
+        Acteurs indirects & \\
+    \hline
+
+        Préconditions & Le SàE est démarré. \newline
+        Un objet a été créé. \\
+    \hline
+
+        Garanties \newline minimales & \\
+    \hline
+
+        Garanties en cas de succès & 
+        L'objet à été supprimé. \\
+    \hline
+
+        Scénario nominal &     \newline
+        1. L'utilisateur selectionne un objet. \newline
+        2. L'application Android grise l'objet selectionné.\newline
+        3. L'utilisateur appuie sur le bouton de suppression. \newline
+        4. L'application Android affiche Ecran\_Suppression. \newline
+        5. L'utilisateur valide. \newline
+        \\
+    \hline
+
+    Variantes & \newline
+        \textbf{1. [Plusieurs objet à selectionné]} \newline
+        1.a.1 L'utiliisateur selectionne plusieurs objets. \newline
+        1.a.2 L'application Android grise les objets selectionné. \newline
+        \\
+    \hline
+
+        Extensions & \\
+    \hline
+\end{longtable}

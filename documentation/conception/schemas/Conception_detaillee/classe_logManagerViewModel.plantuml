@@ -1,0 +1,7 @@
+@startuml 
+    class logManagerViewModel extends ViewModel{
+        getLogData() : LiveData<String>
+        setLogData(String log) : void
+    }
+
+@enduml

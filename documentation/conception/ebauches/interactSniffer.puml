@@ -1,0 +1,53 @@
+@startuml interactSniffer
+
+actor Utilisateur   as User   order 1
+participant gui     as GUI    order 2
+participant logger  as Logger order 3
+
+User   -> GUI       : backToTopSniffer()
+activate GUI #FFBBBB
+GUI    -> GUI       : displayScreen(MAIN_SCREEN)
+GUI    --> User
+deactivate GUI #FFBBBB
+
+
+
+User    -> GUI      : cleanSniffer()
+activate GUI #FFBBBB
+
+GUI     -> Logger   : clearAll()
+activate Logger #FFBBBB
+Logger  --> GUI
+deactivate Logger
+
+GUI     -> GUI      : displayScreen(MAIN_SCREEN)
+GUI     --> User
+deactivate GUI
+
+
+User    -> GUI      : pauseSniffer()
+activate GUI #FFBBBB
+GUI    -> GUI       : displayScreen(MAIN_SCREEN)
+GUI    --> User
+deactivate GUI #FFBBBB
+User    -> GUI      : exportSniffer()
+activate GUI #FFBBBB
+GUI     -> Logger   : save()
+activate Logger #FFBBBB
+Logger  --> GUI
+deactivate Logger
+GUI     --> User
+deactivate GUI
+User    -> GUI      : resumeSniffer()
+activate GUI #FFBBBB
+GUI    -> GUI       : displayScreen(MAIN_SCREEN)
+GUI    --> User
+deactivate GUI #FFBBBB
+
+
+
+
+
+
+
+@enduml

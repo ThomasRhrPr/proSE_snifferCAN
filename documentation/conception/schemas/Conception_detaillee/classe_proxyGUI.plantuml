@@ -1,0 +1,9 @@
+@startuml
+
+hide circle
+
+class ProxyGUI <<medium>> {
+    !includesub diag_classe_CANgateway.plantuml!ProxyGUI
+}
+
+@enduml

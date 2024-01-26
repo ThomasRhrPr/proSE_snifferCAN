@@ -1,0 +1,103 @@
+% ----------------------------------------------
+% CU DEMARRER LE SAE
+% ----------------------------------------------
+\newpage
+\subsubsection{CU Démarrer le SàE}
+\paragraph{Description graphique}
+Voir figure \ref{schema_cu_strat}.
+\paragraph{Description textuelle}
+\medskip
+
+\begin{longtable}[l]{|p{3cm}|p{11.7cm}|}
+    \hline
+    
+        Titre & Démarrer le SàE.\\
+    \hline
+
+        Résumé & Utilisateur démarre le SàE et les différents périphériques dont il a besoin. \\
+    \hline
+
+        Portée & SàE.\\
+    \hline
+
+        Niveau & Utilisateur.\\
+    \hline
+
+        Acteurs directs & Utilisateur.\\
+    \hline 
+
+        Acteurs indirects & N.A. \\
+    \hline
+
+        Préconditions & 
+        \begin{itemize}
+            \item Utilisateur à accès aux différents éléments du SàE ainsi que des différents périphériques dont il a besoin.
+            \item Utilisateur est connecté à la Raspberry Pi en SSH.
+        \end{itemize} \\ 
+    \hline
+
+        Garanties \newline minimales & N.A. \\
+    \hline
+
+        Garanties en cas de succès & 
+        \begin{itemize}
+            \item Utilisateur peut utiliser l'application {\nomApplication} librement. 
+        \end{itemize}
+        \\
+    \hline
+        Scénario nominal &
+        \begin{enumerate}
+            \item Utilisateur met en fonctionnement le Simulateur ICSim. 
+            \item Utilisateur connecte la Raspberry Pi au bus CAN.
+            \item Utilisateur met sous tension la Raspberry Pi.
+            \item Utilisateur lance le programme {\nomLogiciel} via la \newline connexion SSH.
+            \item E\_PC informe Utilisateur que le programme \newline {\nomLogiciel} est lancé.
+            \item Utilisateur connecte E\_Smartphone au réseau TCP/IP de E\_Raspberry.
+            \item E\_Smartphone informe Utilisateur qu'il est connecté au réseau TCP/IP de E\_Raspberry.
+            \item Utilisateur démarre l'application {\nomApplication}.
+            \item L'application {\nomApplication} affiche EcranPrincipal.
+            \item L'application {\nomApplication} se connecte au programme \newline {\nomLogiciel}.
+            \item L'application {\nomApplication} met à jour EcranPrincipal.
+        \end{enumerate} \\
+    \hline
+
+    Variantes &     \newline
+        \textbf{1 [Mise en fonctionnement du Banc de test uniquement]} \newline
+        1.a.1. Utilisateur allume le Banc de test. \newline
+        1.a.2. Va en 2. \newline
+        \newline
+        \textbf{1 [Mise en fonctionnement du Simulateur ICSim et du Banc de test]} \newline
+        1.b.1. Utilisateur allume le Simulateur ICSim. \newline
+        1.b.2. Utilisateur allume le Banc de test. \newline
+        1.b.3. Va en 2. \newline
+        \newline
+        \textbf{1 [Utilisateur ne souhaite pas utiliser Tableau de Bord]} \newline
+        1.c.1. Va en 2. \newline
+        \newline
+        \textbf{1-3 [Utilisateur ne souhaite pas utiliser la Raspberry Pi]} \newline
+        1-3.a.1. Va en 8. \newline
+        \newline
+        \textbf{5 [Le programme {\nomLogiciel} ne s'est pas lancé]}\newline
+        5.a.1 Utilisateur démarre l’application {\nomApplication}.\newline
+        5.a.2 L’application {\nomApplication} aﬀiche EcranPrincipal.\newline
+        5.a.3 Fin du CU. \newline
+        \newline
+        \textbf{7 [La connexion échoue \& Utilisateur ne souhaite pas se reconnecter]} \newline
+        7.a.1. Va en 8. \newline
+        \newline
+        \textbf{7 [La connexion échoue \& Utilisateur souhaite se reconnecter]}\newline
+        7.b.1 Va en 6. \newline
+        \newline
+        \textbf{10 [La connexion échoue \& Utilisateur ne souhaite pas se reconnecter]} \newline
+        10.a.1. Fin du CU. \newline
+        \newline
+        \textbf{10 [La connexion échoue \& Utilisateur souhaite se reconnecter]} \newline
+        10.b.1. Utilisateur demande à \underline{reconnecter l'application {\nomApplication}} au programme {\nomLogiciel}. \newline
+        10.b.2. Fin du CU. \newline
+        \\
+    \hline
+    Extensions & N.A. \\
+    \hline
+    Informations \newline complémentaires & N.A. \\
+    \hline
+\end{longtable}

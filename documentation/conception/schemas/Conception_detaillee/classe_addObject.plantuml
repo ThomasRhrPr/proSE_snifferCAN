@@ -1,0 +1,5 @@
+@startuml
+class AddObject extends Fragment {
+    -addObject (String object) : void
+}
+@enduml

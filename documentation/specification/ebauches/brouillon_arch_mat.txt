@@ -1,0 +1,12 @@
+Le diagramme de déploiement UML de l’Illustration (ArchMat du projet) représente l’architecture matérielle et logicielle du SàE. 
+Les conventions graphiques utilisées sont explicitées sur l’Illustration (Légende du diagramme).
+Ce diagramme de déploiement identifie les entités matérielles et/ou logicielles avec lesquelles le 
+SàE doit interagir et permet ainsi de déterminer les principaux échanges qu’il entretient avec son 
+environnement.
+
+Comme indiqué sur le schéma, l'application CAN Manager est déployée sur un Smartphone. Le programme CAN Transmitter est déployé sur la carte électronique. Le Smartphone et la carte électronique communique ensemble grâce au protocole TCP/IP.
+La carte éléctronique communique avec un PC et/ou un banc de test comportant un certain nombre de capteurs/actionneurs.
+Par convention, le nom de ces entités sont préfixés par les caractères « E_ » (E pour Externe). Les 
+caractéristiques de PC sont décrites dans le dictionnaire du domaine. E_ICSim est un logiciel de simulation déployé sur le PC. Il permettra au futurs utilisateurs de se former aux protocoles communication CAN sans avoir à utiliser le Banc de test encombrant. 
+Le banc de test  est composé de divers capteurs et actionneurs tels que (TODO attendre documentation).
+Le SàE interagit avec le PC et le banc de test grâce au protocole de communication CAN. 

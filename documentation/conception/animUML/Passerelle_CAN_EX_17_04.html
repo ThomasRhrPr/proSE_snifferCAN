@@ -1,0 +1,887 @@
+<head></head>
+<body></body>
+<script>
+	// @ts-check
+	/**
+	 * @type {import("./Model.d.ts").Model<false>}
+	 */
+	const model =
+		{
+			name: "Passerelle_CAN",
+			classes: String.raw`
+				class GUI <<active>>{
+					'Attributs'
+					- currentIdScreen : IdScreen ''Attribut de la classe, correspond à l'écran/pop-up affiché actuellement sur l'application CANdroid.
+					'Opérations'
+					- displayPopup(idPopup : IdPopup) ''Permet d'afficher le pop-up d'identifiant idPopup sur E_Smartphone.
+					- displayMainScreen() ''Permet d'afficher EcranPrincipal sur E_Smartphone.
+					startCANdroid() ''Démarre l'application CANdroid.
+					addObject() ''Opération appelée lorsque Utilisateur clique sur le bouton [ajouter]. Permet d'ajouter un objet à l'application CANdroid. Déclenche l'affichage de PopupAjoutObjet.
+					select(idElement : IdElement) ''Opération appelée lorsque Utilisateur clique sur un objet ou une trame non sélectionné. Permet de sélectionner l'objet ou la trame cliquée. Le paramètre idElement correspond à l'indentifiant de l'objet ou de la trame sélectionné.
+					unselect(idElement : IdElement) ''Opération appelée lorsque Utilisateur clique sur un objet ou une trame déjà sélectionné. Permet de désélectionner l'objet ou la trame cliquée. Le paramètre idElement correspond à l'identifiant de l'objet ou de la trame sélectionné.
+					openObjectMenu(idElement : IdElement) ''Opération appelée lorsque Utilisateur clique sur le bouton [deplierMenuObjet]. Permet de déplier le menu de l'objet. Le paramètre idElement correspond à l'identifiant de l'objet choisi. Change le bouton [deplierMenuObjet] cliqué en [replierMenuObjet].
+					setFrame(frame : String) ''Permet d'écrire une trame associée à un objet. Le paramètre frame correspond à la chaine de caractère saisie par Utilisateur dans le champs de texte <champTrame> sur EcranPrincipal.
+					setObjectName(object : String) ''Permet d'écrire le nom de l'objet créé par Utilisateur. Le paramètre object correspond à la chaine de caractère saisie par Utilisateur dans le champs de texte <champNomObjet> sur PopupAjoutObjet.
+					saveFrame() ''Opération appelée lorsque Utilisateur clique sur le bouton [enregistrerTrame]. Permet d'enrgistrer la trame saisie. Déclenche l'affichage de PopupModeEnvoiTrame si le format de la trame est correct et PopupErreurSaisieTrame si le format de la trame est incorrect.
+					startSendFrame() ''Opération appelée lorsque Utilisateur clique sur le bouton [lancerEnvoi]. Permet de débuter l'envoi des trames précédemment sélectionnée. Change le bouton [lancerEnvoi] en [arreterEnvoi].
+					stopSendFrame() ''Opération appelée lorsque Utilisateur clique sur le bouton [arreterEnvoi]. Permet d'arrêter l'envoi des trames. Change le bouton [arreterEnvoi] en [lancerEnvoi]. Déclenche l'affichage de PopupArretEnvoi.
+					cleanSniffer() ''Opération appelée lorsque Utilisateur clique sur le bouton [viderSniffer]. Permet de supprimer toutes les trames actuellement affichées dans la partie sniffer de EcranPrincipal.
+					exportSniffer() ''Opération appelée lorsque Utilisateur clique sur le bouton [exporterSniffer]. Permet de sauvegarder l'ensemble des trames, affichées dans la partie sniffer de EcranPrincipal, dans un fichier présent sur E_Smartphone.
+					pauseSniffer() ''Opération appelée lorsque Utilisateur clique sur le bouton [pause]. Stoppe le l'affichage de nouvelles trames dans le sniffer. Change le bouton [pause] en [play].
+					resumeSniffer() ''Opération appelée lorsque Utilisateur clique sur le bouton [play]. Reprend l'affichage de nouvelles trames dans le sniffer. Change le bouton [play] en [pause].
+					backToTopSniffer() ''Opération appelée lorsque Utilisateur clique sur le bouton [revenirEnHaut]. Permet de revenir en haut de l'affichage de la partie sniffer de EcranPrincipal.
+					delete() ''Opération appelée lorsque Utilisateur clique sur le bouton [suppressionElement]. Permet de supprimer les objets ou les trames précédemment sélectionnées par Utilisateur et stockées dans Basket. Déclenche l'affichage de PopupSuppressionElement.
+					closeObjectMenu(idElement : IdElement) ''Opération appelée lorsque Utilisateur clique sur le bouton [replierMenuObjet]. Permet de replier le menu de l'objet. Le paramètre idElement correspond à l'identifiant de l'objet choisi. Change le bouton [replierMenuObjet] cliqué en [deplierMenuObjet].
+					askReconnection() ''Opération appelée lorsque Utilisateur clique sur le bouton [connexion]. Permet de demander la reconnexion entre CANgatewate et CANdroid. Déclenche l'affichage de PopupDemandeReconnexion.
+					acceptRequest(idPopup : IdPopup) ''Opération appelée lorsque Utilisateur clique sur le bouton [validerXXXXX] (XXXXX étant le nom du pop-up) du pop-up d'identifiant idPopup actuellement affiché sur E_Smartphone. L'opération appelée ensuite dépend du pop-up actuellement affiché sur E_Smartphone.
+					rejectRequest(idPopup : IdPopup) ''Opération appelée lorsque Utilisateur clique sur le bouton [annulerXXXXX] (XXXXX étant le nom du pop-up) du pop-up d'identifiant idPopup actuellement affiché sur E_Smartphone. E_Smartphone affiche EcranPrincipal.
+					setNetworkAvailability(networkState : NetworkState) ''Permet de mettre à jour l'état de connexion entre CANgateway et CANdroid. L'état courant de connexion correspond à networkState.
+					notifyNewFrame(number : int) ''Informe GUI qu'une nouvelle trame a été reçue par Sniffer et qu'il peut la récupérer pour pouvoir l'afficher dans la partie sniffer de EcranPrincipal.
+					setSendingState(sendingState : SendingState) ''Permet de mettre à jour l'état d'envoi de GUI.
+					setSenderMode(senderMode : SenderMode) ''Opération appelée lorsque Utilisateur clique sur les radio-boutons ([radioBoutonCyclique] ou [radioBoutonPonctuel]) dans PopupModeEnvoiTrame.
+					setFrequency(frequency : int) ''Permet d'écrire la périodicité d'envoi de la trame que Utilisateur à saisi dans le champ de texte <champPeriodicite> sur PopupModeEnvoiTrame. Le paramètre frequecy correspond à la périodicité en ms.
+					stopCANdroid() ''Arrête l'application CANdroid.
+				}
+				class UI <<active>>{
+					'Attributs'
+
+					'Opérations'
+					- signalState(programState : ProgramState) ''Informe Utilisateur de l'état de lancement du programme CANgateway.
+					startCANgateway() ''Démarre le programme CANgateway.
+					stopCANgateway() ''Arrête le programme CANgateway.
+				}
+				class Dealer <<entity>>{
+					'Attributs'
+
+					'Opérations'
+					loadObjects() : IdElement[*]''Permet à GUI de récupérer les éléments (objets et trames) créés lors d'un précédent démarrage de l'application CANdroid. Retourne la liste de ces éléments.
+					saveObject(object : String) : bool ''Permet d'enregistrer un nouvel objet. Le paramètre object correspond au nom de l'objet. 
+					getListObject() : IdElement[*] ''Renvoie la liste des identifiants des objets sauvegardés.
+					getObject(idElement : IdElement) : Object ''Renvoie l'objet possedant l'identifiant passé en paramètre.
+					getMaxIdObject() : int ''Renvoie l'identifiant du prochain objet créé (ie. l'identifiant le plus grand déjà utilisé + 1).
+					saveNewFrame(idObject : IdObject, frame : String, mode : SenderMode, frequency : int) ''Permet d'enregistrer une nouvelle trame. Le paramètre frame correspond à la trame sous le bon format. Le parametre idElement correspond à l'identifiant de l'objet auquel la trame sera liée.
+					deleteArticles() ''Permet de supprimer les éléments précédemment sélectionnés et stockés dans Basket.
+				}
+				class Logger <<entity>> {
+					'Attributs'
+					receivedFrames : CANFrame[*] ''Ensemble des trames reçues sur le bus CAN et affichées dans la partie sniffer de l'application CANdroid.
+					framesFile : File ''Fichier de log contenant les trames reçues.
+					'Opérations'
+					setFrame(frame : CANFrame) ''Ajoute la trame frame à receivedFrames. 
+					getFrame() : CANFrame ''Renvoie la trame la plus ancienne de receivedFrames et la retire de la liste.
+					clearAll() ''Vide le fichier framesFile
+					save() ''Exporte le fichier framesFile.
+				}
+				class Object {
+					'Attributs'
+					- name : String ''Nom de l'objet.
+					- id : int ''Id de l'objet.
+					- myFrames : Frame[*] ''Trames associées à l'objet.
+					'Opérations'
+					getFrames() : Frame[*] ''Renvoie la liste des trames associées à l'objet.
+					addFrame(frame : String, mode : SenderMode, frequency : int) ''Convertit le paramètre frame en Frame et ajoute la trame à myFrames.
+					deleteFrame(frame : String) ''Convertit le paramètre frame en Frame et retire la trame de myFrames si elle existe. Sinon ne fait rien.
+				}
+				class Frame {
+					'Attributs'
+					- canFrame : CANFrame ''Trame CAN (avec identifiant, taille et données).
+					- senderMode : SenderMode ''Mode d'envoi de la trame.
+					'Opérations'
+					getSenderMode() : SenderMode ''Renvoie le mode d'envoi de la trame.
+					setSenderMode(senderMode : SenderMode) ''Met à jour le mode d'envoi de la trame. Le paramètre correspond au mode d'envoi choisi par Utilisateur.
+				}
+				class Sniffer <<active>> {
+					'Attributs'
+
+					'Opérations'
+					- receiveFrame() ''Reçoit la trame sniffée sur le bus CAN et la transmet à Logger.
+					startListenning() ''Commence l'écoute des trames sur le bus CAN.
+					stopListenning() ''Arrête l'écoute des trames sur le bus CAN.
+				}
+				class Network {
+					'Attributs'
+
+					'Opérations'
+					askNetworkAvailability() ''Demande l'état du réseau TCP/IP.
+				}
+				class Basket {
+					'Attributs'
+					elements : IdElement[*] ''Contenu du panier stocké sous forme de liste des identifiants des éléments dans le panier.
+					'Opérations'
+					addElement(idElement : IdElement) ''Ajoute l'élement d'identifiant idElement au panier.
+					removeElement(idElement : IdElement) ''Retire l'élement d'identifiant idElement du panier.
+					getElements() : IdElement[*] ''Retourne un liste contenant l'ensemble des identifiants des éléments du panier.
+					clearAll() ''Vide le panier.
+				}
+				class Sender <<active>> {
+					'Attributs'
+					framesToSend : Frame[*] ''Liste des trames à envoyer. La liste se vide dès que l'envoi s'arrête.
+					'Opérations'
+					- send() ''Envoie les trames sur le bus CAN.
+					startSending() ''Démarre le cycle d'envoi de l'application CANdroid.
+					stopSending() ''Arrête le cycle d'envoi de l'application CANdroid.
+					askSendingState() ''Demande l'état de l'envoi.
+				}
+
+				GUI  "1" --> "1"  Dealer
+				GUI  "1" --> "1"  Network
+				GUI  "1" --> "1"  Basket
+				GUI  "1" -- "1"  Logger
+				GUI  "1" -- "1"  Sender
+				GUI  "1" -- "1"  Sniffer
+				Sniffer "1" --> "1"  Logger
+				Dealer  "1" --> "0..*"  Object
+				Sender "1" --> "1" Basket 
+				Basket "1" --> "0..*" Object
+				Basket "1" --> "0..*" Frame
+				Object  "1" --> "0..*"  Frame
+				UI  "1" --> "1"  Sniffer
+
+				enum IdScreenPopUp {
+					POPUP_ADD_OBJECT ''Correspond à PopupAjoutObjet.
+					POPUP_STOP_SEND ''Correspond à PopupArretEnvoi.
+					POPUP_ASK_RECONNECTION ''Correspond à PopupDemandeReconnexion.
+					POPUP_FAIL_ADD_OBJECT ''Correspond à PopupErreurAjoutObjet.
+					POPUP_FAIL_WRITING_FRAME ''Correspond à PopupErreurSaisieTrame.
+					POPUP_FRAME_SENDING_MODE ''Correspond à PopupModeEnvoiTrame.
+					POPUP_DELETE_ELEMENT ''Correspond à PopupSuppressionElement.
+				}
+				enum ProgramState {
+					PROGRAM_STATE_OFF ''Correspond à l'état éteint du programme CANgateway.
+					PROGRAM_STATE_ON ''Correspond à l'état allumé du programme CANgateway.
+				}
+				enum NetworkState {
+					NETWORK_STATE_CONNECTED ''Correspond à l'état connecté du logiciel CANdroid au programme CAngateway
+					NETWORK_STATE_NOT_CONNECTED '' Correspond à l'état non connecté du logiciel CANdroid au programme CANgateway
+				}
+
+				enum SenderMode {
+					SENDER_MODE_PUNCTUAL ''Correspond au mode d'envoi de trames ponctuel
+					SENDER_MODE_CYCLIC ''Correspond au mode d'envoi de trames cyclique
+				}
+
+				enum SendingState {
+					SENDING_STATE_ON ''Correspond à l'état ON du Mode d'Envoi. Cela signifie que les trames sont en cours d'envoi
+					SENDING_STATE_OFF ''Correspond à l'état OFF du Mode d'Envoi. Cela signifie que les trames ne sont pas en cours d'envoi
+				}
+			`,
+			objects: [
+				{
+					name: "Utilisateur",
+					isActor: true,
+					features: String.raw`
+					`,
+				},
+				{
+					name: "gui",
+					class: "GUI",
+					isActor: false,
+					behavior: String.raw`
+						state MainScreen
+						MainScreen : entry /loadObjects() ; askNetworkAvailability() ; displayMainScreen()
+						[*] -> MainScreen :    /startCANdroid()
+						MainScreen : setNetworkAvailability(networkState) ; displayMainScreen()
+						MainScreen : backToTopSniffer(); displayMainScreen()
+						MainScreen : cleanSniffer() / clearAll(); displayMainScreen()
+						MainScreen : exportSniffer / save(); displayMainScreen()
+						MainScreen : pauseSniffer; displayMainScreen()
+						MainScreen : resumeSniffer; displayMainScreen()
+						MainScreen : select(idElement) / addElement(idElement); displayMainScreen()
+						MainScreen : unselect(idElement) / removeElement(idElement); displayMainScreen()
+						MainScreen : setFrame(frame) ; displayMainScreen()
+
+						state MainScreenSending
+						MainScreen -> MainScreenSending : startSendFrame() / startSending()
+						state PopupStopSending
+						PopupStopSending : entry /displayPopup(POPUP_STOP_SEND)
+						MainScreenSending -> PopupStopSending : stopSendFrame() 
+						PopupStopSending -> MainScreen : acceptRequest(POPUP_STOP_SEND) / stopSending()
+						PopupStopSending -> MainScreenSending : refuseRequest(POPUP_STOP_SEND)
+
+						state PopupAddObject
+						PopupAddObject : entry /displayPopup(POPUP_ADD_OBJECT)
+						state ajouterObjet <<choice>>
+						MainScreen -> PopupAddObject : addObject() / getMaxIdObject()
+						PopupAddObject -> PopupAddObject : setObjectName(object)
+						PopupAddObject -> ajouterObjet : acceptRequest(POPUP_ADD_OBJECT) 
+						ajouterObjet -> MainScreen : [object.name != objects.name] / saveObject(object)
+						PopupAddObject -> MainScreen : refuseRequest(POPUP_ADD_OBJECT) 
+						state PopupFailAddObject
+						state erreurAjouterObjet <<choice>>
+						ajouterObjet -> PopupFailAddObject : [object.name == other_object.name] 
+						PopupFailAddObject : entry /displayPopup(POPUP_FAIL_ADD_OBJECT)
+						PopupFailAddObject -> PopupFailAddObject : setObjectName(object)
+						PopupFailAddObject -> erreurAjouterObjet : acceptRequest(POPUP_FAIL_ADD_OBJECT)
+						erreurAjouterObjet -> MainScreen : [object.name != objects.name] / saveObject(object)
+						erreurAjouterObjet -> PopupFailAddObject : [object.name == other_object.name] 
+						PopupFailAddObject -> MainScreen : refuseRequest(POPUP_FAIL_ADD_OBJECT)  
+
+						state PopupDeleteElement
+						PopupDeleteElement : entry /displayPopup(POPUP_DELETE_ELEMENT)
+						MainScreen -> PopupDeleteElement : delete() 
+						PopupDeleteElement -> MainScreen : acceptRequest(POPUP_DELETE_ELEMENT) / deleteArticles()
+						PopupDeleteElement -> MainScreen : refuseRequest(POPUP_DELETE_ELEMENT)
+
+						state PopupFrameSendingMode
+						PopupFrameSendingMode : entry /displayPopup(POPUP_FRAME_SENDING_MODE)
+						MainScreen -> PopupFrameSendingMode : saveFrame() 
+						PopupFrameSendingMode -> PopupFrameSendingMode : setSenderMode(mode)
+						PopupFrameSendingMode -> PopupFrameSendingMode : setFrequency(frequency)
+						state enregistrerTrame <<choice>>
+						state PopupFailWritingFrame
+						PopupFrameSendingMode -> enregistrerTrame : acceptRequest(POPUP_FRAME_SENDING_MODE)
+						enregistrerTrame -> MainScreen : [formattable frame] / saveNewFrame(idObject, frame, mode, frequency)
+						PopupFrameSendingMode -> MainScreen : refuseRequest(POPUP_FRAME_SENDING_MODE)
+						enregistrerTrame -> PopupFailWritingFrame : [not formattable frame] 
+						PopupFailWritingFrame : entry /displayPopup(POPUP_FAIL_WRITING_FRAME)
+						PopupFailWritingFrame -> MainScreen : refuseRequest(POPUP_FAIL_WRITING_FRAME)
+
+						state PopupAskReconnection
+						PopupAskReconnection : entry /displayPopup(POPUP_ASK_RECONNECTION)
+						MainScreen -> PopupAskReconnection : askReconnection()
+						PopupAskReconnection -> MainScreen : acceptRequest(POPUP_ASK_RECONNECTION) 
+						PopupAskReconnection -> MainScreen : refuseRequest(POPUP_ASK_RECONNECTION)
+					`,
+				},
+				{
+					name: "logger",
+					class: "Logger",
+					isActor: false,
+					stereotypes: [
+						"entity",
+					],
+				},
+				{
+					name: "dealer",
+					class: "Dealer",
+					stereotypes: [
+						"entity",
+					],
+				},
+				{
+					name: "object",
+					class: "Object",
+				},
+				{
+					name: "frame",
+					class: "Frame",
+				},
+				{
+					name: "network",
+					class: "Network",
+					isActor: false,
+				},
+				{
+					name: "basket",
+					class: "Basket",
+					isActor: false,
+				},
+				{
+					name: "sniffer",
+					class: "Sniffer",
+					isActor: false,
+					behavior:String.raw`
+						Listenning : do/ receiveFrame()
+						[*] -> IDLE as "tInitialOFF" :    / 
+						IDLE -> Listenning : startListenning()
+						Listenning -> IDLE : stopListenning()
+					`,
+				},
+				{
+					name: "sender",
+					class: "Sender",
+					isActor: false,
+					behavior: String.raw`
+						Sending : do/ send()
+						[*] -> IDLE as "tInitialOFF" :    / 
+						IDLE -> Sending : startSending()
+						Sending -> IDLE : stopSending()
+						Sending -> Sending : askSendingState()
+						IDLE -> IDLE : askSendingState()
+					`,
+				},
+				{
+					name: "ui",
+					class: "UI",
+					isActor: false,
+				},
+			],
+			connectorByName: {
+				C1: {
+					ends: [
+						"gui",
+						"logger",
+					],
+					possibleMessages: {
+						forward: [
+							"getFrame()",
+							"clearAll()",
+							"save()",
+						],
+						reverse: [
+							"notifyNewFrame()",
+						],
+					},
+				},
+				C2: {
+					ends: [
+						"gui",
+						"dealer",
+					],
+					possibleMessages: {
+						forward: [
+							"loadObjects() : IdElement[*]",
+							"saveObject(object : String) : bool",
+							"getListObject() : IdElement[*]",
+							"getObject(idElement : IdElement) : Object",
+							"getMaxIdObject() : int",
+							"saveNewFrame(idElement : IdElement, frame : String) : String",
+							"deleteArticles()",
+						],
+					},
+				},
+				C3: {
+					ends: [
+						"gui",
+						"network",
+					],
+					possibleMessages: {
+						forward: [
+							"askNetworkAvailability()",
+						],
+						reverse: [
+							"setNetworkAvailability(networkState : NetworkState)",
+						],
+					},
+				},
+				C4: {
+					ends: [
+						"dealer",
+						"object",
+					],
+					possibleMessages: {
+						forward: [
+							"addFrame(frame : String)",
+							"getFrames()",
+							"deleteFrame(frame : String)",
+						],
+					},
+				},
+				C5: {
+					ends: [
+						"gui",
+						"basket",
+					],
+					possibleMessages: {
+						forward: [
+							"addElement(idElement : IdElement)",
+							"removeElement(idElement : IdElement)",
+							"getElements() : IdElement[*]",
+							"clearAll()",
+						],
+					},
+				},
+				C7: {
+					ends: [
+						"logger",
+						"sniffer",
+					],
+					possibleMessages: {
+						reverse: [
+							"setFrame(frame : CANFrame)",
+						],
+					},
+				},
+				C8: {
+					ends: [
+						"frame",
+						"object",
+					],
+					possibleMessages: {
+						reverse: [
+							"getSenderMode() : SenderMode",
+							"setSenderMode(senderMode : SenderMode)",
+						],
+					},
+				},
+				C9: {
+					ends: [
+						"gui",
+						"sender",
+					],
+					possibleMessages: {
+						forward: [
+							"askSendingState()",
+							"startSending()",
+							"stopSending()",
+						],
+						reverse: [
+							"setSendingState(sendingState : SendingState)",
+						],
+					},
+				},
+				C10: {
+					ends: [
+						"Utilisateur",
+						"gui",
+					],
+					possibleMessages: {
+						forward: [
+							"startCANdroid()",
+							"addObject()",
+							"select(idElement : IdElement)",
+							"unselect(idElement : IdElement)",
+							"openObjectMenu(idElement : IdElement)",
+							"setFrame(frame : String)",
+							"setObjectName(object : String)",
+							"saveFrame()",
+							"startSendFrame()",
+							"stopSendFrame()",
+							"cleanSniffer()",
+							"exportSniffer()",
+							"pauseSniffer()",
+							"resumeSniffer()",
+							"backToTopSniffer()",
+							"delete()",
+							"closeObjectMenu(idElement : IdElement)",
+							"askReconnection()",
+							"acceptRequest(idPopup : IdPopup)",
+							"rejectRequest(idPopup : IdPopup)",
+							"setSenderMode(senderMode : SenderMode)",
+							"setFrequency(frequency : int)",
+							"stopCANdroid()",
+						],
+					},
+				},
+				C11: {
+					ends: [
+						"Utilisateur",
+						"ui",
+					],
+					possibleMessages: {
+						forward: [
+							"startCANgateway()",
+							"stopCANgateway()",
+						],
+					},
+				},
+				C12: {
+					ends: [
+						"ui",
+						"sniffer",
+					],
+					possibleMessages: {
+						forward: [
+							"startListenning()",
+							"stopListenning()"
+						],
+					},
+				},
+				C13: {
+					ends: [
+						"basket",
+						"sender",
+					],
+					possibleMessages: {
+						reverse: [
+							"getElements()",
+							"clearAll()",
+						],
+					},
+				},
+			},
+			interactions: {
+				"CU Échanger des trames CAN": String.raw`
+
+					actor Utilisateur
+
+					participant gui
+					participant ui
+					participant sender
+
+					ref over a, b : Démarrer le SàE
+
+					loop CANdroid receives frames from CANgateway
+						ref over a, b : Recevoir des trames
+					end
+
+					ref over a, b : Ajouter un objet
+
+					ref over a, b : Enregistrer une trame
+					
+					ref over a, b : Envoyer des trames
+
+					loop send frame] 
+						e10 : sender -> sender : send()
+					end
+
+					ref over a, b : Arrêter l'envoi des trames
+
+					ref over a, b  : Supprimer un élément
+
+					ref over a, b : Stopper le SàE
+				`,
+
+				"CU Démarrer le SàE": String.raw`
+					
+					actor Utilisateur
+					
+					participant ui
+					participant sniffer
+
+					participant gui
+					participant dealer
+					participant network
+					
+					e2 : Utilisateur -> ui : startCANgateway()
+
+					e3 : ui -> ui : signalState(PROGRAM_STATE_ON)
+					
+					e4 : ui -> sniffer : startListenning()
+
+					e8 : Utilisateur -> gui : startCANdroid()
+
+					e9 : gui -> dealer : loadObjects()
+					returning e9 : elements
+
+					e10 : gui -> gui : displayMainScreen()
+
+					e11 : gui -> network : askNetworkAvailability()
+
+					e12 : network -> gui : setNetworkAvailability(NETWORK_STATE_CONNECTED)
+
+					e13 : gui -> gui : displayMainScreen()
+				`,
+				"CU Reconnecter application CANdroid": String.raw`
+					actor Utilisateur
+					
+					participant gui
+					participant network
+					
+					e0 : Utilisateur -> gui : askReconnection()
+					e1 : gui -> gui : displayPopup(POPUP_ASK_RECONNECTION)
+
+					alt [accept reconnection]
+						e2 : Utilisateur -> gui : acceptRequest(POPUP_ASK_RECONNECTION)
+						e3 : gui -> gui : displayMainScreen()
+						e4 : gui -> network : askNetworkAvailability()
+						alt [connection succeeded]
+							e5 : network -> gui : setNetworkAvailability(NETWORK_STATE_CONNECTED)
+						else [connection rejected]
+							e5 : network -> gui : setNetworkAvailability(NETWORK_STATE_NOT_CONNECTED)
+						end
+						e6 : gui -> gui : displayMainScreen()
+
+					else [cancel reconnection]
+						e2 : Utilisateur -> gui : rejectRequest(POPUP_ASK_RECONNECTION)
+						e3 : gui -> gui : displayMainScreen()
+					end 
+				`,
+				"CU Recevoir des trames - Scenario nominal avec affichage instantane des trames": String.raw`
+					actor Utilisateur
+
+					participant gui
+					participant logger
+					participant sniffer
+
+					loop displays frames
+						loop receives frames
+							e1 : sniffer -> sniffer : receiveFrame(frame)
+							e3 : sniffer -> logger : setFrame(frame)
+						end
+						e4 : logger -> gui : notifyNewFrames_()
+						e5 : gui -> logger : getFrames_()
+						returning e5 : frames
+						e6 : gui -> gui : displayMainScreen()
+					end
+
+					ref over a, b : Interagir avec le sniffer
+				`,
+				"CU Recevoir des trames - Scenario nominal avec affichage des trames par paquets": String.raw`
+					actor Utilisateur
+
+					participant gui
+					participant logger
+					participant sniffer
+
+					loop receives frames
+						e1 : sniffer -> sniffer : receiveFrame(frame)
+						e3 : sniffer -> logger : setFrame(frame)
+						e4 : logger -> gui : notifyNewFrame()
+						e5 : gui -> logger : getFrame()
+						returning e5 : frames
+						e6 : gui -> gui : displayMainScreen()
+					end
+
+					ref over a, b : Interagir avec le sniffer
+				`,
+				"CU Interagir avec le sniffer - Scenario nominal": String.raw`
+					actor Utilisateur
+
+					participant gui
+					participant logger
+
+					e0 : Utilisateur -> gui : backToTopSniffer()
+					e1 : gui -> gui : displayMainScreen()
+
+					e2 : Utilisateur -> gui : cleanSniffer()
+					e3 : gui -> logger : clearAll()
+					returning e3 : void
+					e4 : gui -> gui : displayMainScreen()
+
+					e5 : Utilisateur -> gui : pauseSniffer()
+					e6 : gui -> gui : displayMainScreen()
+
+					e7 : Utilisateur -> gui : exportSniffer()
+					e8 : gui -> logger : save()
+					returning e8 : void
+					e9 : gui -> gui : displayMainScreen()
+
+					e9 : Utilisateur -> gui : resumeSniffer()
+					e10 : gui -> gui : displayMainScreen()
+					ref over a, b : Recevoir des trames
+					
+
+				`,
+				"CU Interagir avec le sniffer - Scenario avec variantes": String.raw`
+					actor Utilisateur
+
+					participant gui
+					participant logger
+
+					loop choose interactions
+						alt [back to top Sniffer]
+							e0 : Utilisateur -> gui : backToTopSniffer()
+							e1 : gui -> gui : displayMainScreen()
+						else [clean sniffer]
+							e2 : Utilisateur -> gui : cleanSniffer()
+							e3 : gui -> logger : clearAll()
+							returning e3 : void
+							e4 : gui -> gui : displayMainScreen()
+						else [pause sniffer]
+							e5 : Utilisateur -> gui : pauseSniffer()
+							e6 : gui -> gui : displayMainScreen()
+						else [export sniffer]
+							e7 : Utilisateur -> gui : exportSniffer()
+							e8 : gui -> logger : save()
+							returning e8 : void
+							e9 : gui -> gui : displayMainScreen()
+						else [resume sniffer]
+							e9 : Utilisateur -> gui : resumeSniffer()
+							e10 : gui -> gui : displayMainScreen()
+							ref over a, b : Recevoir des trames
+						end
+					end
+
+				`,
+				"CU Ajouter un objet" : String.raw`
+					actor Utilisateur  
+					
+					participant gui     
+					participant dealer 
+
+					e0 : Utilisateur -> gui : addObject()
+					e1 : gui -> dealer : getMaxIdObject()
+					returning e1 : maxIdObject
+					e2 : gui-> gui : displayPopup(POPUP_ADD_OBJECT)
+					
+					e3 : Utilisateur -> gui : setObjectName('Clignotant Droit')
+
+					alt [Accept new object]
+						e4 : Utilisateur -> gui : acceptRequest(POPUP_ADD_OBJECT)
+						e5 : gui -> dealer : saveObject('Clignotant Droit')
+						returning e5 : state
+						alt [correct name : state = true]
+							e6 : gui -> dealer : loadObjects()
+							returning e6 : elements
+							e7 : gui -> gui : displayMainScreen()
+						else [wrong name : state = false]
+							e9 : gui -> gui : displayPopup(POPUP_FAIL_ADD_OBJECT)
+							alt [retry]
+								e10 : Utilisateur -> gui : setObjectName('Clignotant Gauche')
+								e11 : Utilisateur -> gui : acceptRequest(POPUP_FAIL_ADD_OBJECT)
+								e12 : gui -> dealer : saveObject('Clignotant Gauche')
+								returning e12 : true
+								e13 : gui -> dealer : loadObjects()
+								returning e13 : elements
+								e14 : gui -> gui : displayMainScreen()
+							else [cancel]
+								e17 : Utilisateur -> gui : rejectRequest(POPUP_FAIL_ADD_OBJECT)
+								e18 : gui -> gui : displayMainScreen()
+							end
+						end
+					else [cancel new object]
+						e19 : Utilisateur -> gui : rejectRequest(POPUP_ADD_OBJECT)
+						e20 : gui -> gui : displayMainScreen()
+					end
+				`,
+
+				"CU Enregistrer une trame" : String.raw`
+					actor Utilisateur
+
+					participant gui
+					participant dealer
+					participant object
+
+					e0 : Utilisateur -> gui : openObjectMenu(object1)
+					e1 : gui -> gui : displayMainScreen()
+
+					e2 : Utilisateur -> gui : setFrame(frame)
+
+					e3 : Utilisateur -> gui : saveFrame() 
+
+					alt [accept new frame and punctual mode]
+						e10 : gui -> gui : displayPopup(POPUP_FRAME_SENDING_MODE)
+						e11 : Utilisateur -> gui : setSenderMode(SENDER_MODE_PUNCTUAL)
+						e12 : Utilisateur -> gui : acceptRequest(POPUP_FRAME_SENDING_MODE)
+						e13 : gui -> dealer : saveNewFrame(object1, frame)
+						e14 : dealer -> object : addFrame(frame)
+
+					else [accept new frame and cyclic mode]
+						e4 : gui -> gui : displayPopup(POPUP_FRAME_SENDING_MODE)
+						e5 : Utilisateur -> gui : setSenderMode(SENDER_MODE_CYCLIC)
+						e6 : Utilisateur -> gui : setFrequency(102)
+						e7 : Utilisateur -> gui : acceptRequest(POPUP_FRAME_SENDING_MODE)
+						e8 : gui -> dealer : saveNewFrame(object1, frame)
+						e9 : dealer -> object : addFrame(frame)
+
+					else [cancel saving]
+						e17 : Utilisateur -> gui : rejectRequest(POPUP_FRAME_SENDING_MODE)
+			
+					else [wrong frame format]
+						e15 : gui -> gui : displayPopup(POPUP_FAIL_WRITING_FRAME)
+						e16 : Utilisateur -> gui : rejectRequest(POPUP_FAIL_WRITING_FRAME)
+					end
+					e17 : gui -> gui : displayMainScreen()
+				`,
+
+				"CU Envoyer des trames": String.raw`
+					actor Utilisateur
+					
+					participant gui
+					participant sender
+					participant basket
+
+					e0 : Utilisateur -> gui : openObjectMenu(object1)
+					e1 : gui -> gui : displayMainScreen()
+
+					e2 : Utilisateur -> gui : select(object1frame1)
+					e3 : gui -> basket : addElement(object1frame1)
+					e4 : gui -> gui : displayMainScreen()
+
+					e5 : Utilisateur -> gui : startSendFrame()
+					e6 : gui -> sender : startSending()
+					e7 : sender -> basket : getElements()
+					returning e7 : elements
+
+					e8 : sender -> basket : clearAll()
+					e10 : sender -> sender : send()
+
+					e9 : gui -> sender : askSendingState()
+					e11 : sender -> gui : setSendingState(SENDING_STATE_ON)
+
+					e12 : gui -> gui : displayMainScreen()
+				`,
+
+				"CU Arrêter envoi des trames": String.raw`
+					actor Utilisateur
+
+					participant gui
+					participant sender
+					
+					e0 : Utilisateur -> gui : stopSendFrame()
+					e1 : gui -> gui : displayPopup(POPUP_STOP_SEND)
+
+					alt [Accept stop sending frame]
+						e2 : Utilisateur -> gui : acceptRequest(POPUP_STOP_SEND)
+						e6 : gui -> sender : stopSending()
+						e3 : gui -> sender : askSendingState()
+						e4 : sender -> gui : setSendingState(SENDING_STATE_OFF)
+					else [Refuse stop sending frame]
+						e2 : Utilisateur -> gui : rejectRequest(POPUP_STOP_SEND)
+					end
+					
+					e5 : gui -> gui : displayMainScreen()
+				`,
+
+				"CU Supprimer un élément": String.raw`
+					actor Utilisateur
+
+					participant gui
+					participant dealer
+					participant basket
+
+					e0 : Utilisateur -> gui : select(object1)
+
+					e2 : gui -> basket : addElement(object1)
+					returning e2 : void
+					
+					e1 : gui -> gui : displayMainScreen()
+					
+					e4 : Utilisateur -> gui : delete()
+
+					e3 : gui -> gui : displayPopup(POPUP_DELETE_ELEMENT)
+
+					alt [accept delete]
+						e7 : Utilisateur -> gui : acceptRequest(POPUP_DELETE_ELEMENT)
+
+						e5 : gui -> dealer : deleteArticles()
+						e6 : dealer -> basket : getElements()
+						returning e6 : elements
+						returning e5 : void
+						
+						e8 : gui -> basket : clearAll()
+					else [cancel delete]
+						e9 : Utilisateur -> gui : rejectRequest(POPUP_DELETE_ELEMENT)
+					end
+
+					e7 : gui -> gui : displayMainScreen()
+				
+					
+				`,
+			},
+			settings: {
+				display: {
+					hideLinks: false,
+					hideClasses: true,
+					hideOperations: true,
+					hideMethods: true,
+					showPorts: false,
+					showEndNames: false,
+					hideStateMachines: true,
+					hideOuterSMBoxes: true,
+					showExplicitSM: false,
+					hideStates: false,
+					showPseudostateInvariants: false,
+					hideSets: false,
+					showTransitions: false,
+					showComments: false,
+					
+				},
+				semantics: {
+					fireInitialTransitions: true,
+					autoFireAfterChoice: true,
+					autoReceiveDisabled: false,
+					considerGuardsTrue: true,
+					checkEvents: false,
+					keepOneMessagePerTrigger: true,
+					enableEventPools: true,
+					matchFirst: true,
+					symbolicValues: false,
+					reactiveSystem: false,
+				},
+				interface: {
+					disableModelSelection: false,
+					disableObjectSelection: false,
+					disableDoc: false,
+					disableSettings: false,
+					disableEdit: false,
+					historyType: "sequence",
+				},
+			},
+		}
+	;
+	document.write(`
+		<iframe width="100%" height="100%" src='http://172.24.2.1/AnimUML.html#${encodeURIComponent(JSON.stringify(model)).replace(/'/g, '%27')}'></iframe>
+	`);
+</script>

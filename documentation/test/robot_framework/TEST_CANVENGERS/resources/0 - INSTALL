@@ -1,0 +1,72 @@
+
+------
+Python
+------
+
+# sudo apt install python3
+# sudo apt install python3-pip
+
+-------
+PyCharm
+-------
+
+https://www.jetbrains.com/fr-fr/pycharm/download/other.html
+
+Version 2022.3
+PyCharm Community Edition
+
+Attention : bien prendre la version 2022.3.3 (la dernière version présente des bugs pour RobotFramework)
+
+Télécharger et désarchiver.
+
+------
+Appium
+------
+
+# sudo apt install npm
+# npm install appium
+
+--------------
+RobotFramework
+--------------
+
+# pip install robotframework
+# pip install robotframework-appiumlibrary
+
+# pip install --force-reinstall -v "Appium-Python-Client==2.8.1"
+# pip install --force-reinstall -v "selenium==4.8.2"
+
+
+-----------
+Android SDK 
+-----------
+/!\ UNIQUEMENT pour ceux qui n'ont pas Android Studio /!\
+
+Pour des tests uniquement sur cible :
+-------------------------------------
+
+# sudo apt install android-sdk
+# sudo apt install adb
+
+Pour des tests sur cible et sur AVDs :
+--------------------------------------
+
+Installation d'un SDK Java (si besoin), exemple avec Java 11 :
+
+# sudo apt install openjdk-11-jdk 
+
+Installation manuelle d'un SDK Android :
+
+# export ANDROID_SDK="/home/<login>/Android/Sdk"
+
+https://developer.android.com/studio
+	> Command line tools only
+	> unzip > contenu dans : $ANDROID_SDK/cmdline-tools/tools/
+
+# export PATH="$ANDROID_SDK/cmdline-tools/tools/bin":$PATH
+
+# yes | sdkmanager --sdk_root=$ANDROID_SDK --licenses
+# sdkmanager --sdk_root=$ANDROID_SDK --install "platform-tools" "extras;google;instantapps" "emulator"
+# sdkmanager --sdk_root=$ANDROID_SDK --install "build-tools;32.0.0"
+
+

@@ -1,0 +1,57 @@
+\section{Description générale} %2
+
+{\client}, une entreprise spécialisée dans les tests de systèmes embarqués véhicule, souhaite développer un démonstrateur CAN \textit{simulator in the loop} pour permettre à ses équipes de monter en compétences sur le réseau CAN. 
+
+\vspace{\baselineskip} % saut d'une ligne
+L'objectif est également de fournir une visualisation concrète de l'architecture du véhicule, du réseau CAN et du démonstrateur CAN pour les personnes novices dans le métier, tels que les nouveaux salariés lors de leur arrivé chez {\client}, ou des étudiants lors des forums. 
+
+\vspace{\baselineskip} % saut d'une ligne
+Pour répondre à ce besoin, {\client} souhaite pouvoir utiliser un Simulateur de tableau de bord sur Linux (type ICSim) et/ou un Banc de test physique, connecté(s) à une carte électronique de type Raspberry Pi pour permettre la connexion au réseau CAN. 
+
+\vspace{\baselineskip} % saut d'une ligne
+De plus, {\client} souhaite contrôler le système à distance via une application Android sur Smartphone appelée {\nomApplication}. Le Smartphone sera connecté au système (via la Raspberry Pi) par un réseau TCP/IP. Sur l'application, il sera possible d'ajouter et  d'envoyer des trames mais également d'observer toutes les trames diffusées sur le bus CAN. Il sera possible d'enregistrer les trames diffusées sur le bus CAN dans un fichier de logs présent sur la Raspberry Pi.
+
+\vspace{\baselineskip} % saut d'une ligne
+En outre, l'entreprise souhaite pouvoir injecter des fautes dans Tableau de Bord afin d'en assurer le bon fonctionnement. Elle pourra réaliser cela en envoyant des trames qui seront susceptibles de mettre Tableau de Bord en erreur, et ainsi, en vérifier le comportement.
+
+\input{sections/2_Description_generale/1_Caracteristiques_acteurs.tex}
+
+\subsection{Environnement}
+
+\input{sections/2_Description_generale/2_Environnement/1_Arch_mat_log.tex}
+
+\input{sections/2_Description_generale/2_Environnement/2_Interfaces_systeme.tex}
+
+% --------------------------
+% CAS D'USAGE {p.12}
+% --------------------------
+%TODO
+\newpage
+\subsection{Fonctions principales développées}
+Ce chapitre présente les principales fonctionnalités développées dans l'incrément 1 et 2 en utilisant une approche basée sur les cas d'usage et les cas d'utilisation (CU). Il met en évidence les fonctionnalités clés implémentées dans ces deux incréments, en les reliant aux cas d'usage et aux cas d'utilisation pertinents. 
+
+\input{sections/2_Description_generale/3_Fonctions_princ_dev/1_Rappel_cas_usage.tex}
+
+\input{sections/2_Description_generale/3_Fonctions_princ_dev/2_Rappel_cu.tex}
+
+\input{sections/2_Description_generale/3_Fonctions_princ_dev/3_Representation_cu.tex}
+
+\input{sections/2_Description_generale/3_Fonctions_princ_dev/4_CU_strat.tex}
+
+\input{sections/2_Description_generale/3_Fonctions_princ_dev/Sous_CU/Sous_CU.tex}
+
+\newpage
+
+\subsection{Contraintes}
+
+\input{sections/2_Description_generale/4_Contraintes/1_Politique_regl.tex}
+
+\input{sections/2_Description_generale/4_Contraintes/2_Contrainte_mat.tex}
+
+\input{sections/2_Description_generale/4_Contraintes/3_Exigence_fiabilite.tex}
+
+\input{sections/2_Description_generale/4_Contraintes/4_Exigence_maintenabilite.tex}
+
+\input{sections/2_Description_generale/4_Contraintes/5_Exigences_disponibilite.tex}
+
+\newpage

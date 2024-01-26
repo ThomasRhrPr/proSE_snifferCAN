@@ -1,0 +1,34 @@
+@startuml
+
+actor Utilisateur
+participant gui
+participant logger
+participant dealer
+participant object
+participant frame
+participant network
+participant basket
+participant sniffer
+participant sender
+participant ui
+
+Utilisateur -> gui : select(id_element)
+activate gui
+gui -> basket : addElement(id_element)
+activate basket
+basket --> gui
+gui -> gui : displayScreen(DELETE_ELEMENT_SCREEN)
+Utilisateur -> gui : delete()
+gui -> dealer : deleteArticles()
+activate dealer
+dealer -> basket : getBasket()
+basket --> dealer
+deactivate basket
+dealer --> gui
+deactivate dealer
+gui -> gui : displayScreen(DELETE_ELEMENT_SCREEN)
+Utilisateur <-- gui
+deactivate gui
+deactivate Utilisateur
+
+@enduml

@@ -1,0 +1,58 @@
+# Installation des dépendances
+
+L'installation des dépendances JavaScript se fait à l'aide du gestionnaire de paquets de Node.js : npm.
+Il est donc nécessaire d'installer npm, soit via un paquet de votre distribution, soit avec une autre méthode.
+
+Ensuite, avant le premier lancement, il est nécessaire d'installer les dépendances avec la commande suivante :
+
+`npm install`
+
+La génération des figures à partir des fichiers PlantUML requiert la présence de la commande `plantuml`.
+Cette commande peut typiquement être installée avec une commande du genre :
+
+`apt install plantuml`
+
+Remarque : il peut être nécessaire de mettre à jour le JAR correspondant (voir la sortie de `dpkg -L plantuml` pour voir où il se trouve).
+
+La génération des fichiers PDF des diagrammes requiert la commande `rsvg-convert`, que vous pouvez, si votre distribution le permet, installer avec la commande :
+
+`apt install librsvg2-bin`
+
+De plus, il est aussi nécessaire d'installer LaTeX pour générer le document PDF d'exemple.
+
+# Configuration
+
+Il n'est normalement pas nécessaire de modifier le fichier Makefile.
+Toute la configuration se fait dans le fichier Config.mk.
+
+Il est notamment nécessaire d'y renseigner les valeurs suivantes :
+* MODEL_PATH : correspond au chemin vers le répertoire contenant le modèle (`.` si répertoire courant)
+* MODEL : correspond au nom du fichier contenant le modèle, sans son extension (le champ `name` du modèle devrait contenir le même nom)
+* MODEL_EXT : correspond à l'extension du fichier contenant le modèle
+
+Par ailleurs, Config.mk permet aussi de configurer la génération des diagrammes :
+* FOLDED_STATES : liste de noms d'états à replier, séparés par des virgules
+	* Un diagramme sera généré pour la machine à états de chaque objet actif, avec les états indiqués dans FOLDED_STATES repliés
+	* Un diagramme sera généré par état replié
+		* Il faudra ensuite utiliser toutes les figures nécessaires pour avoir une vue complète de chaque machine à états
+	* Exemple utilisable avec le modèle ConceptionOVNI :
+		* FOLDED_STATES=heater.PWMOn
+	* Attention : cette fonctionnalité ne supporte pas les transitions ayant un sous-état d'un état replié pour source ou cible
+* PARAMS : liste de paramètres avec valeurs, séparés par des espaces
+	* les paramètres utilisables ici sont les mêmes que dans les display settings des modèles
+	* exemple : showComments=true hideOperations=true
+* ACTIVITIES : liste d'opérations pour lesquelles un diagramme d'activité doit être généré, séparées par des virgules
+	* Attention : chacune de ces opérations doit avoir une méthode de définie
+* MANU_PUML : liste de fichiers PDF à générer pour des fichiers PlantUML créés manuellement, séparés par des espaces
+	* Cette fonctionnalité n'est pas nécessaire si tous les diagrammes requis peuvent être générés par AnimUML
+
+# Utilisation
+
+Lancer la commande `make` permet d'exporter tous les diagrammes au format PlantUML.
+
+Il est aussi possible de générer un document LaTeX d'exemple à l'aide de la commande `make example.tex` (ou `make example.pdf` pour la version PDF).
+Cet exemple montre comment importer les différentes figures, mais aussi comment utiliser les macros décrivant les opérations et attributs de classes, ou encore les littéraux d'énumérations.
+
+Remarques :
+* Les états repliés ne sont pour l'instant pas pris en compte pour la génération de ce document d'exemple. Seule la vue générale de chaque machine à états sera incluse.
+

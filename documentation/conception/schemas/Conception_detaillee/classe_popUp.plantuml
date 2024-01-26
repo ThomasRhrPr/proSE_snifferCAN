@@ -1,0 +1,41 @@
+@startuml
+package PopUp{
+
+    class PopupAjoutObjet extends AppCompatActivity {
+        +namingObject(String name) : void
+    }
+                
+    class PopupErreurNombreObjet extends AppCompatActivity {
+        +cancel() : void
+    }
+
+    class PopupModeEnvoiTrame extends AppCompatActivity {
+        +sendingMode() : void
+        +cancel() : void
+    }
+                
+    class PopupErreurSaisieTrame extends AppCompatActivity {
+        +cancel() : voids
+    }
+    class PopupErreurNombreTrame extends AppCompatActivity {
+        +cancel() : void
+    }
+                
+    class PopupArretEnvoi extends AppCompatActivity {
+        +stopSendingMode() : void
+        +cancel() : void
+    }			
+                
+    class PopupDemandeReconnexion extends AppCompatActivity {
+        +reconnection() : void
+        +cancel() : void
+    }			
+                
+    class PopupSuppressionElement extends AppCompatActivity {
+        +deleteElements() : void
+        +cancel() : void
+    }
+}
+
+
+@enduml

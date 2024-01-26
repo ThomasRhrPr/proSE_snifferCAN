@@ -1,0 +1,10 @@
+Installation :
+1 - "sudo apt-get install doxygen"
+
+Pour créer le doxygen :
+1 - Aller à l'emplacement exact des fichier (.c et .h ou .java)
+2 - Créer le fichier qu'on nommera "doxyfile" via la commande "doxygen -g doxyfile"
+3 - Générer la documentation via la commande "doxygen doxyfile"
+
+Pour mettre à jour le doxygen :
+1 - À chaque modification d'un fichier (et donc des ses balises) mettre à jour la documentation via la commande "doxygen doxyfile"

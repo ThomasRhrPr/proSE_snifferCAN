@@ -1,0 +1,103 @@
+\subsection{Dictionnaire de domaine} \label{dictionnaire}
+
+\begin{itemize}  
+    \item \textbf{Boutons :}
+        \begin{itemize}
+            \item \textbf{[ajouterObjet]} : Fait apparaître PopupAjoutObjet. Permet d'ajouter de nouveaux objets. Ce bouton fait appel à la fonction ajouterObjet() de la figure \ref{schema_contexte_log}.
+            \item \textbf{[ajouterTrame]} : Fait apparaître PopupModeEnvoiTrame. Permet d'ajouter une trame associée à un objet. Le bouton fait appel à la fonction ajouterTrame() de la figure \ref{schema_contexte_log}.
+            \item \textbf{[annulerAjoutObjet]} :  Permet de sortir de PopupAjoutObjet. Ce bouton fait appel à la fonction refuser() de la figure \ref{schema_contexte_log}.
+            \item \textbf{[annulerArretEnvoi]} : Permet d'annuler l'arrêt d'envoi de trames et de sortir de PopupArretEnvoi. Ce bouton fait appel à la fonction refuser() de la figure \ref{schema_contexte_log}.
+            \item \textbf{[annulerModeEnvoi]} : Permet de sortir de PopupModeEnvoiTrame. Le nom de la trame reste cependant dans le champ de texte (<champTrame>, figure \ref{ecran_boutons}). Ce bouton fait appel à la fonction refuser() de la figure \ref{schema_contexte_log}.
+            \item \textbf{[annulerReconnexion]} : Permet d'annuler la reconnexion et quitter PopupDemandeReconnexion, de manière à utiliser l'application CANdroid en mode hors connexion. Ce bouton fait appel à la fonction refuser() de la figure \ref{schema_contexte_log}.
+            \item \textbf{[annulerSuppressionElement]} : Permet d'annuler la suppression des éléments sélectionnés et sortir de PopupSuppressionElement. Les éléments restent sélectionnés. Ce bouton fait appel à la fonction refuser() de la figure \ref{schema_contexte_log}.
+            \item \textbf{[arreterEnvoi]} : Permet l'arrêt de l'envoi des trames en cours d'envoi. Ce bouton fait appel à la fonction arreterEnvoiTrame(mode\_envoi : booléen) de la figure \ref{schema_contexte_log}.
+            \item \textbf{[connexion]} : Fait apparaître PopupDemandeReconnexion. Permet de reconnecter {\nomApplication} et {\nomLogiciel}. Ce bouton fait appel à la fonction recconecter() de la figure \ref{schema_contexte_log}.
+            \item \textbf{[deplierMenuObjet]} : Permet de déplier le menu de l'objet. Ce bouton fait appel à la fonction ouvrirMenuObjet() de la figure \ref{schema_contexte_log}. 
+            \item \textbf{[exporterSniffer]} : Permet d'exporter toutes les trames du sniffer dans un fichier de log. Ce bouton fait appel à la fonction exporterTramesSniffer() de la figure \ref{schema_contexte_log}.
+            \item \textbf{[fermerErreurTrame]} : Permet de sortir de PopupErreurSaisieTrame. Ce bouton fait appel à la fonction quitter() de la figure \ref{schema_contexte_log}.
+            \item \textbf{[fermerErreurNombreObjet]} : Permet de sortir de PopupErreurNombreObjet. Ce bouton fait appel à la fonction quitter() de la figure \ref{schema_contexte_log}.
+            \item \textbf{[fermerErreurNombreTrame]} : Permet de sortir de PopupErreurNombreTrame. Ce bouton fait appel à la fonction quitter() de la figure \ref{schema_contexte_log}.
+            \item \textbf{[lancerEnvoi]} : Permet d'envoyer les trames sélectionnées avec le mode ponctuel et de débuter l'envoi des trames sélectionnées avec le mode cyclique. Ce bouton fait appel à la fonction envoyerTrames() de la figure \ref{schema_contexte_log}.
+            \item \textbf{[play]/[pause]} : Met en marche ou en pause le sniffer. La mise en pause fait appel à la fonction desactiverReceptionTrames(). La reprise de la lecture fait appel à la fonction activerReceptionTrames() de la figure \ref{schema_contexte_log}. 
+            \item \textbf{[replierMenuObjet]} : Permet de replier le menu de l'objet. Ce bouton fait appel à la fonction fermerMenuObjet() de la figure \ref{schema_contexte_log}.
+            \item \textbf{[revenirEnHaut]} : Permet de revenir en haut du sniffer. Ce bouton fait appel à la fonction revenirEnHaut() de la figure \ref{schema_contexte_log}. 
+            \item \textbf{[suppressionElement]} : Fait apparaître PopupSuppressionElement. Permet de supprimer les éléments sélectionnés. Ce bouton fait appel à la fonction supprimer() de la figure \ref{schema_contexte_log}. 
+            \item \textbf{[validerAjoutObjet]} : Permet de confirmer la création d'un nouvel objet et permet de sortir de PopupAjoutObjet. Ce bouton fait appel à la fonction valider() de la figure \ref{schema_contexte_log}.
+            \item \textbf{[validerArretEnvoi]} : Permet de valider la demande d'arrêt d'envoi de trames et de sortir de PopupArretEnvoi. Ce bouton fait appel à la fonction valider() de la figure \ref{schema_contexte_log}.
+            \item \textbf{[validerModeEnvoi]} : Permet de sauvegarder le Mode Envoi et de valider l'ajout de la nouvelle trame. Ce bouton fait appel à la fonction valider() de la figure \ref{schema_contexte_log}.
+            \item \textbf{[validerSuppressionElement]} : Permet de valider la suppression des éléments sélectionnés et de sortir de PopupSuppressionElement. Ce bouton fait appel à la fonction valider() de la figure \ref{schema_contexte_log}.
+            \item \textbf{[validerReconnexion]} : Permet de relancer une nouvelle procédure de reconnexion et de sortir de PopupDemandeReconnexion. Ce bouton fait appel à la fonction valider() de la figure \ref{schema_contexte_log}.
+            \item \textbf{[viderSniffer]} : Permet de supprimer toutes les trames du sniffer. Ce bouton fait appel à la fonction supprimerTramesSniffer() de la figure \ref{schema_contexte_log}.\newline
+        \end{itemize}
+    \item \textbf{CAN} : Controller Area Network, il s'agit d'un protocole de communication série utilisé pour connecter par exemple des capteurs et des actionneurs.\newline
+    \item \textbf{Champs de textes} :
+        \begin{itemize}
+            \item \textbf{<champNomObjet>} : Ce champ de texte correspond à la saisie du nom de l'objet. Par défaut, ce champ est pré-rempli par le Nom d'objet par défaut. Il fait appel à la fonction nommerObjet() de la figure \ref{schema_contexte_log}.
+            \item \textbf{<champPeriodicite>} : Ce champ de texte correspond à la saisie de la périodicité lorsque le mode cyclique est activé. Il fait appel à la fonction saisirPeriodicite() de la figure \ref{schema_contexte_log}. 
+            \item \textbf{<champTrame>} : Ce champ de texte correspond à la saisie de la trame sous le format souhaité. Il fait appel à la fonction ecrireTrame() de la figure \ref{schema_contexte_log}. \newline
+        \end{itemize}
+    \item \textbf{\'Ecrans utilisés} :
+        \begin{itemize}
+            \item \textbf{EcranPrincipal} : Affichage principal de l'application. C'est sur cet écran que Utilisateur fait la majorité de ses interactions (ajouter un objet, supprimer une trame, consulter le sniffer, etc.).
+            \item \textbf{PopupAjoutObjet} : Pop-up d'ajout d'objet. Il sert à demander à Utilisateur le nom de l'objet qu'il souhaite ajouter.
+            \item \textbf{PopupArretEnvoi} : Pop-up de confirmation de demande d'arrêt d'envoi de trames.
+            \item \textbf{PopupDemandeReconnexion} : Pop-up de confirmation de demande de reconnexion entre {\nomApplication} et {\nomLogiciel}.
+            \item \textbf{PopupErreurAjoutObjet} : Pop-up d'ajout d'objet avec le message {\guillemetleft} Vous ne pouvez pas ajouter cet objet, le nom existe déjà {\guillemetright} lorsque Utilisateur écrit un nom d'objet qui existe déjà. 
+            \item \textbf{PopupErreurSaisieTrame} : Pop-up qui informe Utilisateur que le format qu'il a utilisé pour écrire la trame n'est pas le bon. PopupErreurSaisieTrame informe également sur le format à utiliser pour créer une trame.
+            \item \textbf{PopupErreurNombreObjet} : Pop-up pour informer Utilisateur qu'il a atteint le nombre maximum d'objets qu'il peut créer. 
+            \item \textbf{PopupErreurNombreTrame} : Pop-up pour informer Utilisateur qu'il a atteint le nombre maximum de trames qu'il peut créer.
+            \item \textbf{PopupModeEnvoiTrame} : Pop-up de sélection du Mode Envoi de la trame à ajouter. Utilisateur peut choisir le mode ponctuel, ou le monde cyclique et saisir ou non la périodicité d'envoi de la trame.
+            \item \textbf{PopupSuppressionElement} : Pop-up de confirmation de suppression des éléments sélectionnés. 
+            \newline
+        \end{itemize}
+    \item \textbf{E\_Banc\_De\_Test} : Voir Tableau de Bord.\newline
+    \item \textbf{E\_ICSim} : Voir Tableau de Bord.\newline
+    \item \textbf{E\_PC} : Voir PC.\newline
+    \item \textbf{E\_Raspberry} : Voir Raspberry PI.\newline
+    \item \textbf{E\_Smartphone} : Voir Smartphone.\newline
+    \item \textbf{Fichier de logs} : fichier contenant les trames du sniffer, sauvegardé sur la Raspberry Pi. Le titre du fichier est de la forme trames\_date\_heure.log.
+        \begin{itemize}
+            \item Date est sous la forme : JJMMAAAA (J correspond à jour, M correspond à mois, A correspond à années).
+            \item Heure est sous la forme : hhmm (h correspond à heure, m correspond à minutes). \newline
+        \end{itemize}
+    \item \textbf{Format de la trame} : afin d'éviter à Utilisateur de taper tous les zéros non significatifs lors de la saisie d'une trame, les trames doivent être saisies avec des séparateurs de la forme suivante : 
+        \begin{itemize}
+            \item \#id\$size\@@message \newline
+        \end{itemize}
+    \item \textbf{La fin du fil} : correspond au trames reçues en dernier sur le sniffer de l'application {\nomApplication}.\newline
+    \item \textbf{Nom d'objet par défaut} : Le nom par défaut est le nom donné lorsque Utilisateur ne spécifie pas de nom pour l'ajout d'un objet. Le nom par défaut sera {\guillemetleft} Objet\_ {\guillemetright} suivi de l'identifiant le plus grand déjà utilisé pour un objet, augmenté de 1. Par exemple, si les identifiants des derniers objets créés sont 10, 11 et 12, le prochain objet créé aura le nom par défaut {\guillemetleft} Objet\_13 {\guillemetright}.\newline
+    \item \textbf{PC (correspond à E\_PC)} : Il s'agit d'un ordinateur fonctionnant sous Linux. Cet ordinateur dispose de Simulateur ICSim installé.\newline
+    \item \textbf{Raspberry PI (correspond à E\_Raspberry)} : Ordinateur monocarte créé par la Fondation Raspberry Pi. \newline
+    \item \textbf{RS485 CAN Hat} : D'après le site marchant du module (\href{https://www.waveshare.com/wiki/RS485_CAN_HAT}{https://www.waveshare.com/wiki/RS485\_CAN\_HAT}), le RS485 CAN Hat permet à une Raspberry PI de communiquer avec d'autres appareils de manière stable sur longue distance via les fonctions RS485/CAN. Dans notre cas d'utilisation, nous n'utilisons que la fonction CAN. \newline
+    \item \textbf{Smartphone (correspond à E\_Smartphone)} : Téléphone portable sous système Android. \newline
+    \item \textbf{Sniffer} : Un sniffer est un programme qui capture tous les paquets circulant dans le réseau. Dans notre cas, le terme sniffer est utilisé pour désigner le terminal d'affichage des trames du réseaux CAN de l'application {\nomApplication}. \newline
+    \item \textbf{SSH (Secure Shell)} : Protocole sécurisé permettant une connexion distante sécurisée et des échanges de données cryptées entre un client et un serveur. SSH permet d'accéder à distance à des systèmes informatiques de manière sécurisée en utilisant des méthodes d'authentification robustes et en chiffrant les communications. \newline
+    \item \textbf{Tableau de Bord}: représente l'un des (ou les) deux systèmes ci-dessous :
+        \begin{itemize}
+            \item \textbf{Simulateur ICSim (correspond à E\_ICSim)} : Simulateur d'un tableau de bord de voiture.
+            \item \textbf{Banc de test (correspond à E\_Banc\_De\_Test)} : Banc de test d'un tableau de bord de voiture
+        \end{itemize}
+        Il est connecté au SàE afin d'envoyer et recevoir des trames CAN. 
+        Dans tout le dossier, on emploie le terme Tableau de Bord (correspond à E\_TableauDeBord) au singulier, car le scénario nominal du SàE n'utilise que le SimulateurICSim.\newline
+    \item \textbf{Types utilisés} :
+        \begin{itemize}
+            \item \textbf{booléen} : est un type correspondant à un booléan, c'est-à-dire soit vrai (valeur non nulle), soit faux (valeur nulle).
+            \item \textbf{byte} : un ensemble de 8 bits, correspondant à l'unité de stockage d'un emplacement mémoire. C'est la plus petite unité adressable par un programme sur un ordinateur.
+            \item \textbf{string} : est un type correspondant à une chaîne de caractères.
+            \item \textbf{Id\_objet} : identifiant des objets.
+            \item \textbf{Id\_trame} : identifiant des trames (selon leur ordre de création, donc différent de l'ID de la trame CAN).
+            \item \textbf{Id\_popup} : identifiant du pop-up choisit (cf. liste des écran utilisés).
+            \item \textbf{Informations} : informations visuelles visibles sur Tableau de Bord. Cela peut être un clignotant, la vitesse de la voiture, etc.
+            \item \textbf{Trame} : tableau de 12 bytes.
+        \end{itemize}
+\end{itemize}
+
+
+
+
+
+
+
+
+
+

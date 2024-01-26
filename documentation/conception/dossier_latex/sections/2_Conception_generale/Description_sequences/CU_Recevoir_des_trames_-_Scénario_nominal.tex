@@ -1,0 +1,6 @@
+\\
+La première étape du scénario nominal du CU "Recevoir des trames" du dossier de spécification [\hyperref[SPEC]{dossier\_de\_specification\_SPEC\_B1\_2024}] n'est pas représentée dans le diagramme de séquence car elle est implicite. On suppose que Tableau de Bord fonctionne et est capable d'émettre des trames sur le bus CAN. \\
+Périodiquement, \textit{sniffer} reçoit une trame de Tableau de Bord. Lorsqu'il reçoit une trame, il transmet celle-ci à \textit{logger} qui informe ensuite \textit{gui} de la réception d'une nouvelle trame. Cela permet ainsi à \textit{gui} de récupérer et afficher cette trame sur EcranPrincipal. \\
+
+Le diagramme de la \autoref{fig:inter-CU_Recevoir_des_trames_-_Scénario_nominal} représente la réception d'une trame, cependant, il est possible que \textit{sniffer} reçoive beaucoup de trames en peu de temps. Dans ce cas, l'opération "notifyNewFrames()" est appelée périodiquement et \textit{gui} récupère toutes les trames reçues depuis le dernier appel de "getFrames()". Ainsi, les opérations "notifyNewFrames()" et "getFrames()" sont au pluriel car il est possible de récupérer un paquet de trames. 
+Pour finir, comme on peut le voir dans la \autoref{fig:inter-CU_Interagir_avec_le_sniffer_-_Scénario_nominal}, Utilisateur a la possibilité de mettre en pause la réception des trames, ce qui suspend temporairement la boucle. \\

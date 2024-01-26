@@ -1,0 +1,75 @@
+\paragraph{Formalisation du protocole}
+\label{sec:formalisation-protocole-CANdroidToCANgateway}
+
+Lors de la schématisation des formats des messages, nous avons choisi de séparer les parties des messages par des espaces pour des questions de lisibilité. Cependant, ces espaces ne sont pas présents lors de l'exécution du protocole. Par conséquent, nous ne les avons pas représentés dans la partie \ref{sec:exemple-CANdroidToCANgateway}.\\
+
+L'application {\nomApplication} transmet trois types d'informations au programme {\nomLogiciel} : une demande de l'état du Mode Envoi, une demande d'arrêt d'envoi des trames et une séquence de trames.\\
+
+Lorsque Utilisateur envoie des trames, l'application {\nomApplication} transmet un message lui-même composé de plusieurs messages correspondant à des chaînes de caractères. Ce message comprend : un message indiquant le nombre trames envoyées dans la séquence, et un message par trame de la séquence. L'application {\nomApplication} envoie donc une donnée sous le format suivant :\\
+
+\begin{minipage}
+    \textwidth
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        nb= N \textbackslash n & \# ID \$ LENGTH @ DATA / PERIODICITY \textbackslash n & ...\\
+        \hline
+    \end{tabular}
+\end{minipage}
+
+\medspace
+
+\begin{itemize}
+    \item \textbf{nb=} : indique que la suite du message sera N ;
+    \item \textbf{N} : correspond au nombre de trames dans la séquence à envoyer ;
+    \item \textbf{\textbackslash n} : caractère de fin du message, indiquant que le prochain message sera la première trame de la séquence ;
+    \item \textbf{\#} : indique que la suite du message est ID ;
+    \item \textbf{ID} : ID de la trame CAN lu sur le réseau CAN. ID correspond à un nombre hexadécimal à 3 chiffre. Dans notre cas, nous traitons des trames au format standard, ID peut donc prendre une valeur minimale de 0x000 et une valeur maximale de 0x7FF, ce qui correspond à 2047 en décimal ;
+    \item \textbf{\$} : séparateur entre ID et LENGTH ;
+    \item \textbf{LENGTH} : taille de la trame. Cette valeur est un entier qui correspond à un nombre d'octet. Au format standard, une trame a une longueur maximale de 8 octets, LENGTH va donc de 0 à 8 ;
+    \item \textbf{@} : séparateur entre LENGTH et DATA ;
+    \item \textbf{DATA} : correspond aux données de la trame. Au format standard, on peut avoir jusqu'à 8 octets de données, où chaque octet peut contenir une valeur hexadécimale allant de 0x00 à 0xFF ;
+    \item \textbf{/} : séparateur entre DATA et PERIODICITY ;
+    \item \textbf{PERIODICITY} : correspond à la périodicité de l'envoi de la trame. Cette valeur est un entier qui a pour valeur minimale 0, et n'a pas de valeur maximale. Cette valeur est en milliseconde ;
+    \item \textbf{\textbackslash n} : caractère de fin de message ;
+    \item \textbf{...} : représente les N autres trames de la séquence.\\
+\end{itemize}
+
+Utilisateur peut demander l'arrêt d'envoi des trames. L'application {\nomApplication} envoie alors une demande d'état du Mode Envoi sous forme de chaîne de caractères. Cette donnée est envoyée sous le format suivant : \\
+
+\begin{minipage}
+    \textwidth
+    \centering
+    \begin{tabular}{|c|}
+        \hline
+        ! \textbackslash n\\
+        \hline
+    \end{tabular}
+\end{minipage}
+
+\medspace
+
+\begin{itemize}
+    \item \textbf{!} : caractère définissant la nature du message, c'est-à-dire une demande d'arrêt du Mode Envoi ;
+    \item \textbf{\textbackslash n} : caractère de fin de message.\\
+\end{itemize}
+
+
+Lorsque Utilisateur souhaite envoyer des trames, ou arrêter l'envoi de trames, le Mode Envoi doit être mis à jour. L'application {\nomApplication} envoie alors une demande d'état du Mode Envoi sous forme de chaîne de caractères. Cette donnée est envoyée sous le format suivant :\\
+
+\begin{minipage}
+    \textwidth
+    \centering
+    \begin{tabular}{|c|}
+        \hline
+        ? \textbackslash n\\
+        \hline
+    \end{tabular}
+\end{minipage}
+
+\medspace
+
+\begin{itemize}
+    \item \textbf{?} : caractère définissant la nature du message, c'est-à-dire une demande d'état du Mode Envoi ;
+    \item \textbf{\textbackslash n} : caractère de fin de message.\\
+\end{itemize}

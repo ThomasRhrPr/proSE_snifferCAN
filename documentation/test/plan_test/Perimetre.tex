@@ -1,0 +1,283 @@
+% Auteurs : Camille Constant, Paul Trémoureux
+
+\section{Périmètre de test}
+\label{sec:perimetre}
+Cette section a pour objet l'élaboration d'un tableau des fonctionnalités et/ou composants/traitements/données du système mentionnant pour chacun l'effort de test à mener.
+Cet effort est fonction de la pondération des exigences, risques et criticité retenus.
+
+\subsection{Caractéristiques du projet}
+\label{sec:peri:caract} 
+
+KEREVAL, une entreprise spécialisée dans les tests de systèmes embarqués dans les véhicules, souhaite développer un démonstrateur CAN \og simulator in the loop \fg pour permettre à ses équipes de monter en compétences sur le réseau CAN.\\
+
+L'objectif est également de fournir une visualisation concrète de l'architecture du véhicule, du réseau CAN et du démonstrateur CAN pour les personnes qui débutent dans le métier, tels que les nouveaux salariés lors de leur arrivés chez KEREVAL, ou des étudiants lors de forums.\\
+
+Pour répondre à ce besoin, KEREVAL souhaite pouvoir utiliser un simulateur de tableau de bord sur Linux (type ICSim) et/ou un banc de test physique connecté(s) à une carte électronique (type Raspberry Pi) pour permettre la connection au réseau CAN, à la fois réels (sur le banc de test fourni par KEREVAL) et simulés (par le simulateur de tableau de bord).\\
+
+De plus, KEREVAL souhaite contrôler le système à distance via une application Android nommée {\appliA} déployée sur un smartphone. Ce dernier sera connecté au système (via la Raspberry Pi) par un réseau TCP/IP. Sur l'application, il sera possible d'envoyer et d'enregistrer des trames mais également d'observer toutes les trames diffusées sur le bus CAN. Il sera possible d'enregistrer les trames diffusées sur le bus dans un fichier présent sur la Raspberry Pi.\\
+
+En outre, l'entreprise souhaite être en mesure d'injecter des fautes via les trames pour s'assurer du bon fonctionnement du démonstrateur.\\
+
+%Le produit {\produit} permet à {\client} d'étudier la faisabilité de...\\
+
+Le projet {\projet} se décompose en 2 lots/incréments~:
+\begin{itemize}
+    \item Lot 1~:
+    \begin{itemize}
+        \item Communication TCP/IP (entre le programme {\appliC} et l'application {\appliA}) :
+        \begin{itemize}
+            \item Envoi de trame depuis l'application {\appliA}
+            \item Reception de trame sur l'application {\appliA}
+        \end{itemize}
+        \item Communication CAN (entre le programme {\appliC} et Tableau de Bord) :
+        \begin{itemize}
+            \item Sniffer fonctionnel sur le programme {\appliC}
+            \item Communication avec Simulateur ICSim
+        \end{itemize}
+        \item Gestion du SàE :
+        \begin{itemize}
+            \item Démarrer le SàE
+        \end{itemize}
+    \end{itemize}
+    \item Lot 2~:
+    \begin{itemize}
+        \item Communication CAN (entre le programme {\appliC} et Tableau de Bord) :
+        \begin{itemize}
+            \item Communication avec Banc de Test
+        \end{itemize}
+        \item Gestion des objets sur l'application {\appliA} :
+        \begin{itemize}
+            \item Création d'objets sur l'application {\appliA}
+            \item Création de trames dans un objet sur l'application {\appliA}
+            \item Mode d'envoi
+            \item Suppression d'objets sur l'application {\appliA}
+            \item Suppression de trames dans un objet sur l'application {\appliA}
+        \end{itemize}
+        \item Gestion du sniffer sur l'application {\appliA} :
+        \begin{itemize}
+            \item Pause du sniffer sur l'application {\appliA}
+            \item Nettoyage du sniffer sur l'application {\appliA}
+            \item Retour en haut du sniffer sur l'application {\appliA}
+        \end{itemize}
+        \item Gestion de la communication sur l'application {\appliA} :
+        \begin{itemize}
+            \item Reconnexion
+        \end{itemize}
+        \item Gestion du SàE :
+        \begin{itemize}
+            \item Stopper le SàE
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+\medskip
+
+{\client} souhaite connaître la qualité globale de \og {\produit} \fg après chaque lot afin d'éventuellement redéfinir chacun des lots. \\
+Ce plan de test concerne le niveau de test système. Pour information, des tests d'intégration (lots 1 et 2) et des tests unitaires (lot 2) auront été réalisés par {\equipe}.
+
+\subsection{Éléments à tester}
+\label{sec:peri:elements} 
+
+Cette partie s'appuie sur la section \og 2.3 Fonctions principales développées \fg du document de spécifications {\refSpec}. 
+\medskip
+
+%{\it Faire classement par catégories (logiciels développés, supports d'exécution (logiciels et matériels), supports de communication (logiciel (ex : pile TCP/IP) et matériel)).}
+Les éléments à tester se décomposent en plusieurs catégories~:
+\begin{itemize}
+    \item Logiciels développés :
+    \begin{itemize}
+        \item L'application {\appliA}
+        \item Le programme {\appliC}
+    \end{itemize}
+    \item Support de communication :
+    \begin{itemize}
+        \item Protocole de communication
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Éléments concernés par les tests}
+\label{sec:peri:comp:test}
+          
+Cette section désigne ce qui est testé (composant, logiciel, sous-système).
+Seront concernés par l'activité de test les composants logiciels développés durant le projet {\projet}: le programme {\appliC} et l'application {\appliA}, ainsi que la couche application de la communication entre le programme {\appliC} et l'application {\appliA} (+ drivers si développés). 
+
+\subsubsection{Éléments non concernés par les tests}
+\label{sec:peri:comp:nontest}
+
+Cette section désigne ce qui ne va pas être testé (composant, logiciel, sous-système).\\
+Ne seront pas concernés par les tests les supports d'exécution logiciels (Linux, Android, librairies, etc.) et matériels (E\_Smartphone, E\_Raspberry, E\_BancTest et E\_ICSim) ainsi que les supports de communication matériels (E\_PC, E\_PEAK, E\_Shield) et logiciels (pile TCP/IP). 
+
+\subsection{Spécifications fonctionnelles ou techniques à tester}
+\label{sec:peri:spec}
+
+Cette section s'appuie sur la section 2.3 du document de spécifications {\refSpec}.
+Cette section s'appuie également sur la matrice Fonctionnalités-CUs [MatriceFonctionnalitesCUTests.pdf].
+
+\subsubsection{Fonctionnalités à tester}
+\label{sec:peri:fct:test}
+
+Les fonctionnalités suivantes sont à tester (avec les paramètres et jeux de données prédéfinis):
+\noindent\begin{longtable}[c]{|p{.40\textwidth}|p{.20\textwidth}|p{.40\textwidth}|}
+\hline
+\bf Fonctionnalité & \bf \centering Priorité & \bf Commentaire\\
+[-1ex] & (P0 : priorité max) & \\
+\hline
+\endhead
+Envoi de trames depuis l'application {\appliA} & \centering P0 & L'utilisateur doit pouvoir demander l'envoi de trames depuis l'application {\appliA}. L'application {\appliA} doit être capable d'envoyer des trames vers le programme {\appliC}.\\
+\hline
+Réception de trames sur l'application {\appliA} & \centering P0 & L'application {\appliA} doit être capable de recevoir des trames depuis le programme {\appliC}.\\
+\hline
+Sniffer fonctionnel sur le programme {\appliC} & \centering P0 & Le programme {\appliC} doit être capable de lire sur le réseau CAN.\\
+\hline
+Communication avec Banc de Test & \centering P5 & Le programme {\appliC} doit être capable de communiquer avec Banc de Test via le réseau CAN.\\
+\hline
+Communication avec Simulateur ICSim & \centering P1 & Le programme {\appliC} doit être capable de communiquer avec Simulateur ICSim via le réseau CAN.\\
+\hline
+Création d'objets sur l'application {\appliA} & \centering P2 & L'utilisateur doit pouvoir créer un objet sur l'application {\appliA}. L'application {\appliA} doit être capable d'afficher cet objet.\\
+\hline
+Création de trames dans un objet sur l'application {\appliA} & \centering P2 & L'utilisateur doit pouvoir créer une trame dans un objet sur l'application {\appliA}. L'application {\appliA} doit être capable d'afficher cette trame dans l'objet.\\
+\hline
+Mode d'envoi & \centering P3 & L'utilisateur doit pouvoir choisir le mode d'envoi de la trame créée sur l'application {\appliA}. L'application {\appliA} doit être capable d'envoyer les trames selon leurs modes d'envoi.\\
+\hline
+Suppression d'objets sur l'application {\appliA} & \centering P4 & L'utilisateur doit pouvoir supprimer un objet sur l'application {\appliA}. L'application {\appliA} doit être capable d'enlever cet objet de l'affichage.\\
+\hline
+Suppression de trames dans un objet sur l'application {\appliA} & \centering P4 & L'utilisateur doit pouvoir supprimer une trame dans un objet sur l'application {\appliA}. L'application {\appliA} doit être capable d'enlever cette trame de l'affichage de l'objet.\\
+\hline
+Pause du sniffer sur l'application {\appliA} & \centering P2 & L'utilisateur doit pouvoir demander la pause du sniffer sur l'application {\appliA}. L'application {\appliA} doit pouvoir mettre en pause la reception des trames dans le sniffer.\\
+\hline
+Nettoyage du sniffer sur l'application {\appliA} & \centering P3 & L'utilisateur doit pouvoir demander le nettoyage du sniffer sur l'application {\appliA}. L'application {\appliA} doit pouvoir effacer les trames afficher dans la partie sniffer de l'application {\appliA}.\\
+\hline
+Enregistrement du sniffer dans un fichier de log & \centering P2 & L'utilisateur doit pouvoir demander sur l'application {\appliA} l'enregistrement des trames reçues dans un fichier. L'application {\appliA} doit pouvoir enregistrer les trames reçues dans un fichier.\\
+\hline
+Retour en haut du sniffer sur l'application {\appliA} & \centering P4 & L'utilisateur doit pouvoir demander sur l'application {\appliA} de revenir en haut de l'affichage des trames du sniffer. L'application {\appliA} doit pouvoir revenir en haut de l'affichage des trames du sniffer.\\
+\hline
+Reconnexion & \centering P2 & L'utilisateur doit pouvoir demander sur la reconnexion de l'application {\appliA} avec le programme {\appliC}. L'application {\appliA} doit pouvoir se reconnecter avec le programme {\appliC}.\\
+\hline
+Démarrer le SàE & \centering P0 & L'utilisateur doit pouvoir démarrer le SàE.\\
+\hline
+Stopper le SàE & \centering P2 & L'utilisateur doit pouvoir stopper le SàE.\\
+\hline
+Redémarrer le SàE & \centering P2 & L'utilisateur doit pouvoir redémarrer le SàE. Le SàE doit permettre une persistance des données.\\
+\hline
+\end{longtable}
+
+\subsubsection{Caractéristiques techniques à tester}
+\label{sec:peri:tech:test}
+
+Cette section s'appuie sur la section \og 2.4 Contraintes \fg du document de spécifications {\refSpec}.\\
+%<exigences non fonctionnelles> du document de spécifications {\refSpec}. \\
+Les caractéristiques techniques suivantes sont à tester :
+\noindent\begin{longtable}[c]{|p{.40\textwidth}|p{.20\textwidth}|p{.40\textwidth}|}
+\hline
+\bf Caractéristique & \bf \centering Priorité & \bf Commentaire\\
+[-1ex] & (P0 : priorité max) & \\
+\hline
+\endhead
+%En commantaires les caractéristiques à ajouter à l'incrément 2
+Fiabilité & \centering P1 & Le système doit être robuste aux arrêts/redémarrages/coupures électriques.\\
+\hline
+Ergonomie & \centering P1 & Le sous-système application Android doit être ergonomique. Les règles d'ergonomie ont été échangées avec KEREVAL.\\
+\hline
+Facilité d'utilisation & \centering P0 & Le sous-système application Android doit être intuitif, i.e. prise en main et utilisation sans documentation.\\
+\hline
+Facilité d'utilisation & \centering P1 & Le sous-système application Android doit permettre à l'utilisateur de savoir dans quel état est le système complet (état de marche, en erreur, en mode dégradé).\\
+\hline
+Lisibilité message & \centering P0 & Les messages d'erreur doivent être compréhensibles, doivent permettre de diagnostiquer le système et le remettre dans un état opérationnel.\\
+\hline
+Performance en sortie & \centering P1 & Les actionneurs doivent répondre en moins de 1 seconde suite à une sollicitation via le sous-système application Android (temps de prise en compte d'une commande).\\
+\hline
+Performance en entrée & \centering P1 & Une information capteur est affichée en moins de 1 seconde sur le sous-système application Android (temps de remontée d'une information capteur).\\
+\hline
+Maintenabilité & \centering P1 & L'architecture du système doit être modulaire et permettre de remplacer/d'ajouter des capteurs/actionneurs commandables via l'application Android.\\
+\hline
+\end{longtable}
+
+\subsection{Spécifications fonctionnelles ou techniques non testées}
+\label{sec:peri:nontest}
+
+L'ergonomie ainsi que la conformité de l'emplacement des éléments de l'IHM aux spécifications ne sera pas testée. L'IHM ne sera validée qu'au travers des tests fonctionnels. 
+Le fonctionnement du tableau de bord type banc de test, de ses actionneurs et de ses voyants ne sera pas testé.
+L'ensemble des éléments listés dans la partie \og \ref{sec:peri:comp:nontest} Éléments non concernés par les tests \fg de ce document ne seront pas testés.\\
+
+Les caractéristiques techniques suivantes ne seront pas testées :
+\noindent\begin{longtable}[c]{|p{.50\textwidth}|p{.50\textwidth}|}
+    \hline
+    \bf Caractéristique & \bf Commentaire\\
+    \hline
+    \endhead
+    Sécurité & Le système doit implémenter les bonnes pratiques de sécurité imposées par les développements sécurisés.\\
+    \hline
+    Portabilité système & Le sous-système application Android peut être portable sur les différentes versions Android, à partir de version 9.\\
+    \hline
+    Portabilité matériel & Le sous-système application Android peut être portable sur les smartphones supportant une version 9 ou supérieure.\\
+    \hline
+    Eco-conception & Le système ne doit pas consommer plus que la valeur vue avec le client.\\
+    \hline
+\end{longtable}
+
+\subsection{Criticité}
+\label{sec:peri:criticite}
+
+Les éléments suivants revêtent une importance critique :
+\begin{itemize}
+    \item La communication entre le programme {\appliC} et l'application {\appliA} ;
+    \item La communication entre le programme {\appliC} et la partie tableau de bord.
+\end{itemize}
+
+\subsection{Risques}
+\label{sec:peri:risques}
+
+\noindent Id : identifiant du risque\\
+Description : description du risque\\
+Effet : effet du risque\\
+P : probabilité (3 - très probable, 2 - probable, 1 - peu probable)\\
+I : impact (3 - impact fort, 2 - impact moyen, 1 - impact faible)\\
+EI (élément impacté) : coût/qualité/délai\\
+Action : description de l'action pour maîtriser le risque
+
+\subsubsection{Risques projet}
+\label{sec:peri:risques:projet}
+
+\noindent\begin{longtable}[c]{|p{1.4cm}|p{3cm}|p{3cm}|p{0.4cm}|p{0.4cm}|p{1.2cm}|p{3.5cm}|}
+\hline
+\bf Id & \bf Intitulé & \bf Effet & \bf \centering P & \bf \centering I & \bf \centering EI & \bf Action\\
+\hline
+\endhead
+RPRJ1 & Pas de test unitaire & Instabilité de l'application lors des tests système & \centering 2 & \centering 2 & \centering C/Q/D & Faire une phase de smoke tests sur l'application avant de réaliser les tests système.\\
+\hline
+RPRJ2 & Pas de test d'intégration & Instabilité de l'application lors des tests système & \centering 1 & \centering 2 & \centering C/Q/D & Faire une phase de smoke tests sur l'application avant de réaliser les tests système.\\
+\hline
+RPRJ3 & Pas de test unitaire ou de test d'intégration & Instabilité de l'application lors de tests d'acceptation & \centering 1 & \centering 2 & \centering C/Q/D & Réaliser des tests système sur toutes les fonctionnalités système.\\
+\hline
+RPRJ4 & Problème de disponibilité des intervenants & Dérive dans le planning des tests & \centering 1 & \centering 1 & \centering D & Planifier au plus tôt les actions des différents intervenants.\\
+\hline
+RPRJ5 & Spécifications du produit \og {\produit} \fg non à jour & Déviations entre les spécifications et le système d'où une difficulté pour concevoir des tests pertinents & \centering 1 & \centering 2 & \centering Q & Analyse des spécifications pour identifier des écarts. Poser toutes les questions nécessaires à une bonne compréhension des spécifications.\\
+\hline
+RPRJ6 & Non respect des règles inscrites dans le PAQL & Conflits de noms/dépots sur le RDP. Baisse de la qualité de la production. & \centering 2 & \centering 1 & \centering Q & Activité de contrôle régulier des productions de l'équipe.\\
+\hline
+\end{longtable}
+
+\subsubsection{Risques produit}
+\label{sec:peri:risques:produit}
+
+\noindent\begin{longtable}[c]{|p{1.4cm}|p{3cm}|p{3cm}|p{0.4cm}|p{0.4cm}|p{1.2cm}|p{3.5cm}|}
+\hline
+\bf Id & \bf Intitulé & \bf Effet & \bf \centering P & \bf \centering I & \bf \centering EI & \bf Action\\
+\hline
+\endhead
+RPRD1 & Mauvaise implémentation de la communication & Système non fonctionnel & \centering 1 & \centering 3 & \centering C/Q/D & Tester la communication en priorité par des tests d'intégrations (voir unitaires) avant de faire les tests système.\\
+\hline
+RPRD2 & Dysfonctionnement du matériel (Tableaux de Bord (type Banc de Test)) & Système non fonctionnel & \centering 2 & \centering 2 & \centering C/Q/D & Formation à l'utilisation du matériel. Aide de {\client}.\\
+\hline
+RPRD3 & Dysfonctionnement du matériel (Smartphone, Raspberry PI, Tableaux de Bord (type Simulateur), Connecteurs CAN) & Système non fonctionnel & \centering 1 & \centering 3 & \centering C/Q/D & Formation à l'utilisation du matériel, redondance et bouchonnage.\\
+\hline
+\end{longtable}
+
+\subsection{Effort de test}
+\label{sec:peri:effort}
+
+L'effort de test sera priorisé de la façon suivante :
+\begin{itemize}
+    \item Phase de \og Smoke test \fg pour vérifier la stabilité de l'application avant de réaliser la campagne de tests fonctionnels système ;
+    \item Campagne de tests fonctionnels système par priorité ;
+    \item Campagne de tests non fonctionnels système par priorité.
+\end{itemize}

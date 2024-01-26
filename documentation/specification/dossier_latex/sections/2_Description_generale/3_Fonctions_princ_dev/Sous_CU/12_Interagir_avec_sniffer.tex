@@ -1,0 +1,95 @@
+% ----------------------------------------------
+% CU Interagir avec le sniffer
+% ----------------------------------------------
+\newpage
+\subsubsection{CU Interagir avec le sniffer}
+\paragraph{Description graphique}
+Voir figure \ref{schema_cu_strat}.
+\paragraph{Description textuelle}
+\medskip
+
+\begin{longtable}[l]{|p{3cm}|p{11.7cm}|}
+    \hline
+    
+        Titre & Interagir avec le sniffer.\\
+    \hline
+
+        Résumé & Utilisateur interagit avec le sniffer. \\
+    \hline
+
+        Portée & Application {\nomApplication}.\\
+    \hline
+
+        Niveau & Utilisateur.\\
+    \hline
+
+        Acteurs directs & Utilisateur.\\
+    \hline 
+
+        Acteurs indirects & N.A. \\
+    \hline
+
+        Préconditions & 
+            \begin{itemize}
+                \item Le SàE est démarré. 
+                \item L'application {\nomApplication} est connectée au programme \newline {\nomLogiciel}.
+                \item La Raspberry Pi est connectée au bus CAN.
+                \item Tableau de Bord est connecté au bus CAN.
+            \end{itemize}\\
+    \hline
+
+        Garanties \newline minimales & N.A. \\
+    \hline
+
+        Garanties en cas de succès & 
+        \begin{itemize}
+            \item Utilisateur est capable d'exporter et de supprimer les trames du sniffer.
+            \item Utilisateur est capable d'arrêter la mise à jour du sniffer en temps réel et de revenir en haut du fil lorsqu'il fait défiler les trames.
+        \end{itemize}
+        \\
+    \hline
+
+        Scénario nominal & 
+        \begin{enumerate}
+            \item Utilisateur demande de revenir en haut du fil.
+            \item L'application {\nomApplication} va en haut du fil.
+            \item Utilisateur demande d'effacer les trames.
+            \item L'application {\nomApplication} efface les trames affichées.
+            \item Utilisateur demande l'arrêt de la réception des trames.
+            \item L'application {\nomApplication} stoppe l'affichage de nouvelles trames.
+            \item Utilisateur demande d'enregistrer les trames reçues sur le \newline Smartphone.
+            \item L'application {\nomApplication} enregistre les trames dans un fichier de log (voir section \ref{dictionnaire}).
+            \item Utilisateur demande la reprise de la réception des trames.
+            \item L'application {\nomApplication} reprend l'affichage de nouvelles trames.
+        \end{enumerate} \\
+    \hline
+
+        Variantes & \newline
+            \textbf{1,3,5,7 [La réception de trames est arrêtée \& Utilisateur souhaite reprendre la réception de trames]}\newline
+                1,3,5,7.a.1. Va en 9. \newline
+            \newline
+            \textbf{1,3,5,7,9 [Utilisateur ne souhaite rien faire]}\newline
+                1,3,5,7,9.a.1. Fin du CU. \newline
+            \newline
+            \textbf{1,3,9 [La réception de trames est arrêtée \& Utilisateur souhaite enregistrer les trames reçues]}\newline
+                1,3,9.a.1. Va en 7. \newline
+            \newline
+            \textbf{1,3,9 [La réception de trames est en cours \& Utilisateur souhaite arrêter la réception de trames]}\newline
+                1,3,9.b.1. Va en 5. \newline
+            \newline
+            \textbf{1,3,9 [La réception de trames est en cours \& Utilisateur souhaite enregistrer les trames reçues]}\newline
+                1,3,9.c.1. Va en 5. \newline
+            \newline
+            \textbf{1,5,7,9 [Utilisateur souhaite effacer les trames]}\newline
+                1,5,7,9.a.1. Va en 3. \newline
+            \newline
+            \textbf{3,5,7,9 [Utilisateur souhaite aller en haut du fil]}\newline
+                3,5,7,9.a.1. Va en 1. \newline
+            \\
+    \hline
+
+        Extensions & N.A. \\
+    \hline
+    Informations \newline complémentaires & N.A. \\
+    \hline
+\end{longtable}

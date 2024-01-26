@@ -1,0 +1,60 @@
+L'écran principal se décompose en deux parties. La partie haute permet les interactions avec le simulateur tandis que la partie basse correspond à la visualisation des trames CAN. 
+
+La partie haute modère les interactions avec le simulateur. On y observe l'état de la connexion à la raspberry. On peut ajouter/ supprimer des objets ainsi que des trames. On y ordonne l'envoi de trames. 
+
+Connexion : 
+
+Lors du démarrage de l'application, la connexion avec la raspberry s'initialise automatiquement. Une connexion valide est représenté par l'icone de framboise (logo de raspberry) en haut à gauche. Si la connexion ne s'est pas correctement déroulé, l'icone perd sa couleur et est barré. Un pop-up s'affiche demande si l'on souhaite une reconnexion ou un abandon de la connexion à la raspberry. L'application peux être utilisé sans connexion. Dans ce cas, l'icone de framboise reste barré. 
+
+
+Objet : 
+Lorsqu'il n'y a pas d'objet, un texte indique "[Pas d'objets actuellement, ajoutez un objet]". Les objets sont matérialisés sur l'appli par un rectangle. Ce rectangle comprend un sous-rectangle avec le nom de l'objet en haut à gauche et à droite, la flèche déroule un menu pour détailler les trames déjà engeristrés pour cet objet. 
+L'ajout d'objet se concrétise par l'appui sur l'icone "plus" du haut droit de l'écran. Un pop-up est alors déclenché pour que l'utilisateur insère un nouveau nom d'objet. Lorsque le nom est entré, un clic dans le cadre "Ajouter" valide l'ajout de l'objet et l'enregistre automatiquement dans la liste des objets présents sur l'appli. 
+Pour supprimer un objet, l'utilisateur clic 2sec sur l'objet, la case entière se grise puis l'utilisateur clic sur la poubelle en haut à droite de l'écran principale. Un pop-up s'affiche indiquant "Voulez vous vraiment supprimer ce(s) élément(s) ?". La suppression d'un objet comprend la suppression des trames associées à cet objet. La liste des élements sélectionnés à suprimé est indiqué et l'utilisatuer clic sur "Supprimer" pour valider la suppression.
+Les objets sont conservés d'une utilisation à l'autre sur l'appli. 
+
+Trames : 
+Chaque trame est associé à un objet. Elle est caractérisé par un nom [et un id] et est associé à un objet. Les trames sont visibles dans le rectangle de l'objet associé à la suite du nom de l'objet et dans l'ordre de leur ajout. 
+Pour visualiser la liste des trames, l'utilisateur clic sur la [check de validation]. 
+Pour ajouter une trame, l'utilisateur se palce dans l'objet auquel il veut associer sa nouvelle trame, il indique le nom de la nouvelle trame dans le rectangle intitulé "Entrez votre nom ici". La validation se fait pas un clic sur l'icone "enregistrer". 
+Pour envoyer une trame, l'utilisateur clic 2sec sur une trame à envoyer. Si il souhaite en envoyer plusieur, la selection est succéssive. Lorsque la selection est effectué, l'utilisateur clic sur l'icone d'envoie en haut à gauche de l'écran. Un pop-up indique "Mode d'envoi : ", liste les trrames à envoyer et l'utilisateur coche le mode d'envoi souhaité. L'utilisateur clic sur "Envoi" pour valider l'envoi de la trame. 
+
+
+Quel que soit le pop-up ouvert, l'utilisateur peut à tout moment annuler son action en cliquant sur la croix en haut à droite du pop-up. 
+
+
+
+La parte basse de l'écran présente les trames CAN lorsqu'il y en a. Pour chaque trame CAN, on précise [les détails, numéro en hexa, direction, état ?]. Lorsqu'il n'y a pas de connexion, [ce qu'il se passe lorsqu'il n'y a pas de co]
+L'utilisateur peut revenir en haut de la liste des trames par un clic sur le rectangle "Revenir en haut" 
+
+
+
+
+
+
+-est ce que on est d'accord qu'il n'y a des trames CAN si il n'y a pas de connexion ? garde de la mémoire/partie basse grisé en cas de perte de connexion
+
+-si il n'y a pas de nom à l'objet ou, le même qu'un autre objet, impossible ? Non pour les objets au même nom (à demander au client) au moins un caractère puor le nom
+
+-est ce que on voit déjà le détail des objet avant de mettre la flèche vers la gauche en direction du bas? 
+
+-clic sur l'objet 2 sec pour le supprimer (ou, un temps t)?
+
+-annuler la suppression/ajout d'objet par une croix en haut à droite du pop-up? Oui
+
+-est ce que on peut renommer un objet/trame?
+
+-mise à jour de l'appli et/ tache de fond et reprendre ou... mise en pause etc
+
+-défilement par le bas ou par le haut?
+
+-limite pour les trames au bout d'un certain temps ? enregistrement ou suppression au bout d'un certain temps/nombre 
+
+-lors de re-co coupure indiqué sur le snifeur ?
+
+-bouton pour clean/ pas d'utilité 
+
+
+Appli Android / appli/...
+Carte électronique/raspberry/...
+Simulateur/ Simulateurs/...

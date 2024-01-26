@@ -1,0 +1,5 @@
+@startuml
+    class SaveSniffer extends Fragment{
+    }
+                    
+@enduml

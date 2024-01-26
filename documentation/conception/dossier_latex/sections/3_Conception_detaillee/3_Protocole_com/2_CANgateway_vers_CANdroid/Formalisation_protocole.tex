@@ -1,0 +1,52 @@
+\paragraph{Formalisation du protocole}
+\label{sec:formalisation-protocole-CANgatewayToCANdroid}
+
+Lors de la schématisation des formats des messages, nous avons choisi de séparer les parties des messages par des espaces pour des questions de lisibilité. Cependant, ces espaces ne sont pas présents lors de l'exécution du protocole. Par conséquent, nous ne les avons pas représentés dans la partie \ref{sec:exemple-CANgatewayToCANdroid}.\\
+
+Le programme {\nomLogiciel} transmet deux types d'informations à l'application {\nomApplication} : une trame et un état du Mode Envoi. Les trames sont celles sniffées sur le réseau CAN. Après encodage en chaîne de caractères, elles sont envoyées sous le format suivant : \\
+
+\begin{minipage}
+    \textwidth
+    \centering
+    \begin{tabular}{|c|}
+        \hline
+        \textasciitilde{} frame \# ID \$ LENGTH @ DATA \textbackslash n\\
+        \hline
+    \end{tabular}
+\end{minipage}
+
+\medspace
+
+\begin{itemize}
+    \item \textbf{\textasciitilde{}} : caractère de début de message ;
+    \item \textbf{frame} : indique la nature du message envoyé. Dans le cas suivant le message est une trame ;
+    \item \textbf{\#} : séparateur entre la nature du message et l'ID de la trame ;
+    \item \textbf{ID} : ID de la trame CAN lu sur le réseau CAN. ID correspond à un nombre hexadécimal à 3 chiffre. Dans notre cas, nous traitons des trames au format standard, ID peut donc prendre une valeur minimale de 0x000 et une valeur maximale de 0x7FF, ce qui correspond à 2047 en décimal ;
+    \item \textbf{\$} : séparateur entre ID et LENGTH ;
+    \item \textbf{LENGTH} : taille de la trame. Cette valeur est un entier qui correspond à un nombre d'octet. Au format standard, une trame a une longueur maximale de 8 octets, LENGTH va donc de 0 à 8 ;
+    \item \textbf{@} : séparateur entre LENGTH et DATA ;
+    \item \textbf{DATA} : correspond aux données de la trame. Au format standard, on peut avoir jusqu'à 8 octets de données, où chaque octet peut contenir une valeur hexadécimale allant de 0x00 à 0xFF ;
+    \item \textbf{\textbackslash n} : caractère de fin de message.\\
+\end{itemize}
+
+L'état du Mode Envoi est envoyé en réponse à une demande d'état du Mode Envoi. Après encodage en chaîne de caractères, cette information est sous le format suivant :\\
+
+\begin{minipage}
+    \textwidth
+    \centering
+    \begin{tabular}{|c|}
+        \hline
+        \textasciitilde{} sendingState \# DATA \textbackslash n\\
+        \hline
+    \end{tabular}
+\end{minipage}
+
+\medspace
+
+\begin{itemize}
+    \item \textbf{\textasciitilde{}} : caractère de début de message ;
+    \item \textbf{sendingState} : indique la nature du message envoyée. Dans le cas suivant le message est un état du Mode Envoi ;
+    \item \textbf{\#} : séparateur entre la nature du message et DATA ;
+    \item \textbf{DATA} : correspond à l'état du Mode Envoi. DATA peut prendre les deux valeurs logiques : 0 si l'état du Mode Envoi est OFF, et 1 si l'état du Mode Envoi est OFF ;
+    \item \textbf{\textbackslash n} : caractère de fin de message.\\
+\end{itemize}

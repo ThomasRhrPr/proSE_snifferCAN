@@ -1,0 +1,3 @@
+\newline
+Lors du lancement de l'application {\nomApplication}, la machine à états est dans l'état IDLE. Dès que l'ensemble des connexions entre le Smartphone, la Raspberry PI et Tableau de Bord sont faites, la machine à états passe à l'état Listening. Dans cet état, Sniffer reçoit les trames en continu, comme le montre la fonction "receiveFrame()". \newline
+Lorsque Utilisateur souhaite mettre en pause l'arrivée des trames, la machine repasse dans l'état IDLE via l'opération "stopListening()". Il peut ainsi retourner en écoute lors de la reprise du sniffer via l'opération "startListening()". \newline 

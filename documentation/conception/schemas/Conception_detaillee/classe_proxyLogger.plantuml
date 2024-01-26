@@ -1,0 +1,9 @@
+@startuml
+
+hide circle
+
+class ProxyLogger <<medium>> {
+    !includesub diag_classe_CANgateway.plantuml!ProxyLogger
+}
+
+@enduml

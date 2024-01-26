@@ -1,0 +1,29 @@
+@startuml
+actor Utilisateur
+actor RaspberryPi
+participant gui
+participant logger
+participant dealer
+participant object
+participant frame
+participant network
+participant basket
+participant sniffer
+participant sender
+participant ui
+Utilisateur -> RaspberryPi : connectRasp()
+RaspberryPi -> Utilisateur : signalState(C_OFF)
+Utilisateur -> RaspberryPi : switchOnRasp()
+RaspberryPi -> ui : startCANgateway()
+ui -> sniffer : startListenning()
+ui -> network : startServer()
+ui -> RaspberryPi : tellIsStrated()
+RaspberryPi -> Utilisateur : signalState(C_ON)
+Utilisateur -> gui : startCANdroid()
+gui -> dealer : loadObject()
+gui -> Utilisateur : displayScreen(MAIN_SCREEN)
+gui -> network : askAvailabilityNetwork()
+network -> gui : setAvailabilityNetwork()
+gui -> Utilisateur : displayScreen(MAIN_SCREEN)
+@enduml
+'Ajouter enum State {C_OFF, C_ON}'

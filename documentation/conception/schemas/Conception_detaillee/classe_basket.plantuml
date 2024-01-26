@@ -1,0 +1,13 @@
+@startuml
+    class ObjectFragment extends Fragment{
+        - elements : IdElement[*]
+        +addElement (idElement : IdElement) : void
+        +removeElement(idElement : IdElement) : void
+        +getElement() : IdElement[*]
+        +clearAll() : void
+        +update () : void
+        
+    }
+
+
+@enduml

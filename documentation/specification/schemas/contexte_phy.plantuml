@@ -1,0 +1,10 @@
+@startuml
+
+rectangle "<u>SàE</u>" as S{
+}
+rectangle "<u>E_TableauDeBord</u>" as T{
+}
+
+S -right- T : connecterCAN() <&arrow-right> \n envoyerCAN(donnee : byte[]) <&arrow-right> \n recevoirCAN() : byte[] <&arrow-right> \n deconnecterCAN() <&arrow-right> \n
+
+@enduml

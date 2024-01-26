@@ -1,0 +1,59 @@
+@startuml
+
+
+package Dealer{
+package Datas { 
+
+class Object
+{
+a_id : int
+a_name : String
+}
+
+class Frame 
+{
+a_id : int
+a_idFrame : int
+a_size : int
+a_data : String
+a_periodicity : int
+a_objectId : int
++ setIdObject(p_idObject : int) : void
+}
+
+interface DAO
+{
++ addObject(p_object : Object) : void
++ addFrameOnly(p_frame : Frame) : void
++ deleteAllObjects() : void
++ deleteAllFrames() : void
++ deleteSpecificObject(p_name : String) : void
++ deleteSpecificObject(p_idFrame : String, p_size : int, p_data : String, p_periodicity : int, p_idObject : int) : void
++deleteAllFramesInObject(p_idObject : int) : void
++ getAllObjects() : List<Object>
++ getObjectById(p_idObject : int) : Object
++ getObjectByName(p_name : String) : Object
++ getFramesByIdFrame(p_idFrame : String) : List<Frame>
++ getFramesBySize(p_size : int) : List<Frame>
++ getFramesByData(p_data : String) : List<Frame>
++ getFramesByPeriodicity(p_periodicity : String) : List<Frame>
++ getFramesByObjectId(int p_idObject) : List<Frame>
++ addFrame(p_frame : Frame, p_object : Object) : void
++ deleteAll() : void
++ removeFrame(p_frame : Object) : void
++ removeObject(p_object : Object) : void
+}
+
+abstract class BDD
+{
+a_dao : DAO
+}
+
+}
+}
+
+Frame --> Object
+Object --> DAO
+DAO --> BDD
+BDD --> MainActivity
+@enduml 

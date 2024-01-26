@@ -1,0 +1,11 @@
+@startuml
+    class BasketAdapter extends Adapter{
+        +onBindViewHolder (ViewHolder holder, int position) : void
+        +getItemCount() : int
+        +bindListViewData(RecyclerView recyclerView, ArrayList<String> data) : void
+        +setData(ArrayList<String> newData) : void
+        +ViewHolder () : void
+    }
+
+
+@enduml

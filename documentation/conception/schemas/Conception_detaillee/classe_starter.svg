@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="121px" preserveAspectRatio="none" style="width:164px;height:121px;" version="1.1" viewBox="0 0 164 121" width="164px" zoomAndPan="magnify"><defs><filter height="300%" id="fj7gtpj24012y" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[1bca517e7fa79f6a2f9ac3600994dc72]
+class Starter--><rect fill="#FEFECE" filter="url(#fj7gtpj24012y)" height="103.9922" id="Starter" style="stroke: #A80036; stroke-width: 1.5;" width="146" x="7" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="44" x="58" y="23.1387">Starter</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="8" x2="152" y1="30.9688" y2="30.9688"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="8" x2="152" y1="38.9688" y2="38.9688"/><ellipse cx="18" cy="49.9688" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="115" x="27" y="53.1792">new() : ErrorState_e</text><ellipse cx="18" cy="62.7734" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="119" x="27" y="65.9839">start() : ErrorState_e</text><ellipse cx="18" cy="75.5781" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="117" x="27" y="78.7886">stop() : ErrorState_e</text><ellipse cx="18" cy="88.3828" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="117" x="27" y="91.5933">stop() : ErrorState_e</text><ellipse cx="18" cy="101.1875" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="120" x="27" y="104.3979">main() : ErrorState_e</text><!--MD5=[4d085b0c1fd196759560c0f0f1740d03]
+@startuml
+
+hide circle
+
+class Starter {
+        + new() : ErrorState_e
+        + start() : ErrorState_e
+        + stop() : ErrorState_e
+        + stop() : ErrorState_e
+        + main() : ErrorState_e
+}
+
+@enduml
+
+PlantUML version 1.2020.02(Sun Mar 01 11:22:07 CET 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.19+7-post-Ubuntu-0ubuntu122.04.1
+Operating System: Linux
+Default Encoding: UTF-8
+Language: fr
+Country: FR
+--></g></svg>

@@ -1,0 +1,10 @@
+@startuml
+
+abstract class BDD
+{
+    {abstract} dao : DAO
+    + getInstance(context: Context): DataBase
+    - createDataBase(context: Context): DataBase
+}
+
+@enduml

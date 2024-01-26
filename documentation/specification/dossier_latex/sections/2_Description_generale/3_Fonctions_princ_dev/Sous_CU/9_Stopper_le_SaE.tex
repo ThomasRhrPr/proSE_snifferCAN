@@ -1,0 +1,85 @@
+% ----------------------------------------------
+% CU STOPPER LE SAE
+% ----------------------------------------------
+\newpage
+\subsubsection{CU Stopper le SàE}
+\paragraph{Description graphique}
+Voir figure \ref{schema_cu_strat}.
+\paragraph{Description textuelle}
+\medskip
+
+\begin{longtable}[l]{|p{3cm}|p{11.7cm}|}
+    \hline
+    
+        Titre & Stopper le SàE. \\
+    \hline
+
+        Résumé & Permet d'arrêter convenablement le SàE. \\
+    \hline
+
+        Portée & SàE.\\
+    \hline
+
+        Niveau & Utilisateur.\\
+    \hline
+
+        Acteurs directs & Utilisateur.\\
+    \hline 
+
+        Acteurs indirects & N.A. \\
+    \hline
+
+        Préconditions & 
+        \begin{itemize}
+            \item Le SàE est démarré. 
+            \item Utilisateur est connecté à la Raspberry Pi en SSH.
+        \end{itemize}
+        \\
+    \hline
+
+        Garanties \newline minimales & N.A. \\
+    \hline
+
+        Garanties en cas de succès & 
+        \begin{itemize}
+            \item Le SàE est arrêté. 
+        \end{itemize}
+        \\
+    \hline
+
+        Scénario nominal & 
+        \begin{enumerate}
+            \item Utilisateur quitte l'application {\nomApplication}.
+            %\item L'application {\nomApplication} se déconnecte du programme {\nomLogiciel}.
+            \item Utilisateur arrête le programme {\nomLogiciel}.
+            \item Utilisateur met hors tension la Raspberry Pi.
+            \item Utilisateur éteint le Simulateur ICSim.
+        \end{enumerate}
+        \\
+    \hline
+
+    Variantes & \newline
+        \textbf{2-4 [Uniquement application CANdroid en fonctionnement]} \newline
+        2-4.a.1. Fin du CU. \newline
+        \newline
+        \textbf{4 [Utilisateur utilise le Simulateur et le Banc de test]} \newline
+        4.a.1. Utilisateur éteint le Simulateur ICSim. \newline
+        4.a.2. Utilisateur éteint le Banc de test. \newline
+        4.a.3. Utilisateur débranche le Banc de test. \newline
+        4.a.4. Fin du CU. \newline
+        \newline
+        \textbf{4 [Utilisateur utilise uniquement le Banc de test]} \newline
+        4.b.1. Utilisateur éteint le Banc de test. \newline
+        4.b.2. Utilisateur débranche le Banc de test. \newline
+        4.b.3. Fin du CU. \newline
+        \newline
+        \textbf{4 [Aucun Tableau de Bord n'est allumé]} \newline
+        4.c.1. Fin du CU. \newline
+        \\
+    \hline
+
+        Extensions & N.A. \\
+    \hline
+    Informations \newline complémentaires & N.A. \\
+    \hline
+\end{longtable}

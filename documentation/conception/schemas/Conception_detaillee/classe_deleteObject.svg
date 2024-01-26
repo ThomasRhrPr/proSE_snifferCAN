@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="187px" preserveAspectRatio="none" style="width:233px;height:187px;" version="1.1" viewBox="0 0 233 187" width="233px" zoomAndPan="magnify"><defs><filter height="300%" id="fed9c7owq8n9u" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[a5982b05db26c8286aee71087c1b69e5]
+class DeleteObject--><rect fill="#FEFECE" filter="url(#fed9c7owq8n9u)" height="60.8047" id="DeleteObject" style="stroke: #A80036; stroke-width: 1.5;" width="216" x="6" y="116"/><ellipse cx="69.25" cy="132" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M72.2188,137.6406 Q71.6406,137.9375 71,138.0781 Q70.3594,138.2344 69.6563,138.2344 Q67.1563,138.2344 65.8281,136.5938 Q64.5156,134.9375 64.5156,131.8125 Q64.5156,128.6875 65.8281,127.0313 Q67.1563,125.375 69.6563,125.375 Q70.3594,125.375 71,125.5313 Q71.6563,125.6875 72.2188,125.9844 L72.2188,128.7031 Q71.5938,128.125 71,127.8594 Q70.4063,127.5781 69.7813,127.5781 Q68.4375,127.5781 67.75,128.6563 Q67.0625,129.7188 67.0625,131.8125 Q67.0625,133.9063 67.75,134.9844 Q68.4375,136.0469 69.7813,136.0469 Q70.4063,136.0469 71,135.7813 Q71.5938,135.5 72.2188,134.9219 L72.2188,137.6406 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="81" x="89.75" y="136.1543">DeleteObject</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="221" y1="148" y2="148"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="221" y1="156" y2="156"/><rect fill="#F24D5C" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="164"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="190" x="26" y="170.2104">deleteObject (String object) : void</text><!--MD5=[499a93d1a2128e7b640a788d1f7209bf]
+class Fragment--><rect fill="#FEFECE" filter="url(#fed9c7owq8n9u)" height="48" id="Fragment" style="stroke: #A80036; stroke-width: 1.5;" width="92" x="68" y="8"/><ellipse cx="83" cy="24" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M85.9688,29.6406 Q85.3906,29.9375 84.75,30.0781 Q84.1094,30.2344 83.4063,30.2344 Q80.9063,30.2344 79.5781,28.5938 Q78.2656,26.9375 78.2656,23.8125 Q78.2656,20.6875 79.5781,19.0313 Q80.9063,17.375 83.4063,17.375 Q84.1094,17.375 84.75,17.5313 Q85.4063,17.6875 85.9688,17.9844 L85.9688,20.7031 Q85.3438,20.125 84.75,19.8594 Q84.1563,19.5781 83.5313,19.5781 Q82.1875,19.5781 81.5,20.6563 Q80.8125,21.7188 80.8125,23.8125 Q80.8125,25.9063 81.5,26.9844 Q82.1875,28.0469 83.5313,28.0469 Q84.1563,28.0469 84.75,27.7813 Q85.3438,27.5 85.9688,26.9219 L85.9688,29.6406 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="60" x="97" y="28.1543">Fragment</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="69" x2="159" y1="40" y2="40"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="69" x2="159" y1="48" y2="48"/><!--MD5=[33cf5009192bd0801722be72576ab941]
+reverse link Fragment to DeleteObject--><path d="M114,76.11 C114,89.31 114,103.54 114,115.65 " fill="none" id="Fragment&lt;-DeleteObject" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="107,76.04,114,56.04,121,76.04,107,76.04" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[18f74c0b756454aa8abf5705a1a83151]
+@startuml
+
+class DeleteObject extends Fragment {
+    -deleteObject (String object) : void
+}
+
+@enduml
+
+PlantUML version 1.2020.02(Sun Mar 01 11:22:07 CET 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.19+7-post-Ubuntu-0ubuntu122.04.1
+Operating System: Linux
+Default Encoding: UTF-8
+Language: fr
+Country: FR
+--></g></svg>
